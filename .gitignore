@@ -54,3 +54,6 @@ compilation.yml
 
 # SVG images (inkscape)
 *.pdf_tex
+
+# Permettre certains fichiers pdf
+!*.allow.pdf
