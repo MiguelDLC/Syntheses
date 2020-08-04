@@ -1,5 +1,4 @@
 \documentclass[fr]{../../../eplsummary}
-
 \usepackage{../../../eplcode}
 \usepackage{../../../eplunits}
 \usepackage{syntax}
@@ -50,7 +49,8 @@
 \subsection{Vue d'ensemble des paradigmes}
 \begin{figure}[H]
 	\centering
-	\includesvg[width=0.83\textwidth]{img/ParadigmsOverview}
+	%\includesvg[width=0.83\textwidth]{img/ParadigmsOverview}
+	\includegraphics[width=0.83\textwidth]{img/ParadigmsOverview.eps}
 	\caption{Vue d'ensemble des paradigmes.}
 \end{figure}
 
@@ -58,12 +58,14 @@
 \centering
 \begin{subfigure}[t]{0.47\textwidth}
 \centering
-\includesvg[width=\textwidth]{img/PortMessages}
+%\includesvg[width=\textwidth]{img/PortMessages}
+\includegraphics[width=\textwidth]{img/PortMessages.eps}
 \caption{Figure représentative d'un \emph{port} (canal de communication).}
 \end{subfigure}\hfill
 \begin{subfigure}[t]{0.47\textwidth}
 \centering
-\includesvg[width=\textwidth]{img/multiAgent}
+%\includesvg[width=\textwidth]{img/multiAgent}
+\includegraphics[width=\textwidth]{img/multiAgent.eps}
 \caption{Programmation multi-agents}
 \end{subfigure}
 \caption{Explication des ports et de la programmation multi-agents.}
@@ -97,7 +99,8 @@ Avec le sucre syntaxique, \lstinline!1|nil! peut s'écrire aussi \lstinline![1]!
 
 \begin{figure}[H]
 \centering
-\includesvg[scale=0.5]{img/567Tree}
+%\includesvg[scale=0.5]{img/567Tree}
+\includegraphics[scale=0.5]{img/567Tree.eps}
 \caption{Exemple de représentation d'une liste.}
 \label{fig:tree}
 \end{figure}
@@ -168,7 +171,8 @@ tous les résultats intermédiaires grâce à l'accumulateur.
 \subsection{Représentation en mémoire}
 \begin{figure}[H]
 	\centering
-	\includesvg[scale = 0.5]{img/ProgEnvMem}
+	%\includesvg[scale = 0.5]{img/ProgEnvMem}
+	\includegraphics[scale = 0.5]{img/ProgEnvMem.eps}
 	\caption{Représentation en mémoire d'un programme.}
 	\label{fig:ProgEnvMem}
 \end{figure}
@@ -652,7 +656,7 @@ un pour chaque connecteur mais pas pour le délai.}
 On peut écrire les équations logiques
 pour le latch\footnote{Celles-ci peuvent changer
 selon la définition de \emph{latch} qu'on utilise,
-notamment quel état de la clock fait suivre l'output et quel état le gêle.}.
+notamment quel état de la clock fait suivre l'output et quel état le gêle.}.
 On commence par définir
 \[
 	\setlength{\tabcolsep}{0pt}
@@ -1530,7 +1534,7 @@ end
 Le type de lock que nous utilisons est dit \og reentrant\fg{},
 car il permet à un même thread de rentrer dans plusieurs zones critiques
 protégées par un même lock.
-Pour faire ceci, il faut donner un ID unique à chaque thread.
+Pour faire ceci, il faut donner un ID unique à chaque thread.
 
 \subsection{Monitors}
 Les locks sont importants pour faire de la programmation concurrente
