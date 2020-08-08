@@ -1,10 +1,128 @@
 \documentclass[fr]{../../../eplsummary}
 
-\hypertitle{Physique subatomique, atomique et moléculaire}{6}{PHYS}{1344}
-{Author1\and Author2\and Author3}
-{Professor}
 
-\section{What is the answer to life, the universe and everything ?}
-42
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}%T1: pour les accents
+\usepackage{graphicx}
+\usepackage{graphics}
+% \usepackage{vmargin}
+\usepackage{url}
+\def\UrlBreaks{\do\/\do\-\do\_\do\ \do\,\do\.\do\=}
+
+\usepackage{enumitem}
+\usepackage{textcomp}
+\usepackage{gensymb}  %avec le symbole 'degrés'
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{mathtools}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{physics}
+\usepackage{float}
+\usepackage{tabu}
+
+\numberwithin{equation}{section} %Numéroter les équations par section
+\numberwithin{figure}{section}   %Numéroter les figures par section
+\numberwithin{table}{section}   %Numéroter les tables par section
+%\setlength{\parindent}{0pt} %Modifier l'alinéa des paragraphes
+
+
+\usepackage{blindtext} %faire des minipages
+
+\usepackage[nodisplayskipstretch]{setspace}
+\setstretch{1.1}      %Ajuster l'espace entre les lignes
+
+%pour simplifier les expression mathématiques
+\newcommand{\eq}{\; = \;}
+\newcommand{\eqq}{\quad = \quad}
+\newcommand{\p}{\partial}
+
+% pour le d infinitesimal (droit, comme dans dx)
+\renewcommand{\d}{\mathrm{d}}
+\newcommand{\dx}{\mathrm{d}x}
+\newcommand{\dt}{\mathrm{d}t}
+
+%pour les symboles Angstrom en mode math
+\newcommand{\angstrom}{\textup{\AA}}
+
+\usepackage{bm} %symboles mathématiques en gras
+
+\hypertitle{Physique subatomique, atomique et moléculaire}{6}{PHYS}{1344}
+{Eléonore Lieffrig \and Florian Dupont \and Valentin Fonck \and Pierre Laboureur \and Justin Gérard \and Arnaud Bacq \and Agathe Vermer}
+{Xavier Urbain, Mariko Dunseath-Terao, Clément Lauzin et Vincent Lemaître en mineure physique}
+
+\newpage
+\begin{center}
+    \textsc{\Large{Université Catholique de Louvain - Faculté des Sciences \\ Ecole de Physique}} \vfill
+    \rule{1\textwidth}{1pt} \vspace{\baselineskip} \\
+    \LARGE{\textbf{LPHYS1344 - Physique subatomique, atomique et moléculaire \\ Cours collaboratif}} 
+    \rule{1\textwidth}{1pt} \\ \vfill
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.40]{Images1/large_QUxxmjstCrRXfVrLhsYBNKHMs3X1IteSRxk1ndXA-ME.png}
+    \end{figure}
+    \vfill
+    Année académique 2019-2020
+\end{center}
+
+\newpage
+
+Ce document est une proposition de support de cours à destination des étudiants suivant le cours de physique subatomique, atomique et moléculaire. Il a été rédigé par les étudiants suivant ce même cours pendant l'année académique 2019-2020 et se base sur les slides mises à disposition par les professeurs, les notes de cours partagées par les étudiants ingénieurs (merci à Sofiane Arib et Pierre Laboureur) ainsi que diverses ressources externes (genre wikipédia tmtc). 
+
+\vspace{0.2cm}
+
+Contributeurs en 2019-2020: Eléonore Lieffrig, Florian Dupont, Valentin Fonck, Pierre Laboureur, Justin Gérard, Arnaud Bacq, Agathe Vermer
+
+\vspace{0.2cm}
+
+\textit{Merci de ne pas effectuer de modifications sans en informer les auteurs des différentes parties! Laissez plutôt un commentaire en rouge (ou bleu, ou mandarine \#teamHaggy) ou contactez-les directement (on est gentils faites pas les timides).}
+
+\newpage
+\tableofcontents
+
+
+\newpage
+\part{Introduction (Vincent Lemaître)}
+\begin{center}
+    En cas de questions ou de remarques sur cette partie : contactez Eléonore Lieffrig
+\end{center}
+\input{Part1}
+
+%\newpage
+%\part{Physique atomique (Xavier Urbain et Mariko Terao)}
+%\begin{center}
+%    En cas de questions ou de remarques sur cette partie : contactez Eléonore Lieffrig, Justin Gérard %ou Valentin Fonck.
+%\end{center}
+%\input{Part2}
+% 
+%\newpage
+%\part{Physique moléculaire (Clément Lauzin)}
+%\begin{center}
+%    En cas de questions ou de remarques sur cette partie : contactez Florian Dupont.
+%\end{center}
+%\input{Part3}
+%
+%\newpage
+%\part{Physique subatomique (Vincent Lemaître)}
+%\begin{center}
+%    En cas de questions ou de remarques sur cette partie : contactez Pierre Laboureur ou Valentin Fonck.
+%\end{center}
+%\input{Part4_1}
+%\newpage
+%\input{Part4_2}
+%\newpage
+%\input{Part4_3}
+%\newpage
+%\input{Part4_4}
+%\newpage
+%\input{Part4_5}
+%\newpage
+%\input{Part4_6}
+%\newpage
+%\input{Part4_7}
+%\newpage
+%\input{Part4_8}
 
 \end{document}
