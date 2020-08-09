@@ -1,25 +1,26 @@
-\documentclass[fr]{../../../eplsummary}
-%\documentclass[a4paper]{article}
+\documentclass[fr,skiptoc]{../../../eplsummary}
 
-
-\usepackage[french]{babel}
-%\usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}%T1: pour les accents
+%\usepackage[french]{babel} % déjà dans eplcommon
+%\usepackage[utf8]{inputenc} % déjà dans eplbase
+%\usepackage[T1]{fontenc}%T1: pour les accents % déjà dans eplbase
 \usepackage{graphicx}
 % \usepackage{vmargin}
 \input{url_breaks.tex}
 \usepackage{enumitem}
 %\usepackage{textcomp}
 \usepackage{gensymb}  %avec le symbole 'degrés'
-\usepackage{amsmath,amsfonts,amssymb}
-\usepackage{mathtools}
+%\usepackage{amsmath,amsfonts,amssymb} % déjà dans eplcommon
+%\usepackage{mathtools} % déjà dans eplcommon
 \usepackage{verbatim}
 \usepackage{wrapfig}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-\usepackage{xcolor}
+%\usepackage{xcolor} % déjà dans eplbase
 \usepackage{physics}
-\usepackage{float}
+%\usepackage{float} % déjà dans eplbase
 \usepackage{tabu}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+\newcommand{\kg}{\si{kg}}
 
 \numberwithin{equation}{section} %Numéroter les équations par section
 \numberwithin{figure}{section}   %Numéroter les figures par section
@@ -27,7 +28,7 @@
 %\setlength{\parindent}{0pt} %Modifier l'alinéa des paragraphes
 
 
-\usepackage{blindtext} %faire des minipages
+%\usepackage{blindtext} %faire des minipages
 
 \usepackage[nodisplayskipstretch]{setspace}
 \setstretch{1.1}      %Ajuster l'espace entre les lignes
@@ -42,6 +43,14 @@
 \newcommand{\dx}{\mathrm{d}x}
 \newcommand{\dt}{\mathrm{d}t}
 
+%\usepackage{titlesec} %Modifier la taille des titres
+%\titleformat*{\section}{\LARGE\bfseries}
+%\titleformat*{\subsection}{\Large\bfseries}
+%\titleformat*{\subsubsection}{\large\bfseries}
+
+
+
+
 %pour les symboles Angstrom en mode math
 \newcommand{\angstrom}{\textup{\AA}}
 
@@ -49,7 +58,7 @@
 
 \hypertitle{Physique subatomique, atomique et moléculaire}{6}{PHYS}{1344}
 {Eléonore Lieffrig \and Florian Dupont \and Valentin Fonck \and Pierre Laboureur \and Justin Gérard \and Arnaud Bacq \and Agathe Vermer}
-{Xavier Urbain, Mariko Dunseath-Terao, Clément Lauzin et Vincent Lemaître en mineure physique}
+{Xavier Urbain, Mariko Dunseath-Terao, Clément Lauzin et Vincent Lemaître en PHYS (École de Physique) et en mineure physique}
 %\begin{document}
 
 \newpage
@@ -64,23 +73,13 @@
     \end{figure}
     \vfill
     Année académique 2019-2020
+    \vfill
 \end{center}
-
-\newpage
 
 Ce document est une proposition de support de cours à destination des étudiants suivant le cours de physique subatomique, atomique et moléculaire. Il a été rédigé par les étudiants suivant ce même cours pendant l'année académique 2019-2020 et se base sur les slides mises à disposition par les professeurs, les notes de cours partagées par les étudiants ingénieurs (merci à Sofiane Arib et Pierre Laboureur) ainsi que diverses ressources externes (genre wikipédia tmtc). 
 
-\vspace{0.2cm}
-
-Contributeurs en 2019-2020: Eléonore Lieffrig, Florian Dupont, Valentin Fonck, Pierre Laboureur, Justin Gérard, Arnaud Bacq, Agathe Vermer
-
-\vspace{0.2cm}
-
-\textit{Merci de ne pas effectuer de modifications sans en informer les auteurs des différentes parties! Laissez plutôt un commentaire en rouge (ou bleu, ou mandarine \#teamHaggy) ou contactez-les directement (on est gentils faites pas les timides).}
-
 \newpage
 \tableofcontents
-
 
 \newpage
 \part{Introduction (Vincent Lemaître)}
@@ -123,5 +122,6 @@ Contributeurs en 2019-2020: Eléonore Lieffrig, Florian Dupont, Valentin Fonck, 
 %\input{Part4_7}
 %\newpage
 %\input{Part4_8}
+%\begin{document} % à supprimer, c'est pour que VScode comprenne
 
 \end{document}
