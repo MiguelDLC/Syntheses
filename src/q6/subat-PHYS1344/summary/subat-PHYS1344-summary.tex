@@ -20,14 +20,15 @@
 \usepackage{tabu}
 \usepackage{wrapfig}
 \usepackage{siunitx}
-\newcommand{\kg}{\si{kg}}
+
+
+\allsectionsfont{\normalfont\bfseries} %parce que mine de rien c'est pas très joli le sans serif, et surtout beaucoup moins visible
 
 \numberwithin{equation}{section} %Numéroter les équations par section
 \numberwithin{figure}{section}   %Numéroter les figures par section
 \numberwithin{table}{section}   %Numéroter les tables par section
+\newtheorem{rem}{Remarque}[section]
 %\setlength{\parindent}{0pt} %Modifier l'alinéa des paragraphes
-
-
 %\usepackage{blindtext} %faire des minipages
 
 \usepackage[nodisplayskipstretch]{setspace}
@@ -39,9 +40,8 @@
 \newcommand{\p}{\partial}
 
 % pour le d infinitesimal (droit, comme dans dx)
-\renewcommand{\d}{\mathrm{d}}
-\newcommand{\dx}{\mathrm{d}x}
-\newcommand{\dt}{\mathrm{d}t}
+\newcommand{\dx}{\dif x}
+\newcommand{\dt}{\dif t}
 
 %\usepackage{titlesec} %Modifier la taille des titres
 %\titleformat*{\section}{\LARGE\bfseries}
@@ -65,7 +65,7 @@
 \begin{center}
     \textsc{\Large{Université Catholique de Louvain - Faculté des Sciences \\ Ecole de Physique}} \vfill
     \rule{1\textwidth}{1pt} \vspace{\baselineskip} \\
-    \LARGE{\textbf{LPHYS1344 - Physique subatomique, atomique et moléculaire \\ Cours collaboratif}} 
+    \LARGE{\textbf{LPHYS1344 - Physique subatomique, atomique et moléculaire \\ Cours collaboratif}}
     \rule{1\textwidth}{1pt} \\ \vfill
     \begin{figure}[H]
         \centering
@@ -76,25 +76,25 @@
     \vfill
 \end{center}
 
-Ce document est une proposition de support de cours à destination des étudiants suivant le cours de physique subatomique, atomique et moléculaire. Il a été rédigé par les étudiants suivant ce même cours pendant l'année académique 2019-2020 et se base sur les slides mises à disposition par les professeurs, les notes de cours partagées par les étudiants ingénieurs (merci à Sofiane Arib et Pierre Laboureur) ainsi que diverses ressources externes (genre wikipédia tmtc). 
+Ce document est une proposition de support de cours à destination des étudiants suivant le cours de physique subatomique, atomique et moléculaire. Il a été rédigé par les étudiants suivant ce même cours pendant l'année académique 2019-2020 et se base sur les slides mises à disposition par les professeurs, les notes de cours partagées par les étudiants ingénieurs (merci à Sofiane Arib et Pierre Laboureur) ainsi que diverses ressources externes (genre wikipédia tmtc).
 
 \newpage
 \tableofcontents
 
-\newpage
-\part{Introduction (Vincent Lemaître)}
-\begin{center}
-    En cas de questions ou de remarques sur cette partie : contactez Eléonore Lieffrig
-\end{center}
-\input{Part1}
-
 %\newpage
-%\part{Physique atomique (Xavier Urbain et Mariko Terao)}
+%\part{Introduction (Vincent Lemaître)}
 %\begin{center}
-%    En cas de questions ou de remarques sur cette partie : contactez Eléonore Lieffrig, Justin Gérard %ou Valentin Fonck.
+%    En cas de questions ou de remarques sur cette partie : contactez Eléonore Lieffrig
 %\end{center}
-%\input{Part2}
-% 
+%\input{Part1}
+
+\newpage
+\part{Physique atomique (Xavier Urbain et Mariko Terao)}
+\begin{center}
+    En cas de questions ou de remarques sur cette partie : contactez Eléonore Lieffrig, Justin Gérard %ou Valentin Fonck.
+\end{center}
+\input{Part2}
+
 %\newpage
 %\part{Physique moléculaire (Clément Lauzin)}
 %\begin{center}
