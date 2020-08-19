@@ -300,18 +300,15 @@ Les figures \ref{fig:fcx_rad_2} et \ref{fig:fcx_rad_3} sont quelques représenta
     \label{fig:fcx_rad_3}
 \end{figure}
 
-Les états de moment angulaire maximum (l=n-1) sont beaucoup plus simples à comprendre que les autres qui ont un comportement ondulatoire (présence de noeuds et ventres dans leur fonction d'onde). En effet, l'électron peut être vu comme une onde piégée dans un potentiel qui va, sous l'action de ce dernier, former une espèce d'onde stationnaire : ce sont les noeuds et les ventres que l'on observe (L'électron a une probabilité de présence nulle sur un noeud et une probabilité forte sur un ventre).\\
+Les états de moment angulaire maximum (l=n-1) sont beaucoup plus simples à comprendre que les autres qui ont un comportement ondulatoire (présence de noeuds et ventres dans leur fonction d'onde). En effet, l'électron peut être vu comme une onde piégée dans un potentiel qui va, sous l'action de ce dernier, former une espèce d'onde stationnaire : ce sont les noeuds et les ventres que l'on observe (L'électron a une probabilité de présence nulle sur un noeud et une probabilité forte sur un ventre).
+
 On peut donner une image assez classique de ces noeuds et ventres. Lorsqu'on a des noeuds et des ventre, on peut voir l'électron comme une onde stationnaire qui fait des aller-retours entre le noyau et le bord du potentiel. Cependant, lorsque $l$ est maximal (i.e. $l=n-1$), la partie radiale de la fonction d'onde $R_{n,l=n-1}$ ne présente plus qu'un seul ventre sans noeuds. Dès lors, on doit ainsi plus voir l'électron comme orbitant à une distance moyenne constante du noyau. Attention que ceci est une image fort classique pour la mécanique quantique. Cependant plus $n$ est grand, plus on se rapproche de cette image et on peut donc considérer l'électron comme étant une particule classique orbitant autour d'un noyau (surtout à partir de $n=100$).
-
-
-
 
 Plus le nombre quantique $n$ d'un état est élevé, plus l'état correspondant est excité. Un état de grand $n$ est appelé état de Rydberg. A l'échelle atomique, la fonction d'onde d'un tel état s'étend sur de très grandes distances, comme suggère l'expression du maximum de la fonction de distribution radiale
 
 \[
     r\eq \dfrac{n^2}{Z}a_{\mu}
 \]
-
 Par exemple, la fonction d'onde radiale de l'état 50s qui est représentée ci-dessous s'étend jusque $5000a_0=0.27\mu m$.
 
 \begin{figure}[tph]
@@ -332,43 +329,33 @@ Par exemple, la fonction d'onde radiale de l'état 50s qui est représentée ci-
 
 Les alcalins sont les éléments de la première colonne du tableau périodique. Ils ont une structure électronique à coeur de gaz rare. Ils perdent facilement leur électron de valence célibataire dans la sous-couche externe s. Nous avons par exemple:
 
-
-
-
 \begin{center}
-
-Li [He:1s$^{2}$] 2s \\
-Na [Ne: 1s$^{2}$2s$^{2}$2p$^{6}$] 3s \\
-K [Ar: 1s$^{2}$2s$^{2}$2p$^{6}$3s$^{2}$3p$^{6}$] 4s 
-
+    Li [He:1s$^{2}$] 2s \\
+    Na [Ne: 1s$^{2}$2s$^{2}$2p$^{6}$] 3s \\
+    K [Ar: 1s$^{2}$2s$^{2}$2p$^{6}$3s$^{2}$3p$^{6}$] 4s 
 \end{center}
-
-
-
-
 Pour chaque sous-couche pleine, on rappelle qu'on a $\sum_i l_i = 0$.
 
-Nous allons essayer de décrire ces atomes comme un atome d'hydrogène. Tout d'abord, nous nous intéressons au lithium. Dans cette approche de l'atome d'hydrogène on peut voir l'électron 2s comme lié à un ion Li$^{+}$ que l'on peut considérer approximativement comme un proton dans le sens où c'est une charge positive. Puisque c'est un électron 2s, nous savons qu'il a une probabilité de présence non-nulle près du noyau, c'est-à-dire dans le volume occupé par les deux autres électrons.\\  
+Nous allons essayer de décrire ces atomes comme un atome d'hydrogène. Tout d'abord, nous nous intéressons au lithium. Dans cette approche de l'atome d'hydrogène on peut voir l'électron 2s comme lié à un ion Li$^{+}$ que l'on peut considérer approximativement comme un proton dans le sens où c'est une charge positive. Puisque c'est un électron 2s, nous savons qu'il a une probabilité de présence non-nulle près du noyau, c'est-à-dire dans le volume occupé par les deux autres électrons.
 
 
 Étant donné que tout cela est probabiliste, il se peut que l'électron 2s se trouve plus proche du noyau que les autres électrons ("plus proche" d'une façon tout à fait schématique) et que donc il "voit" une charge qui n'est pas 1e mais 2e ou 3e car il n'y a plus d'effet d'écrantage.
 
-Nous avons donc Z qui augmente et l'énergie de liaison $E_n \propto 1/n^2$ aussi. Nous corrigeons par conséquent le nombre quantique principal qui n'est donc plus un nombre entier. Cette correction s’appelle le \textbf{défaut quantique}, notée $\delta_l$, et c’est une bonne solution pour décrire la perturbation de ces électrons dits externes lorsque nous faisons varier le nombre quantique principal.\\
+Nous avons donc Z qui augmente et l'énergie de liaison $E_n \propto 1/n^2$ aussi. Nous corrigeons par conséquent le nombre quantique principal qui n'est donc plus un nombre entier. Cette correction s’appelle le \textbf{défaut quantique}, notée $\delta_l$, et c’est une bonne solution pour décrire la perturbation de ces électrons dits externes lorsque nous faisons varier le nombre quantique principal.
 Le défaut quantique sera toujours du même ordre de grandeur pour tous les alcalins car il ne dépend pas de $n$ mais seulement de l. En effet, la probabilité de présence près du noyau de l'électron diminue avec l'augmentation de l, donc le défaut quantique sera plus grand pour les plus petits l. Pour des moments angulaires plus importants (l élevé), le potentiel effectif (dû au terme centrifuge) va empêcher les électrons externes d’aller à courtes distances et donc ils ne seront pas perturbés par la présence des autres électrons.
  
- \[\delta_s>\delta_p>\delta_d>\delta_f\simeq 0\]
- 
+\[
+    \delta_s>\delta_p>\delta_d>\delta_f\simeq 0
+\]
 L'énergie de liaison des alcalins obéit à la loi de Balmer modifiée par l’introduction du défaut quantique, qui rend compte de l’écrantage imparfait de la charge du noyau par les autres électrons. Il est d’autant plus grand que l’orbitale a une grande probabilité de présence à courte distance.
  
 \begin{equation}
     E_{nl} \eq  - \dfrac{Ry}{2(n-\delta_l)^2}
     \label{eq:def_quant}
 \end{equation}
- 
+
 NB: pas de facteur 2 au dénominateur quand on est en eV ; on est en Hartree dans cette formule. 
  
-
-
  
 Si nous nous intéressons maintenant au cas du sodium nous constatons que la correction dépasse 1 pour $l=0$ : $\delta_l = 1.35$. Cela signifie que le remplissage des couches ne se fera pas suivant la règle de Madelung (ou  Klechkowski). \textcolor{red}{Sûr de ça? Parce qu'il y a aussi l'effet joué par la correction du terme $l=1$ à prendre en compte si on veut `classer' les couches}
 En effet, pour le potassium (K) par exemple, le 3 de la sous-couche 3d devient 2.75 tandis que le 4 de la sous couche 4s devient 1.81. Par conséquent, l’énergie de la 4s est plus petite que celle du 3d comme l'indique la formule \ref{eq:def_quant}. La sous-couche 4s sera donc remplie avant la 3d.
@@ -385,25 +372,26 @@ Ce phénomène ne se limite pas seulement aux alcalins. Pour  n'importe quel ato
 Nous allons ici développer un outil très important pour l'identification des éléments. Il a notamment servi à identifier la présence d'éléments terrestres dans le Soleil, ce qui n'avait a priori rien d'évident. En bombardant un matériau d'électrons de haute énergie, on observe l'émission de rayons X caractéristiques de sa structure.\\
 
 Dans un atome à plusieurs électrons, nous savons que l'énergie ne suit plus exactement la loi de Balmer obtenue pour l'atome d'H ($E_n \propto Z/n^2$). En effet, il y a un effet dû aux autres électrons. Comme nous l'avons vu, cet effet peut être pris en compte en considérant un `défaut quantique' (formule \ref{eq:def_quant}). Cependant, une autre façon de voir les choses est d'utiliser une charge effective mais de laisse le nombre quantique inchangé. Cette charge effective $Z^{*}$ perçue par chaque électron est définie comme \[ Z^{*}=Z-\sigma \] où $\sigma$ représente l'effet d'écran produit sur l'électron d'intérêt par les électrons plus proches du noyau. Dès lors, l'énergie s'exprime comme
+
 \begin{equation}
     E_n \eq -\dfrac{1}{2} \dfrac{(Z-\sigma_n)^2}{n^2} \; [ua = Ha]
     \label{eq:energie_effective}
 \end{equation}
+Comme vu dans l'introduction, lors du passage d'un électron de haute énergie dans un milieu matériel, l'électron subit une perte d'énergie continue sous forme de rayonnement de freinage (pour de hautes énergies de l'électron incident, on peut ignorer la perte sous forme d'ionisation, voir figure \ref{fig:Résumé pertes}). La figure idéalisée de ce rayonnement selon la longueur d'onde de l'électron incident\footnote{On observe donc bien entendu pour un même électron une variation de cette longueur d'onde au cours de sa progression.} se trouve à la figure \ref{fig:Freinage idéalisé} où l'\textit{intensité relative} correspond à l'intensité du rayonnement, autrement dit $\fdif{E}{x}$ la perte d'énergie par unité de distance pour l'électron [J/m].
 
-
-Comme vu dans l'introduction, lors du passage d'un électron de haute énergie dans un milieu matériel, l'électron subit une perte d'énergie continue sous forme de rayonnement de freinage (pour de hautes énergies de l'électron incident, on peut ignorer la perte sous forme d'ionisation, voir figure \ref{fig:Résumé pertes}). La figure idéalisée de ce rayonnement selon la longueur d'onde de l'électron incident \footnote{On observe donc bien entendu pour un même électron une variation de cette longueur d'onde au cours de sa progression.} se trouve à la figure \ref{fig:Freinage idéalisé} où l'\textit{intensité relative} correspond à l'intensité du rayonnement, autrement dit $\fdif{E}{x}$ la perte d'énergie par unité de distance pour l'électron [J/m].
 \begin{figure}[tph]
     \centering
     \includegraphics[scale=0.8]{Images2/RésuméPerte.PNG}
     \caption{Perte d'énergie par unité de longueur en fonction de l'énergie incidente. On a ici représenté les 2 effets de perte d'énergie dans un matériau : le rayonnement de freinage et la perte par ionisation}
     \label{fig:Résumé pertes}
-\end{figure}
+\end{figure}%
 \begin{figure}[tph]
     \centering
     \includegraphics[scale=1.0]{Images2/FreinageIdéalisé.PNG}
     \caption{Rayonnement de freinage sans phénomène de résonance avec les atomes de la cible}
     \label{fig:Freinage idéalisé}
-\end{figure}
+\end{figure}%
+
 Dans la réalité, la perte d'énergie par unité de longueur en fonction de la longueur d'onde incidente est du type de la courbe représentée à la figure \ref{fig:Rayonnement freinage} (et non de la courbe représentée à la figure \ref{fig:Freinage idéalisé} qui n'est qu'une approximation négligeant complètement un phénomène important). Ainsi, pour des longueurs d'onde particulières, la perte d'énergie est drastiquement augmentée. Le phénomène responsable de cette perte drastique est dû à la résonance entre l'énergie de l'électron incident et (dans notre cas présent) des électrons de coeur : l'énergie perdue par les électrons lors de cette résonance correspond à l'énergie des photons associés aux rayons X observés dont nous discuterons dans un instant.\\
 \begin{figure}[tph]
     \centering
@@ -416,11 +404,11 @@ Dans la réalité, la perte d'énergie par unité de longueur en fonction de la 
 \subsubsection{Émission de rayons X}
 
 
-Les fréquences auxquelles on observe les phénomènes de résonance dans le spectre du rayonnement de freinage (= les fréquence où on a des pics d'absorption) correspondent aux fréquences des transitions d'orbitales $n = 2$ vers $n = 1$. Pour caractériser ces transitions, on peut se servir de la loi empirique de Moseley, qui n'est qu'une généralisation des différentes séries de Lyman, Balmer, etc. %En fait, on peut l'obtenir en faisant simplement la différence entre deux niveaux d'énergie distincts via la formule \ref{eq:energie_effective} où on considère un écrantage `moyen' (=la moyenne des écrantages des deux niveaux dont on fait la différence)
+Les fréquences auxquelles on observe les phénomènes de résonance dans le spectre du rayonnement de freinage (= les fréquence où on a des pics d'absorption) correspondent aux fréquences des transitions d'orbitales $n = 2$ vers $n = 1$. Pour caractériser ces transitions, on peut se servir de la loi empirique de Moseley, qui n'est qu'une généralisation des différentes séries de Lyman, Balmer, etc\footnote{En fait, on peut l'obtenir en faisant simplement la différence entre deux niveaux d'énergie distincts via la formule \ref{eq:energie_effective} où on considère un écrantage `moyen' (=la moyenne des écrantages des deux niveaux dont on fait la différence)}.
 \begin{equation}
     h\nu 
     \eq E_{n_1} - E'_{n_2}
-    \eq \dfrac{1}{2}(Z-\sigma_{n_1})^2(\dfrac{1}{n_1^2}-\dfrac{1}{n_2^2})
+    \eq \dfrac{1}{2}(Z-\sigma_{n_1})^2\left(\dfrac{1}{n_1^2}-\dfrac{1}{n_2^2}\right)
     \label{eq:Moseley}
 \end{equation}
 
