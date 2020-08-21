@@ -76,7 +76,7 @@ Considérons l'équation de Schrödinger et sa complexe conjuguée:
 Le taux de variation au cours du temps de la valeur moyenne d'un opérateur $A$ est donc donnée par
 
 \begin{align*}
-    \fdif{}{t}  \left<A\right>&\eq\fdif{}{t} \int \Psi^{*} A \Psi \dif\vec{r} \\
+    \fdif{}{t}  \braket{A} &\eq\fdif{}{t} \int \Psi^{*} A \Psi \dif\vec{r} \\
     &\eq \int\left(\dfrac{\partial\Psi^{*}}{\partial t}A \Psi + \Psi^{*} A \dfrac{\partial \Psi }{\partial t } + \Psi^{*} \dfrac{\partial A}{\partial t}\Psi \right) \dif\vec{r}\\
     &\eq \Big< \dfrac{\partial A}{\partial t} \Big> +\dfrac{1}{\imag \hbar} \int \Psi^{*} (AH-HA)\Psi \dif\vec{r}
 \end{align*}
@@ -1228,14 +1228,12 @@ avec $g_J$, le facteur de Landé défini comme suivant et tel que $1\leq g_J \le
 \]
 Avis au lecteur : dans les notes c'est $\bra{a}$ et non $\bra{\tau J M_J}$ mais comme après il y a la même erreur mais qu'il l'a corrigée, je pense que c'est ici aussi une erreur. Le delta est aussi un ajout qui semble coller aux conclusions et à nos calculs personnels mais n'est pas repris dans les slides.\\
 
-Dans cette expression de $g_J$, on comprend facilement que si on s'était limité au moment angulaire orbital $\vec{L}$ on aurait eu que le terme 1 ($S=0 \rightarrow J=L$). Le reste de l'expression provient du couplage spin-orbitale et s'exprime d'ailleurs de façon tout à fait analogue à la correction fine de couplage SO.\\
-
-De manière générale, on observe deux couplages simultanés:
+Dans cette expression de $g_J$, on comprend facilement que si on s'était limité au moment angulaire orbital $\vec{L}$ on aurait eu que le terme 1 ($S=0 \rightarrow J=L$). Le reste de l'expression provient du couplage spin-orbitale et s'exprime d'ailleurs de façon tout à fait analogue à la correction fine de couplage SO. De manière générale, on observe deux couplages simultanés:
 \begin{itemize}[label=$\bullet$]
     \item le couplage des moments magnétiques (de spin et d'orbite) ensemble : il s'agit de la correction spin-orbite, c'est ce qui nous oblige à travailler en terme de $\vec{J}$ et non $\vec{L}$ et $\vec{S}$.
     \item l'interaction du moment magnétique total avec le champ extérieur
 \end{itemize}
-Dans le cas d'un champ magnétique important $B>>1T$, on s'aperçoit en comparant ces deux effets que le couplage spin-orbite est négligeable. Il nous reste donc séparément le couplage du moment magnétique orbital avec $B$ et le couplage du moment magnétique de spin avec $B$. On va donc pouvoir découpler $L$ et $S$. On obtient tout simplement cette expression :
+Dans le cas d'un champ magnétique important $B>>\SI{1}{T}$, on s'aperçoit en comparant ces deux effets que le couplage spin-orbite est négligeable. Il nous reste donc séparément le couplage du moment magnétique orbital avec $B$ et le couplage du moment magnétique de spin avec $B$. On va donc pouvoir découpler $L$ et $S$. On obtient tout simplement cette expression :
 
 \[
     \bra{a}H_B\ket{a} \; \approx \; \mu_\text{B}(m_L + 2m_S)B_z
@@ -1285,10 +1283,10 @@ L'effet Stark est l'équivalent de l'effet Zeeman pour un champ électrique cons
 En temps normal, un atome isolé n'a pas de moment dipolaire permanent : sa symétrie sphérique l'en empêche. Cependant, sous l'action d'un champ électrique extérieur, ses électrons peuvent se délocaliser : le nuage se déplace dans le sens inverse du champ, entraînant ainsi une polarisation de l'atome. Sous ce champ $E$, notre atome devient donc un dipôle induit.
 
 \[
-    \vec{D} \eq \vec{D}_0 + \vec{D}_{induit}
+    \vec{D} \eq \vec{D}_0 + \vec{D}_\text{induit}
 \]
 \[
-    \vec{D}_{induit} \eq \alpha \vec{\epsilon} \;\; \text{où}\; \alpha \; \text{est la polarisabilité dipolaire statique de l'atome}
+    \vec{D}_\text{induit} \eq \alpha \vec{\epsilon} \;\; \text{où}\; \alpha \; \text{est la polarisabilité dipolaire statique de l'atome}
 \]
 On présente ensuite le développement classique de la théorie des perturbation (cf Mécanique Quantique 2).
 
@@ -1328,16 +1326,20 @@ On distingue donc deux cas selon si on se trouve sur la diagonale des éléments
 \[
     n \neq l\;:\;\;\; a^{(1)}_{nl} \eq \dfrac{H'_{ln}}{E^{(0)}_n-E^{(0)}_l}
 \]
-On a donc ici une correction diagonale à l'énergie sous la forme de $E^{(1)}_n$ qui ne concerne que l'état lui-même\footnote{A priori, car nous allons voir tout de suite que la symétrie sphérique de l'atome entraîne que cette correction est nulle.} et une correction non-diagonale aux vecteurs propres qui fait potentiellement intervenir d'autres états couplés par l'effet Stark avec l'état $n$. On va donc développer à l'ordre deux pour obtenir la correction à l'énergie entraînée par ce couplage.\\
+On a donc ici une correction diagonale à l'énergie sous la forme de $E^{(1)}_n$ qui ne concerne que l'état lui-même\footnote{A priori, car nous allons voir tout de suite que la symétrie sphérique de l'atome entraîne que cette correction est nulle.} et une correction non-diagonale aux vecteurs propres qui fait potentiellement intervenir d'autres états couplés par l'effet Stark avec l'état $n$. On va donc développer à l'ordre deux pour obtenir la correction à l'énergie entraînée par ce couplage.
 
-\begin{figure}[htp]
+%il faudrait taper cette partie en LaTeX plutot qu'une image
+%À l'ordre 2 en $\lambda$:
+%\[
+%    H_0 \Psi_n^{(2)} + H'\Psi_n^{(1)} \eq E_n^{(0)}\Psi_n^{(2)} + E_n^{(1)} \Psi_n^{(1)} + E_n^{(2)} \Psi_n^{(0)}
+%\]
+
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.65]{Images2/ordre2.1.PNG}
 \end{figure}
-
-On obtient donc $E_n^{(2)}$ qui représente la correction en énergie au second ordre pour le n$^\text{ème}$ état. On voit que, contrairement à la correction au premier ordre qui était diagonale et ne faisait donc intervenir que l'état corrigé, la correction au second ordre n'est pas diagonale et fait donc intervenir d'autres états. On dit que la perturbation couple les états $k$ et $n$ si l'élément de couplage $|H'_{kn}|^2$ n'est pas nul. On regarde ensuite la correction aux vecteurs propres.\\
-
-\begin{figure}[htp]
+On obtient donc $E_n^{(2)}$ qui représente la correction en énergie au second ordre pour le $n^\text{ème}$ état. On voit que, contrairement à la correction au premier ordre qui était diagonale et ne faisait donc intervenir que l'état corrigé, la correction au second ordre n'est pas diagonale et fait donc intervenir d'autres états. On dit que la perturbation couple les états $k$ et $n$ si l'élément de couplage $|H'_{kn}|^2$ n'est pas nul. On regarde ensuite la correction aux vecteurs propres.
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.65]{Images2/ordre2.2.PNG}
 \end{figure}
@@ -1369,14 +1371,14 @@ On réexprime donc la correction en énergie au premier ordre, le produit scalai
 \]
 Grâce à l'hybridation des orbitales, le moment dipolaire permanent de l'hydrogène à l'état fondamental n'est pas nul. En effet, l'opérateur z couple les parties de parité différente de la décomposition de $\psi_n^{(0)}$. Par exemple : $\bra{\psi_{n10}}z\ket{\psi_{n20}}\epsilon \neq 0$.\\
 
-\begin{figure}[htp]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{Images2/hybridation.png}
 \end{figure}
 
 \textbf{Pour le cas général :}\\
 
-\begin{figure}[htp]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.8]{Images2/correcordre.PNG}
 \end{figure}
@@ -1385,17 +1387,18 @@ On voit tout de suite que seuls les états proches en énergie seront couplés p
 
 On se retrouve donc avec un état fondamental particulier pour l'atome d'hydrogène. Cette particularité sous un champ électrique va nous permettre de réaliser des transitions exotiques. On va par exemple pouvoir réaliser des transitions entre le 2s perturbé (mélange de 2s et 2p) vers l'état 4s (mélange de 4s, 4p, 4d, 4f) ce qui est normalement impossible. On va également pouvoir réaliser des transitions entre ce 2s et le 3s ce qui est normalement impossible à cause de la parité des états.\\
 
-\begin{figure}[htp]
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{Images2/EffetStark.PNG}
+    \includegraphics[width=0.65\textwidth]{Images2/EffetStark.PNG}
 \end{figure}
 
-On exprime $\psi$ la fonction d'onde sous perturbation comme une combili des $\psi_a$ et $\psi_b$, les fonctions d'onde du système non-perturbé. En diagonalisant la matrice de l'Hamiltonien perturbé, on obtient $E^{\pm}$. On distingue deux régimes, soit les énergies sont éloignées $(E_a - E_b)^2 >> 0$ on obtient donc $E^+ = E_a$ et $E^- = E_b$. On a donc pas d'effet pour des énergies très éloignées.\\
-Si $4e^2\bra{b}\sum_iz_i\ket{a} = 4|H'_{ba}|^2<<(E_a - E_b)^2 $, par le développement de Taylor de $(1 + x)^2\eq 1 + \dfrac{x}{2} - \dfrac{x^2}{8} + O(x^3);x<<1$, on a une modification quadratique en $\epsilon$ des niveaux d'énergie. Si on ne peut pas faire ce raisonnement, on a une évolution linéaire.\\
+On exprime $\psi$ la fonction d'onde sous perturbation comme une combili des $\psi_a$ et $\psi_b$, les fonctions d'onde du système non-perturbé. En diagonalisant la matrice de l'Hamiltonien perturbé, on obtient $E^{\pm}$. On distingue deux régimes, soit les énergies sont éloignées $(E_a - E_b)^2 >> 0$ on obtient donc $E^+ = E_a$ et $E^- = E_b$. On a donc pas d'effet pour des énergies très éloignées. Si $4e^2\bra{b}\sum_iz_i\ket{a} = 4|H'_{ba}|^2<<(E_a - E_b)^2 $, par le développement de Taylor de $(1 + x)^2\eq 1 + \dfrac{x}{2} - \dfrac{x^2}{8} + \bigO(x^3)$ ; $x<<1$, on a une modification quadratique en $\epsilon$ des niveaux d'énergie. Si on ne peut pas faire ce raisonnement, on a une évolution linéaire (Fig. \ref{fig:stark_lin}).
 
 \begin{figure}[htp]
     \centering
     \includegraphics[scale=0.7]{Images2/GrapheStark.PNG}
+    \caption{Effet Stark}
+    \label{fig:stark_lin}
 \end{figure}
 
 On a finalement une évolution en $n^2$ pour l'orbite moyenne (bien qu'il ne s'agisse plus d'orbite de Bohr), la section géométrique ou encore la surface occupée dans l'espace évolue comme le carré du rayon en $n^4$, le moment dipolaire de $L$ à L+1 varie en $n^2$, la polarisabilité en $n^7$, le temps de vie en $n^3$, le moment dipolaire en en $\dfrac{1}{n^4}$ pour le potentiel d'ionisation. Comme la polarisabilité augmente très vite, on peut s'en servir pour guider les atomes via un champ électrique. En condensé :
@@ -1407,16 +1410,16 @@ On a finalement une évolution en $n^2$ pour l'orbite moyenne (bien qu'il ne s'a
     S_{at} \; \propto\; n^4
 \]
 \[
-    \mu_{dip} \; \propto\; n^2
+    \mu_\text{dip} \; \propto\; n^2
 \]
 \[
     \alpha \; \propto\; n^7
 \]
 \[
-    \tau_{vie} \; \propto\; n^3
+    \tau_\text{vie} \; \propto\; n^3
 \]
 \[
-    E_{ion} \; \propto\; \dfrac{1}{n^4}
+    E_\text{ion} \; \propto\; \dfrac{1}{n^4}
 \]
 
 Quand on augmente le nombre quantique principal n, les électrons deviennent moins liés au noyau et donc plus polarisables, l'effet Stark est d'autant plus important. Finalement, pour des $n$ importants, on arrive dans une situation chaotique où les nombres quantiques vont se mélanger et on obtient le genre de graphe présenté au-dessus. A un certain stade, le potentiel coulombien est tellement déformé qu'il laisse s'échapper l'électron comme représenté sur le dessin suivant (Fig. \ref{fig:fig_stark}).\\
@@ -1427,7 +1430,7 @@ Quand on augmente le nombre quantique principal n, les électrons deviennent moi
     \caption{Représentation de l'effet Stark sur le potentiel}
     \label{fig:fig_stark}
 \end{figure}
-\begin{figure}[htp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Images2/TableauStark.PNG}
 \end{figure}
@@ -1444,7 +1447,7 @@ Dans la haute atmosphère, le $O_2$ entre en collision avec les électrons de ha
     &\longrightarrow\; O(^3P)\; +\; O(^1D)
 \end{align*}
 
-Les deux termes excités de même configuration que l'état fondamental sont $^1D$ et $^1S$ (singulet D et singulet S). Chaque processus d'ionisation-recombinaison va produire soit l'un soit l'autre dans certaines proportions mesurables ainsi qu'un $O(^3P)$. On va donc avoir des longueurs d'onde bien précises qui correspondent à deux transitions interdites parce que ces termes sont de mêmes configuration donc forcément de même parité. Dans la cascade de désexcitation de l'oxygène $^1S$ on va avoir une longueur d'onde de $527nm$ de couleur verte qui correspond à une transition E2 (quadripolaire électrique, transition interdite) de  $^1S$ vers $^1D$, pas de changement de spin, pas de changement de parité. Un temps de vie de 0.7 secondes est associé à cette transition.\\
+Les deux termes excités de même configuration que l'état fondamental sont $^1D$ et $^1S$ (singulet D et singulet S). Chaque processus d'ionisation-recombinaison va produire soit l'un soit l'autre dans certaines proportions mesurables ainsi qu'un $O(^3P)$. On va donc avoir des longueurs d'onde bien précises qui correspondent à deux transitions interdites parce que ces termes sont de mêmes configuration donc forcément de même parité. Dans la cascade de désexcitation de l'oxygène $^1S$ on va avoir une longueur d'onde de \SI{527}{nm} de couleur verte qui correspond à une transition E2 (quadripolaire électrique, transition interdite) de  $^1S$ vers $^1D$, pas de changement de spin, pas de changement de parité. Un temps de vie de 0.7 secondes est associé à cette transition.\\
 
 Si on regarde la transition du $^1D$ vers le $^3P$, on observe une transition beaucoup plus lente (108 secondes) car on a un changement de spin. Il s'agit donc d'une transition de type M1, dipolaire magnétique avec deux longueurs d'onde possibles car deux états de J possibles. On a pas accès à $J=0$ mais $J=1,2$ sont possibles car on avait $J=2$ dans l'état $^1D$. Dans une phase gazeuse à haute pression donc basse altitude, il est impossible que l'atome passent 108 secondes sans choc avec un autre atome. Par contre à haute altitude, la densité d'atomes est bien inférieure et il devient possible pour un atome de ne rencontrer aucun autre corps sur son temps de désexcitation (108 secondes) et de donc rester exciter jusque émission. Il y a donc une altitude minimale pour une aurore boréale de ce type, sous cette altitude elle change de régime.\\
 
@@ -1455,6 +1458,8 @@ Dans la réalité, il y a bien plus de types d'aurores boréales avec des corps 
 \begin{figure}[htp]
     \centering
     \includegraphics[scale=0.8]{Images2/AuroreBoréale.PNG}
+    \caption{Mécanisme des aurores boréales}
+    \label{fig:meca_aurores_boreales}
 \end{figure}
 \begin{figure}[htp]
     \centering
