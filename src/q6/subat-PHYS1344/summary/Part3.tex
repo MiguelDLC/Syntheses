@@ -54,48 +54,52 @@ Cette énergie sera donc de l'ordre du \si{MeV}, et d'autant plus petite que la 
 
 Pour résoudre l'Hamiltonien associé à une molécule, on va d'abord le séparer en une partie nucléaire et une partie électronique. Donc avec $R$ les coordonnées des noyaux et $r$ celles des électrons, on aura :
 \[
-H_\text{mol}(r,R)  \Psi(r,R) = E\Psi(r,R)
+    H_\text{mol}(r,R)  \Psi(r,R) = E\Psi(r,R)
 \]
 \[
-H_\text{mol}(r,R) \to [H_\text{el}(r,R) + T_\text{Nu}(R)]\Psi(r,R) = E\Psi(r,R)
+    H_\text{mol}(r,R) \to [H_\text{el}(r,R) + T_\text{Nu}(R)]\Psi(r,R) = E\Psi(r,R)
 \]
 On peut développer les fonctions propres de l'Hamiltonien global en termes des fonctions propres de $H_\text{el}$ et $T_\text{Nu}$, que l'on notera $\psi^\text{el}_m(r;R)$\footnote{(r;R) signifie que $R$ est fixé et $r$ varie.} et $\phi^\text{Nu}_m(R)$.
 \[
-\Psi(r,R) = \sum\limits_m \psi^\text{el}_m(r;R) \phi^\text{Nu}_m(R)
+    \Psi(r,R) = \sum\limits_m \psi^\text{el}_m(r;R) \phi^\text{Nu}_m(R)
 \]
 Avec, bien entendu, les relations :
 \[
-H_\text{el}\psi^\text{el}_m(r;R) = E^\text{el}_m\psi^\text{el}_m(r;R) \quad \textrm{et} \quad \braket{\psi^\text{el}_m(r;R)}{\psi^\text{el}_n(r;R)} = \delta_{mn}
+    H_\text{el}\psi^\text{el}_m(r;R) = E^\text{el}_m\psi^\text{el}_m(r;R) \quad \textrm{et} \quad \braket{\psi^\text{el}_m(r;R)}{\psi^\text{el}_n(r;R)} = \delta_{mn}
 \]
 Si on applique l'Hamiltonien, on aura donc :
 \[
-T_\text{Nu} \sum\limits_m \psi^\text{el}_m \phi^\text{Nu}_m + H_\text{el}\sum\limits_m \psi^\text{el}_m \phi^\text{Nu}_m  = E\psi^\text{el}_m\phi^\text{Nu}_m
+    T_\text{Nu} \sum\limits_m \psi^\text{el}_m \phi^\text{Nu}_m + H_\text{el}\sum\limits_m \psi^\text{el}_m \phi^\text{Nu}_m  = E\psi^\text{el}_m\phi^\text{Nu}_m
 \]
 En multipliant à gauche par $\bra{\psi^\text{el}_n}$, on obtient :
+
 \begin{equation}\label{eq:1}
-\sum\limits_m \mel{\psi^\text{el}_n}{T_\text{Nu}}{\psi^\text{el}_m \phi^\text{Nu}_m} + \delta_{mn}E^\text{el}_m\phi^\text{Nu}_m = E \delta_{mn}\phi^\text{Nu}_m
+    \sum\limits_m \mel{\psi^\text{el}_n}{T_\text{Nu}}{\psi^\text{el}_m \phi^\text{Nu}_m} + \delta_{mn}E^\text{el}_m\phi^\text{Nu}_m = E \delta_{mn}\phi^\text{Nu}_m
 \end{equation}
 Sachant que $T_\text{Nu} = \sum\limits_{\alpha}-\dfrac{\hbar^2}{2M_{\alpha}}\nabla_{\alpha}^2$, avec $\alpha$ les différents noyaux, la somme de l'équation \ref{eq:1} devient :
+
 \begin{equation}\label{eq:2}
-\begin{split}
-\sum\limits_m \mel{\psi^\text{el}_n}{T_\text{Nu}}{\psi^\text{el}_m \phi^\text{Nu}_m} = & - \dfrac{\hbar^2}{2}\sum\limits_{\alpha}\dfrac{1}{M_{\alpha}}\nabla_{\alpha}^2\phi^\text{Nu}_m\delta_{mn} \\
-& - \hbar^2\sum\limits_{\alpha}\dfrac{1}{M_{\alpha}}\nabla_{\alpha}\phi^\text{Nu}_m\nabla_{\alpha}\psi^\text{el}_m \\
-& - \dfrac{\hbar^2}{2}\sum\limits_{\alpha}\dfrac{1}{M_{\alpha}}\nabla_{\alpha}^2\psi^\text{el}_m\phi^\text{Nu}_m
-\end{split}
+    \begin{split}
+        \sum\limits_m \mel{\psi^\text{el}_n}{T_\text{Nu}}{\psi^\text{el}_m \phi^\text{Nu}_m} = & - \dfrac{\hbar^2}{2}\sum\limits_{\alpha}\dfrac{1}{M_{\alpha}}\nabla_{\alpha}^2\phi^\text{Nu}_m\delta_{mn} \\
+        & - \hbar^2\sum\limits_{\alpha}\dfrac{1}{M_{\alpha}}\nabla_{\alpha}\phi^\text{Nu}_m\nabla_{\alpha}\psi^\text{el}_m \\
+        & - \dfrac{\hbar^2}{2}\sum\limits_{\alpha}\dfrac{1}{M_{\alpha}}\nabla_{\alpha}^2\psi^\text{el}_m\phi^\text{Nu}_m
+    \end{split}
 \end{equation}
 Dans l'équation \ref{eq:2}, la première ligne correspond à l'Hamiltonien du noyau, la seconde aux interactions entre les noyaux et les électrons, que l'on notera $C_{nm}^{(1)}$, et la troisième aux interactions des électrons entre eux, notée $C_{nm}^{(2)}$. On remarquera que les termes $C_{ii}^{(1)}$ sont nuls, et que $C_{nm}^{(1)} = - C_{mn}^{(1)}$
 L'Hamiltonien moléculaire total en représentation adiabatique ressemblera donc à :
+
 \[
-H_\text{mol} =
-\begin{pmatrix}
-T_\text{Nu} + \epsilon_o^\text{el} + C_{00}^{(2)} & C_{01}^{(1)}+C_{01}^{(2)} & C_{02}^{(1)}+C_{02}^{(2)} & \cdots \\
-C_{10}^{(1)}+C_{10}^{(2)} & T_\text{Nu} + \epsilon_1^\text{el} + C_{11}^{(2)} & C_{12}^{(1)}+C_{12}^{(2)} & \cdots \\
-\vdots  & \vdots  & \vdots & \ddots  \\
-\end{pmatrix}
+    H_\text{mol} =
+    \begin{pmatrix}
+        T_\text{Nu} + \epsilon_o^\text{el} + C_{00}^{(2)} & C_{01}^{(1)}+C_{01}^{(2)} & C_{02}^{(1)}+C_{02}^{(2)} & \cdots \\
+        C_{10}^{(1)}+C_{10}^{(2)} & T_\text{Nu} + \epsilon_1^\text{el} + C_{11}^{(2)} & C_{12}^{(1)}+C_{12}^{(2)} & \cdots \\
+        \vdots  & \vdots  & \vdots & \ddots  \\
+    \end{pmatrix}
 \]
 Ou encore :
+
 \[
-\mel{\psi^\text{el}_n}{H_\text{mol}}{\psi^\text{el}_m} = \delta_{mn}T_\text{Nu} + \delta_{mn}E_m^\text{el} + C_{nm}^{(1)} + C_{nm}^{(2)}
+    \mel{\psi^\text{el}_n}{H_\text{mol}}{\psi^\text{el}_m} = \delta_{mn}T_\text{Nu} + \delta_{mn}E_m^\text{el} + C_{nm}^{(1)} + C_{nm}^{(2)}
 \]
 Partant de cette représentation, on pourra faire deux approximations différentes :
 \begin{itemize}
@@ -107,24 +111,23 @@ Cette dernière approximation va supprimer complètement la dépendance en la ma
 
 \subsection{Limites de l'approximation de Born-Oppenheimer}
 
-
 L'approximation de Born-Oppenheimer peut se résumer à l'équation suivante :
-\[
-[\hat{H}-E_m]\ket{\psi_m} = 0
-\]
+
+\[ [\hat{H}-E_m]\ket{\psi_m} = 0 \]
 Si on dérive cette expression par rapport aux coordonnées des noyaux, on obtient :
+
 \begin{equation}\label{eq:3}
-[\hat{H}'-E_m']\ket{\psi_m} + [\hat{H}-E_m]\ket{\psi_m'} = 0
+    [\hat{H}'-E_m']\ket{\psi_m} + [\hat{H}-E_m]\ket{\psi_m'} = 0
 \end{equation}
 Que l'on peut multiplier par $\bra{\psi_m}$ :
+
 \begin{align*}
-\mel{\psi_m}{H'}{\psi_m} - \mel{\psi_m}{E_m'}{\psi_m} + \mel{\psi_m}{H}{\psi_m'} + \mel{\psi_m}{E_m}{\psi_m'} & = 0 \\
-\mel{\psi_m}{H'}{\psi_m} - E_m'\braket{\psi_m}{\psi_m} + \braket{H\psi_m}{\psi_m'} - E_m \braket{\psi_m}{\psi_m'} & = 0 \\
-\mel{\psi_m}{H'}{\psi_m} - E_m' + E_m\braket{\psi_m}{\psi_m'} - E_m \braket{\psi_m}{\psi_m'} & = 0 \\
-\mel{\psi_m}{H'}{\psi_m} & = E_m'
+    \mel{\psi_m}{H'}{\psi_m} - \mel{\psi_m}{E_m'}{\psi_m} + \mel{\psi_m}{H}{\psi_m'} + \mel{\psi_m}{E_m}{\psi_m'} & = 0 \\
+    \mel{\psi_m}{H'}{\psi_m} - E_m'\braket{\psi_m}{\psi_m} + \braket{H\psi_m}{\psi_m'} - E_m \braket{\psi_m}{\psi_m'} & = 0 \\
+    \mel{\psi_m}{H'}{\psi_m} - E_m' + E_m\braket{\psi_m}{\psi_m'} - E_m \braket{\psi_m}{\psi_m'} & = 0 \\
+    \mel{\psi_m}{H'}{\psi_m} & = E_m'
 \end{align*}
 Le passage de $\mel{\psi_m}{H}{\psi_m'}$ à $\braket{H\psi_m}{\psi_m'}$ est correct, car $H$ est un opérateur auto-adjoint.
-
 
 Si on reprend l'équation \ref{eq:3} et qu'on la multiplie, cette fois, par $\bra{\psi_m}$, on obtient :
 \begin{align*}
@@ -135,12 +138,11 @@ Si on reprend l'équation \ref{eq:3} et qu'on la multiplie, cette fois, par $\br
 \end{align*}
 Le terme de droite de la dernière égalité étant proportionnel à $C_{nm}^{(1)}$, qui a été négligé dans les deux approximations, le terme de gauche doit être très petit dans nos approximations. Or il est inversement proportionnel à $E_n-E_m$, donc lorsque deux états auront des énergies très proches, l'approximation ne tiendra plus. Ce <<problème>> arrive ssi:
 
-
 \begin{equation}\label{eq:etats_proches}
-\begin{split}
-    & \mel{\psi_1}{H}{\psi_1} = \mel{\psi_2}{H}{\psi_2} \\
-    & \mel{\psi_1}{H}{\psi_2} = \mel{\psi_2}{H}{\psi_1} = 0\\
-\end{split}
+    \begin{split}
+        & \mel{\psi_1}{H}{\psi_1} = \mel{\psi_2}{H}{\psi_2} \\
+        & \mel{\psi_1}{H}{\psi_2} = \mel{\psi_2}{H}{\psi_1} = 0\\
+    \end{split}
 \end{equation}
 Les équations \ref{eq:etats_proches} donnent 2 contraintes supplémentaires, sauf dans le cas où $\psi_1$ et $\psi_2$ sont de symétrie différentes\footnote{Par symétrie différente, on veut dire que les observables de l'ECOC sont différents pour les deux états.}, car alors on a toujours : $\mel{\psi_1}{H}{\psi_2} = 0$, et seule la première équation est une contrainte. La dimension du domaine de croisement sera donc égale à $D-2$ pour des états de même symétrie, et à $D-1$ pour des états de symétries différentes, avec $D$ la dimension des hyper-surfaces d'énergie.
 
@@ -207,7 +209,7 @@ Avec $M$ la masse totale. En définissant $\mu$ comme la masse réduite des deux
 
 Maintenant qu'on a un Hamiltonien dans des coordonnées plus accessibles, on va pouvoir essayer d'en trouver des solutions approchées. Le terme en $\nabla_{r_j}\nabla_{r_i}$ correspond au déplacement du centre de masse dû au mouvement des électrons. Celui-ci étant considéré comme très faible, on pourra le négliger. Il nous reste donc :
 \[
-H = -\dfrac{\hbar^2}{2\mu}\nabla^2_R - \dfrac{\hbar^2}{2M}\nabla^2_{R_\text{CM}} -\dfrac{\hbar^2}{2m}\sum\limits_i \nabla^2_{r_{i}} + V(r_i, R)
+    H = -\dfrac{\hbar^2}{2\mu}\nabla^2_R - \dfrac{\hbar^2}{2M}\nabla^2_{R_\text{CM}} -\dfrac{\hbar^2}{2m}\sum\limits_i \nabla^2_{r_{i}} + V(r_i, R)
 \]
 
 
@@ -231,7 +233,7 @@ $\Psi'$, quant à lui, doit être solution de l'Hamiltonien interne :
 
 
 \[
-\left[-\dfrac{\hbar^2}{2\mu}\nabla^2_R - \dfrac{\hbar^2}{2m}\sum\limits_i \nabla^2_{r_{i}} + V(r_i, R)\right]\Psi' = (E_T-E_\text{CM})\Psi'
+    \left[-\dfrac{\hbar^2}{2\mu}\nabla^2_R - \dfrac{\hbar^2}{2m}\sum\limits_i \nabla^2_{r_{i}} + V(r_i, R)\right]\Psi' = (E_T-E_\text{CM})\Psi'
 \]
 Par la suite, on notera $E$ l'énergie interne ($E = E_T - E_\text{CM}$). On peut maintenant appliquer l'approximation de Born-Oppenheimer pour séparer les Hamiltoniens électronique et nucléaire. On aura donc une solution du type :
 
@@ -257,26 +259,24 @@ Avec $N^2$ le moment angulaire de rotation défini comme :
 
 
 \[
-N^2 \equiv -\hbar^2\left[\dfrac{1}{sin\theta}\fpart{}{\theta}\left(sin\theta\fpart{}{\theta}\right) + \dfrac{1}{sin^2\theta}\ffpart{}{\phi}\right]
+    N^2 \equiv -\hbar^2\left[\dfrac{1}{sin\theta}\fpart{}{\theta}\left(sin\theta\fpart{}{\theta}\right) + \dfrac{1}{sin^2\theta}\ffpart{}{\phi}\right]
 \]
 De valeur propre $N(N+1)$. On a donc :
 
 
 \[
-\left[\dfrac{-\hbar^2}{2\mu}\dfrac{1}{R^2}\fpart{}{R}\left(R^2\fpart{}{R}\right) + \dfrac{N(N+1)\hbar^2}{2\mu R^2} + E^\text{el}(R)\right]F(R) = EF(R)
+    \left[\dfrac{-\hbar^2}{2\mu}\dfrac{1}{R^2}\fpart{}{R}\left(R^2\fpart{}{R}\right) + \dfrac{N(N+1)\hbar^2}{2\mu R^2} + E^\text{el}(R)\right]F(R) = EF(R)
 \]
 En posant $G(R) = RF(R)$, on obtient :
 
 
 \[
-\dfrac{-\hbar^2}{2\mu}G''(R) + \left[\dfrac{N(N+1)\hbar^2}{2\mu R^2} + E^\text{el}(R)\right]G(R) = EG(R)
+    \dfrac{-\hbar^2}{2\mu}G''(R) + \left[\dfrac{N(N+1)\hbar^2}{2\mu R^2} + E^\text{el}(R)\right]G(R) = EG(R)
 \]
 On va maintenant s'intéresser à la composante vibrationnelle du mouvement, donc en considérant que $N = 0$. Pour cela, on va faire le changement de coordonnée suivant :
 
 
-\[
-Q = \sqrt{\mu}(R-R_e)
-\]
+\[ Q = \sqrt{\mu}(R-R_e) \]
 Dans le but d'avoir quelque chose qui ressemble à un oscillateur harmonique ($R_e$ est la distance d'équilibre définie plus tôt). L'Hamiltonien s'écrit alors :
 
 
@@ -285,7 +285,7 @@ En $R = R_e$, $Q = 0$, on peut donc faire le développement de Taylor de $E^\tex
 
 
 \[
-E^\text{el}(Q) \approx E^\text{el}(0) + \left. \fdif{E^\text{el}(Q)}{Q}\right|_{Q = 0}Q + \left. \ffdif{E^\text{el}(Q)}{Q}\right|_{Q = 0}Q^2 + \dots
+    E^\text{el}(Q) \approx E^\text{el}(0) + \left. \fdif{E^\text{el}(Q)}{Q}\right|_{Q = 0}Q + \left. \ffdif{E^\text{el}(Q)}{Q}\right|_{Q = 0}Q^2 + \dots
 \]
 En $R = R_e$, on a un minimum pour l'énergie, donc $\fdif{E^\text{el}}{Q} = 0$, et si on considère qu'on se trouve dans l'état fondamental, $E^\text{el}(0) = 0$ également. Si on définit maintenant $\lambda = \omega^2 \equiv \left. \ffdif{E^\text{el}(Q)}{Q}\right|_{Q = 0} $, on a donc un potentiel harmonique et l'Hamiltonien devient :
 
@@ -302,7 +302,7 @@ Et les fonctions propres sont :
 
 
 \[
-\psi_v(Q) = \left[(\dfrac{\gamma}{\pi})^{\dfrac{1}{2}}\dfrac{1}{2^v(v!)} \right]^{\dfrac{1}{2}}e^{\dfrac{1}{2}\gamma Q^2}H_v(\gamma^{\dfrac{1}{2}}Q)
+    \psi_v(Q) = \left[(\dfrac{\gamma}{\pi})^{\dfrac{1}{2}}\dfrac{1}{2^v(v!)} \right]^{\dfrac{1}{2}}e^{\dfrac{1}{2}\gamma Q^2}H_v(\gamma^{\dfrac{1}{2}}Q)
 \]
 Avec $\gamma \equiv \dfrac{2\pi \nu}{\hbar}$, et $H_v(x)$ les polynômes d'Hermite, dont les 4 premiers termes sont :
 
@@ -373,7 +373,7 @@ On peut voir aussi que, dans le cadre de ce modèle
     \includegraphics[width=0.7\textwidth]{Images3/niv_energie_morse.eps}
     \caption{Fonctions d’onde vibrationnelle pour $v= 0, 1, 2$ associées au potentiel
     électronique de la molécule HF. Ces fonctions d’ondes ont été obtenues par une
-    approche variationnelle dans une base de sinus en considérant $N$ = J = 0.}
+    approche variationnelle dans une base de sinus en considérant $N = J = 0$.}
     \label{fig:Niv}
 \end{figure}
 
@@ -383,7 +383,7 @@ On peut voir aussi que, dans le cadre de ce modèle
 
 Pour tester les modèles et développements, on va étudier le système le plus simple, à savoir l'ion H$_2^+$. Celui-ci ne contient qu'un électron et 2 protons, il n'y a donc pas d'interaction électron-électron. Dans le cadre de l'approximation de Born-Oppenheimer, on a l'Hamiltonien suivant :
 \[
-H_\text{el} = -\dfrac{\hbar^2}{2m}\nabla^2_i-\dfrac{Z_Ae^2}{4\pi \epsilon_0||r_i - R_A||}-\dfrac{Z_Be^2}{4\pi \epsilon_0||r_i - R_B||} +\dfrac{Z_AZ_B}{4\pi\epsilon_0R}
+    H_\text{el} = -\dfrac{\hbar^2}{2m}\nabla^2_i-\dfrac{Z_Ae^2}{4\pi \epsilon_0||r_i - R_A||}-\dfrac{Z_Be^2}{4\pi \epsilon_0||r_i - R_B||} +\dfrac{Z_AZ_B}{4\pi\epsilon_0R}
 \]
 Que l'on peut réécrire en coordonnées confocales $(\mu, \nu, \phi)$, avec :
 \begin{align*}
@@ -391,16 +391,14 @@ Que l'on peut réécrire en coordonnées confocales $(\mu, \nu, \phi)$, avec :
     \nu &= \dfrac{r_a-r_b}{R}
 \end{align*}
 \[
-H_\text{el} = -\dfrac{\hbar^2}{2m_eR^2}\dfrac{4}{\mu^2-\nu^2}\left[\fpart{}{\mu}(\mu^2-1)\fpart{}{\mu}+\fpart{}{\nu}(1-\nu^2)\fpart{}{\nu}+\left(\dfrac{1}{\mu^2-1}+\dfrac{1}{1-\nu^2}\right)\ffpart{}{\phi}\right] - \dfrac{2e^2}{R}\left(\dfrac{1}{\nu + \mu}+\dfrac{1}{\mu-\nu}\right) + \dfrac{e^2}{R}
+    H_\text{el} = -\dfrac{\hbar^2}{2m_eR^2}\dfrac{4}{\mu^2-\nu^2}\left[\fpart{}{\mu}(\mu^2-1)\fpart{}{\mu}+\fpart{}{\nu}(1-\nu^2)\fpart{}{\nu}+\left(\dfrac{1}{\mu^2-1}+\dfrac{1}{1-\nu^2}\right)\ffpart{}{\phi}\right] - \dfrac{2e^2}{R}\left(\dfrac{1}{\nu + \mu}+\dfrac{1}{\mu-\nu}\right) + \dfrac{e^2}{R}
 \]
 Les solutions de cet Hamiltonien seront de la forme :
-\[
-\psi(\mu,\nu,\phi) = F(\mu,\nu)e^{im\phi}
-\]
+
+\[ \psi(\mu,\nu,\phi) = F(\mu,\nu)e^{im\phi} \]
 Avec
-\[
-F(\mu,\nu) = M(\mu)N(\nu)
-\]
+
+\[ F(\mu,\nu) = M(\mu)N(\nu) \]
 Nous avons donc bien $\ffpart{\psi}{\phi} = -m^2\psi$, et $M$ et $N$ satisfont les équations :
 \begin{align*}
     \fdif{}{\mu}(\mu^2-1)\fdif{M}{\mu} + \left(E\mu^2\dfrac{m_eR^2}{2\hbar^2}+\dfrac{2}{a_0}\mu R+K-\dfrac{m^2}{\mu^2-1}\right)M &= 0\\
@@ -408,13 +406,10 @@ Nous avons donc bien $\ffpart{\psi}{\phi} = -m^2\psi$, et $M$ et $N$ satisfont l
 \end{align*}
 L'équation satisfaite par $\psi(\mu,\nu,\phi)$ pouvant être séparée en une partie dépendante de $\mu$ à gauche et une partie dépendante de $\nu$ à droite de l'égalité, chaque partie est une constante par rapport à l'autre variable, que l'on appelle $K$, et qui intervient dans les équations pour $M$ et $N$ ci-dessus.
 
-
 Tout ceci peut être résolu exactement numériquement, et on arrive à la conclusion que les valeurs propres de l'Hamiltonien sont dégénérées en $m$, et qu'il commute avec l'opérateur $L_z$, car on a une symétrie cylindrique autour de l'axe entre les noyaux. On va maintenant pouvoir utiliser ces résultats pour tester des modèles.
 
 
 \subsection{Modèle LCAO, cas général}
-
-
 Ce modèle consiste à considérer une orbitale moléculaire comme une combinaison linéaire d’orbitales atomiques (Linear Combination of Atomic Orbital). La fonction d'onde moléculaire s'écrit donc :
 
 \[ \Psi = \sum\limits_i c_i\ket{\phi_i} \]
@@ -524,7 +519,7 @@ Ces valeurs et vecteurs propres sont représentés sur les figures \ref{fig:Ham}
 Ce modèle donne, pour H$_2^+$, une valeur $D_e = \SI{1.76}{eV}$ et une distance d'équilibre $R_e = \SI{1.32}{\angstrom}$. La solution exacte de l'Hamiltonien donne les valeurs : $D_e = \SI{2.78}{eV}$ et $R_e=\SI{1.06}{\angstrom}$. Les différences sont donc importantes, mais ce modèle a le mérite d'être très simple et de permettre d'avoir une idée de ce qu'il se passe physiquement. On peut l'améliorer en utilisant le principe variationnel pour insérer un paramètre dans la fonction d'onde électronique :
 
 \[
-\Psi_g(r;R) = \dfrac{1}{\sqrt{2+2S}}\dfrac{1}{\sqrt{\pi}}\left(\dfrac{\lambda}{a_0}\right)^{3/2}\left[e^{-\lambda\dfrac{r_A}{a_0}} + e^{-\lambda\dfrac{r_B}{a_0}}\right]
+    \Psi_g(r;R) = \dfrac{1}{\sqrt{2+2S}}\dfrac{1}{\sqrt{\pi}}\left(\dfrac{\lambda}{a_0}\right)^{3/2}\left[e^{-\lambda\dfrac{r_A}{a_0}} + e^{-\lambda\dfrac{r_B}{a_0}}\right]
 \]
 En minimisant l'énergie électronique par rapport à $\lambda$, on trouve, pour $\lambda = 1.24$ les valeurs $D_e = \SI{2.35}{eV}$ et $R_e = \SI{1.06}{\angstrom}$. Ces valeurs sont déjà beaucoup plus proches de la réalité. Cette amélioration tient mieux compte de l'attraction de l'électron par les deux noyaux simultanément, c'est pourquoi on obtient de meilleurs résultats. 
 
@@ -547,25 +542,26 @@ On pourrait faire la même chose avec les valeurs propres -1 ou $m_l$, qui est n
 
 
 \subsection{de \textnormal{H}$_2^+$ à \textnormal{H}$_2$}
-
-
 En passant de 1 à 2 électrons, l'Hamiltonien dans les coordonnées de la figure \ref{fig:Coor} devient :
+
 \[
-H = -\dfrac{\hbar^2}{2m}(\nabla^2_1+\nabla^2_2) + \dfrac{e^2}{4\pi\epsilon_0}\left(-\dfrac{1}{r_{A1}}-\dfrac{1}{r_{A2}}-\dfrac{1}{r_{B1}}-\dfrac{1}{r_{B2}}+\dfrac{1}{r_{12}}+\dfrac{1}{R}\right)
+    H = -\dfrac{\hbar^2}{2m}(\nabla^2_1+\nabla^2_2) + \dfrac{e^2}{4\pi\epsilon_0}\left(-\dfrac{1}{r_{A1}}-\dfrac{1}{r_{A2}}-\dfrac{1}{r_{B1}}-\dfrac{1}{r_{B2}}+\dfrac{1}{r_{12}}+\dfrac{1}{R}\right)
 \]
 Que l'on peut décomposer en\footnote{Attention au signe de $\dfrac{1}{R}$ qui change, car on le considère dans la définition des deux Hamiltoniens monoélectroniques.} :
+
 \[
-H = H_1 + H_2 +\dfrac{e^2}{4\pi\epsilon_0}\left(\dfrac{1}{r_{12}}-\dfrac{1}{R}\right) \quad \textrm{où} \quad H_i = -\dfrac{\hbar^2}{2m}\nabla^2_i - \dfrac{e^2}{4\pi\epsilon_0}\left(\dfrac{1}{r_{Ai}}+\dfrac{1}{r_{Bi}}+\dfrac{1}{R}\right)
+    H = H_1 + H_2 +\dfrac{e^2}{4\pi\epsilon_0}\left(\dfrac{1}{r_{12}}-\dfrac{1}{R}\right) \quad \textrm{où} \quad H_i = -\dfrac{\hbar^2}{2m}\nabla^2_i - \dfrac{e^2}{4\pi\epsilon_0}\left(\dfrac{1}{r_{Ai}}+\dfrac{1}{r_{Bi}}+\dfrac{1}{R}\right)
 \]
 On peut donc calculer la valeur de l'énergie pour cet Hamiltonien :
+
 \[
-\langle E \rangle = \mel{\phi}{H}{\phi} = \mel{\phi}{H_1}{\phi} + \mel{\phi}{H_2}{\phi} + \dfrac{e^2}{4\pi\epsilon_0}\mel{\phi}{\dfrac{1}{r_{12}}-\dfrac{1}{R}}{\phi}
+    \langle E \rangle = \mel{\phi}{H}{\phi} = \mel{\phi}{H_1}{\phi} + \mel{\phi}{H_2}{\phi} + \dfrac{e^2}{4\pi\epsilon_0}\mel{\phi}{\dfrac{1}{r_{12}}-\dfrac{1}{R}}{\phi}
 \]
 \begin{figure}[htpb]
-\centering
-\includegraphics[scale=0.4]{Images3/Coordonnées2.png}
-\caption{Système de coordonnées utilisé}
-\label{fig:Coor}
+    \centering
+    \includegraphics[scale=0.4]{Images3/Coordonnées2.png}
+    \caption{Système de coordonnées utilisé}
+    \label{fig:Coor}
 \end{figure}
 Comme les électrons sont des fermions, ils doivent satisfaire le principe de Pauli, donc la fonction d'onde électronique doit être antisymétrique par rapport à la permutation des deux électrons. Donc $P_{12}\Psi_\text{elec} = -\Psi_\text{elec}$, avec $P_{12}$ l'opérateur de permutation des deux électrons.
 
@@ -593,8 +589,8 @@ Et on notera $\sigma_g(1)\alpha(1) = \sigma_g(1)$ et $\sigma_g(1)\beta(1) = \ove
 \end{align*}
 Cette fonction d'onde est bien antisymétrique par rapport à la permutation des électrons.
 
-
 On peut maintenant introduire ce $\phi$ dans la valeur de l'énergie trouvée précédemment, et on obtient :
+
 \[
     E(R) = E(R)_{H^+_2} + \dfrac{e^2}{4\pi\epsilon_0a_0}\left[\dfrac{5}{16}-\dfrac{a_0}{2R}-\dfrac{a_0}{2R}\left(1+\dfrac{11R}{8a_0}+\dfrac{3R^2}{4a_0^2}+\dfrac{R^3}{6a_0^3}\right)^{\dfrac{2R}{a_0}}\right]
 \]
@@ -624,14 +620,11 @@ Ce qui se rapproche déjà beaucoup plus de la bonne solution, et en ajoutant d'
 \[ \phi(1,2) = \sum\limits_{i=1}^kc_i\phi_i(1)\phi_i(2) \]
 Kolos et Roothan ont réussi à obtenir :
 
-\[
-D_e = \SI{-4.746}{eV} \quad \quad R_e = \SI{0.741}{\angstrom}
-\]
+\[ D_e = \SI{-4.746}{eV} \quad \quad R_e = \SI{0.741}{\angstrom} \]
 Pour k = 50.
 
 
 \subsection{ECOC de l'Hamiltonien électronique et symétrie de $\Psi_\text{electronique}$}
-
 
 Rappel de MQ :
 \begin{itemize}
@@ -682,7 +675,7 @@ L'énergie de chaque état peut être calculée par des méthodes de chimie quan
 
 En général, la première étape est l'utilisation de la méthode de Hartree-Fock moléculaire. On va donc approximer la fonction d'onde comme une combinaison de fonctions de base, avant de l'injecter dans l'Hamiltonien. Ce qui donne :
 \begin{align*}
-    H &= -\dfrac{\hbar^2}{2m}\nabla^2_i + V_{eff}(r_i)\\
+    H &= -\dfrac{\hbar^2}{2m}\nabla^2_i + V_\text{eff}(r_i)\\
     H\phi_i &= E\phi_i\\
     \intertext{Avec} 
     \phi &= \prod_{i=1}^N\phi_i
@@ -750,32 +743,29 @@ pour considérer les multiplicités de spin possibles, qui auront les valeurs su
 Dans ce cadre, on considère que le spin est conservé, et que les valeurs de $M_l$ sont $L, L-1, \dots, 0$. Par exemple, si l'on considère la fission d'un atome de Magnésium en oxyde de Béryllium ou en dicarbone, on aura, en partant d'un état atomique $^3D_g$, des états moléculaires $^3\Delta$, $^3\Pi$ et $^3\Sigma$ \footnote{Le nombre précédant la lettre grecque dans la notation de l'état correspond à 2S+1, avec S le spin total.}. Dans le cas du dicarbone, ces états seront pairs, car les molécules homonucléaires gardent la parité de l'atome fissionné.
 
 
-\subsection{Détermination des états moléculaires de l'O$_2$}
-
+\subsection{Détermination des états moléculaires de l'\textnormal{O}$_2$}
 
 \begin{figure}[htpb]
-\centering
-\includegraphics[scale=0.6]{Images3/orbitales moléculaires.png}
-\caption{Représentation des orbitales moléculaires pour des molécules diatomiques homonucléaires. En (b) pour les molécules plus légères que $N_2$ ($N_2$ comprise) et en (c) pour les molécules plus lourdes (de O$_2$ à $Ne_2$).}
-\label{fig:orbitales}
+    \centering
+    \includegraphics[scale=0.6]{Images3/orbitales moléculaires.png}
+    \caption{Représentation des orbitales moléculaires pour des molécules diatomiques homonucléaires. En (b) pour les molécules plus légères que N$_2$ (N$_2$ comprise) et en (c) pour les molécules plus lourdes (de O$_2$ à $Ne_2$).}
+    \label{fig:orbitales}
 \end{figure}
+
 On prendra la molécule de dioxygène (O$_2$) comme exemple pour cette partie.
-
-
 On sait que la le dioxygène possède 16 électrons, qu'il faut donc répartir sur les orbitales disponibles. Pour cela, il suffit d'utiliser la figure \ref{fig:orbitales} et de remplir les orbitales en partant du bas. Les électrons étant des fermions, on ne peut en mettre que 2 par orbitales (un de spin up et un de spin down). On aura donc la configuration suivante :
+
 \[
-(1\sigma_g)^2(1\sigma^*_u)^2(2\sigma_g)^2(2\sigma^*_u)^2(3\sigma_g)^2(1\pi_u)^4(1\pi^*_g)^2
+    (1\sigma_g)^2(1\sigma^*_u)^2(2\sigma_g)^2(2\sigma^*_u)^2(3\sigma_g)^2(1\pi_u)^4(1\pi^*_g)^2
 \]
-Comme dans le cas atomique, toutes les couches jusque $(1\pi_u)^4$ sont fermées, et seule la dernière est ouverte. Sur cette dernière couche, on a 4 états possibles pour les électrons, et donc 6 combinaisons pour les deux électrons de la dernière couche, qui sont représentés dans le tableau de la figure \ref{fig:Combinaisons}. Ces électrons sont forcément de type $\pi_g$, avec une valeur de $m_l$ de $\pm1$ (représenté par l'indice +1 ou -1 en dessous du g dans le tableau) et un spin positif ou négatif (une barre surmontant l'état correspond à un spin négatif, et son absence à un spin positif).
-
-
-\begin{figure}
-\centering
-\includegraphics[scale=0.7]{Images3/Combinaisons électroniques.png}
-\caption{Combinaisons possibles pour les deux électrons de la dernière couche de O$_2$ et valeurs de $M_l$ et $M_s$ correspondantes.}
-\label{fig:Combinaisons}
+Comme dans le cas atomique, toutes les couches jusque $(1\pi_u)^4$ sont fermées, et seule la dernière est ouverte. Sur cette dernière couche, on a 4 états possibles pour les électrons, et donc 6 combinaisons pour les deux électrons de la dernière couche, qui sont représentés dans le tableau de la figure \ref{fig:Combinaisons}. Ces électrons sont forcément de type $\pi_g$, avec une valeur de $m_l$ de $\pm1$ (représenté par l'indice $+1$ ou $-1$ en dessous du $g$ dans le tableau) et un spin positif ou négatif (une barre surmontant l'état correspond à un spin négatif, et son absence à un spin positif).
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.7]{Images3/Combinaisons électroniques.png}
+    \caption{Combinaisons possibles pour les deux électrons de la dernière couche de O$_2$ et valeurs de $M_l$ et $M_s$ correspondantes.}
+    \label{fig:Combinaisons}
 \end{figure}
-On pourra donc avoir un état $^1\Delta_g$ dégénéré en $M_l$ (en bleu), et des états $^3\Sigma_g$ et $^1\Sigma_g$, en fonction des valeurs de $M_s$. On peut ensuite déterminer si les états $\Sigma$ sont + ou -. Pour cela, il faut déterminer la valeur propre de l'opérateur $\sigma_v$. Commençons par l'état $M_l = 0$ et $M_s=1$ :
+On pourra donc avoir un état $^1\Delta_g$ dégénéré en $M_l$ (en bleu), et des états $^3\Sigma_g$ et $^1\Sigma_g$, en fonction des valeurs de $M_s$. On peut ensuite déterminer si les états $\Sigma$ sont $+$ ou $-$. Pour cela, il faut déterminer la valeur propre de l'opérateur $\sigma_v$. Commençons par l'état $M_l = 0$ et $M_s=1$ :
 \begin{align*}
     \phi(M_l=0, M_s=1) &= \abs{\pi_{g_{+1}}\;\pi_{g_{-1}}}\\
     &= \dfrac{1}{\sqrt{2}}
@@ -786,122 +776,120 @@ On pourra donc avoir un état $^1\Delta_g$ dégénéré en $M_l$ (en bleu), et d
     &= \dfrac{1}{\sqrt{2}}(\pi_{g_{+1}}(1)\pi_{g_{-1}}(2)-\pi_{g_{-1}}(1)\pi_{g_{+1}}(2))\\
 \end{align*}
 On peut maintenant appliquer $\sigma_v$ sur cette fonction pour voir la valeur propre associée \footnote{Pour rappel, $\sigma_v$ à pour effet de changer le signe de $m_l$.}:
+
 \begin{align*}
     \sigma_v\phi &= \dfrac{1}{\sqrt{2}}(\pi_{g_{-1}}(1)\pi_{g_{+1}}(2)-\pi_{g_{+1}}(1)\pi_{g_{-1}}(2))\\
     &= -\phi
 \end{align*}
 La valeur propre de $\sigma_v$ est donc -1, l'état triplet sigma se note alors : $^3\Sigma_g^-$.
-
-
 Pour passer à l'état $M_l = 0$ et $M_s = 0$, on va utiliser un opérateur de descente en spin pour les deux électrons sur l'état $M_l = 0$, $M_s = 1$ traité précédemment. Ce qui nous donne :
+
 \[
-\abs{\overline{\pi}_{g_{+1}}\;\pi_{g_{-1}}} + \abs{\pi_{g_{+1}}\;\overline{\pi}_{g_{-1}}}
+    \abs{\overline{\pi}_{g_{+1}}\;\pi_{g_{-1}}} + \abs{\pi_{g_{+1}}\;\overline{\pi}_{g_{-1}}}
 \]
 Comme la base doit être orthogonale, on peut définir la fonction d'onde électronique de l'état singulet sigma :
+
 \begin{align*}
     \phi =& \abs{\overline{\pi}_{g_{+1}}\;\pi_{g_{-1}}} - \abs{\pi_{g_{+1}}\;\overline{\pi}_{g_{-1}}}\\
-    =& \dfrac{1}{\sqrt{2}}(\overline{\pi}{g_{+1}}(1)\pi_{g_{-1}}(2) - \pi_{g_{-1}}(1)\overline{\pi}_{g_{+1}}(2) - \pi_{g_{+1}}(1)\overline{\pi}_{g_{-1}}(2) + \overline{\pi}_{g_{-1}}(1)\pi_{g_{+1}}(2))
+    =& \dfrac{1}{\sqrt{2}}\left[\overline{\pi}_{g_{+1}}(1)\pi_{g_{-1}}(2) - \pi_{g_{-1}}(1)\overline{\pi}_{g_{+1}}(2) - \pi_{g_{+1}}(1)\overline{\pi}_{g_{-1}}(2) + \overline{\pi}_{g_{-1}}(1)\pi_{g_{+1}}(2)\right]
 \end{align*}
 On peut maintenant y appliquer $\sigma_v$ :
+
 \begin{align*}
-    \sigma_v\phi &= \dfrac{1}{\sqrt{2}}(\overline{\pi}{g_{-1}}(1)\pi_{g_{+1}}(2) - \pi_{g_{+1}}(1)\overline{\pi}_{g_{-1}}(2) - \pi_{g_{-1}}(1)\overline{\pi}_{g_{+1}}(2) + \overline{\pi}_{g_{+1}}(1)\pi_{g_{-1}}(2))\\
+    \sigma_v\phi &= \dfrac{1}{\sqrt{2}}\left[\overline{\pi}_{g_{-1}}(1)\pi_{g_{+1}}(2) - \pi_{g_{+1}}(1)\overline{\pi}_{g_{-1}}(2) - \pi_{g_{-1}}(1)\overline{\pi}_{g_{+1}}(2) + \overline{\pi}_{g_{+1}}(1)\pi_{g_{-1}}(2)\right]\\
     &= \phi
 \end{align*}
-La valeur propre de $\sigma_v$ est donc +1, l'état singulet sigma se note alors : $^1\Sigma_g^+$.
-
-
+La valeur propre de $\sigma_v$ est donc $+1$, l'état singulet sigma se note alors : $^1\Sigma_g^+$.
 On peut maintenant étudier séparément la partie spatiale et la partie de spin pour les deux fonctions d'ondes, et on remarquera que la partie spatiale de $^3\Sigma_g^-$ est antisymétrique par rapport à la permutation des électrons, alors que la partie de spin est symétrique, et pour l'état $^1\Sigma^+_g$ c'est l'inverse.
-
-
 Grâce à la règle de Hund, on peut déterminer que l'état fondamental sera l'état $^3\Sigma_g^-$, le premier état excité sera $^1\Delta_g$ et le second sera $^1\Sigma^+_g$.
-
-
-Le cas de $N_2$ a également été fait en cours, mais le principe est le même.
+Le cas de N$_2$ a également été fait en cours, mais le principe est le même.
 \begin{figure}
-\centering
-\includegraphics[scale=0.6]{Images3/Table des termes moléculaires.PNG}
-\caption{Table des termes moléculaires possibles en fonction des combinaisons électroniques.}
-\label{fig:termes_mol}
+    \centering
+    \includegraphics[width=\textwidth]{Images3/Table des termes moléculaires.PNG}
+    \caption{Table des termes moléculaires possibles en fonction des combinaisons électroniques.}
+    \label{fig:termes_mol}
 \end{figure}
+
 
 
 \section{Spectroscopie de molécules diatomiques}
 
+Les objectifs de cette section sont de déterminer les règles de sélection, i.e. entre quelles paires de niveaux une transition peut avoir lieu, ainsi que les facteurs dont dépendent la probabilité de transition. Pour rappel, en physique atomique, une transition radiative (avec absorption ou émission de photon) ne peut advenir que si :
 
-Les objectifs de cette section sont de déterminer les règles de sélection, i.e. entre quelles paires de niveaux une transition peut avoir lieu, ainsi que les facteurs dont dépendent la probabilité de transition.
-
-
-Pour rappel, en physique atomique, une transition radiative (avec absorption ou émission de photon) ne peut advenir que si :
-\[
-\mel{\psi'}{\mu}{\psi''} \neq 0
-\]
+\[ \mel{\psi'}{\mu}{\psi''} \neq 0 \]
 Et l'intensité de la transition sera proportionnelle au carré de ce terme.
-
-
 Dans cette équation, on note $\psi'$ l'état excité, $\psi''$ l'état de départ et $\mu$ le moment dipolaire électrique défini comme suit :
+
 \[
-\mu = -e\sum\limits_i\Vec{r}_i + Z_1e\Vec{R_1} + Z_2e\Vec{R_2}
+    \mu = -e\sum\limits_i\Vec{r}_i + Z_1e\Vec{R_1} + Z_2e\Vec{R_2}
 \]
 Le dipôle étant donc séparable en une partie électronique (le premier terme, que l'on peut noter $\mu_\text{el}$) et une partie nucléaire (les deux derniers termes, notés $\mu_{nucl}$). Il est important de noter que $\mu$ est impair comparativement à l'opération $E^*$ (inversion des coordonnées x, y et z).
-
-
 Pour évaluer l'interaction entre la lumière et la molécule, il faut projeter le moment dipolaire dans le référentiel du champ électromagnétique oscillant associé à la lumière. En considérant une fonction d'onde dans le cadre de l'approximation de Born-Oppenheimer ($\Psi(r,R) = \phi^\text{Nu}_m(R)\psi^\text{el}_m(r;R)$), la condition de transition peut s'écrire :
+
 \[
-\mu_{mk} = \int (\psi^\text{el}_m\phi^\text{Nu}_m|\mu^\text{el} + \mu^\text{Nu}|\psi^\text{el}_k\phi^\text{Nu}_k)d\tau_\text{el}d\tau_\text{Nu}
+    \mu_{mk} = \int (\psi^\text{el}_m\phi^\text{Nu}_m|\mu^\text{el} + \mu^\text{Nu}|\psi^\text{el}_k\phi^\text{Nu}_k)d\tau_\text{el}d\tau_\text{Nu}
 \]
 Déjà à partir de cette équation, on peut déduire deux règles de sélection. En effet, comme les fonctions de base de spin sont orthonormales, on peut s'attendre à ne pas observer de variation de spin électronique ($\Delta S = 0$) ou nucléaire ($\Delta $I$ =0$). On peut maintenant réécrire cette intégrale en séparant la partie nucléaire et électronique :
+
 \[
-\mu_{mk} = \int \phi^\text{Nu}_m\left[\int \psi^\text{el}_m\mu^\text{el}\psi^\text{el}_kd\tau_\text{el} \right]\phi^\text{Nu}_kd\tau_\text{Nu} + \int \phi^\text{Nu}_m\left[\int \psi^\text{el}_m\psi^\text{el}_kd\tau_\text{el} \right]\phi^\text{Nu}_kd\tau_\text{Nu}
+    \mu_{mk} = \int \phi^\text{Nu}_m\left[\int \psi^\text{el}_m\mu^\text{el}\psi^\text{el}_kd\tau_\text{el} \right]\phi^\text{Nu}_kd\tau_\text{Nu} + \int \phi^\text{Nu}_m\left[\int \psi^\text{el}_m\psi^\text{el}_kd\tau_\text{el} \right]\phi^\text{Nu}_kd\tau_\text{Nu}
 \]
 Pour que ces intégrales soient non-nulles, il faut que l'intégrant soit pair, et même totalement symétrique. Comme $\mu$ et ses deux composantes $\mu_\text{el}$ et $\mu_\text{Nu}$ sont impairs par rapport à $E^*$, on réalise que la première intégrale implique un changement de parité lors de la transition électronique, et la seconde implique une transition au sein d'un état électronique (spectre de rotation-vibration).
 
 
+
 \subsection{Spectres de rotation-vibration}
 
-
 Reprenons l'intégrale de rotation-vibration :
+
 \[
-\int \phi^\text{Nu}_m\left[\int \psi^\text{el}_m\psi^\text{el}_kd\tau_\text{el} \right]\phi^\text{Nu}_kd\tau_\text{Nu}
+    \int \phi^\text{Nu}_m\left[\int \psi^\text{el}_m\psi^\text{el}_kd\tau_\text{el} \right]\phi^\text{Nu}_kd\tau_\text{Nu}
 \]
 Ce terme est bien nul si $m\neq k$ (car les $\psi^\text{el}_m$ forment une base orthonormée), mais il est également nul dans le cas d'une molécule homonucléaire. En effet, $\mu_\text{Nu} = Z_1e\Vec{R_1} + Z_2e\Vec{R_2}$, or $Z_1=Z_2$ et $\Vec{R_1}=-\Vec{R_2}$ si les deux atomes sont identiques, $\mu_\text{Nu}$ est donc nul dans ce cas.
 
 
 Dans la section \ref{Solutions de l'hamiltonien}, on avait considéré que les problèmes vibrationnels et rotationnels étaient découplés. On peut alors obtenir :
+
 \[
-\psi(r,Q,\theta,\phi) = \psi^\text{el}_m(r;R)\dfrac{\psi(Q)}{R}Y_J^M(\theta,\phi)
+    \psi(r,Q,\theta,\phi) = \psi^\text{el}_m(r;R)\dfrac{\psi(Q)}{R}Y_J^M(\theta,\phi)
 \]
 Avec $Q = \sqrt{\mu}(R-R_e)$ (attention, ici $\mu$ est la masse réduite et pas le moment dipolaire), et \footnote{Le développement se trouve à la section \ref{Solutions de l'hamiltonien}}
+
 \[
-\psi_v(Q) = \left[(\dfrac{\gamma}{\pi})^{\dfrac{1}{2}}\dfrac{1}{2^v(v!)} \right]^{\dfrac{1}{2}}e^{\dfrac{1}{2}\gamma Q^2}H_v(\gamma^{\dfrac{1}{2}}Q)
+    \psi_v(Q) = \left[(\dfrac{\gamma}{\pi})^{\dfrac{1}{2}}\dfrac{1}{2^v(v!)} \right]^{\dfrac{1}{2}}e^{\dfrac{1}{2}\gamma Q^2}H_v(\gamma^{\dfrac{1}{2}}Q)
 \]
 On peut maintenant projeter le moment dipolaire moléculaire du référentiel fixé sur la molécule au référentiel dans lequel se propage la lumière :
+
 \[
-\mu(R) = ||\mu(R)||\sin{(\theta)}\cos{(\phi)}\hat{x} + ||\mu(R)||\sin{(\theta)}\sin{(\phi)}\hat{y} +||\mu(R)||\cos{(\theta)}\hat{z}
+    \mu(R) = ||\mu(R)||\sin{(\theta)}\cos{(\phi)}\hat{x} + ||\mu(R)||\sin{(\theta)}\sin{(\phi)}\hat{y} +||\mu(R)||\cos{(\theta)}\hat{z}
 \]
 Pour rappel, l'élément de volume en coordonnées sphériques est :
-\[
-dV = R^2\sin{\theta}dRd\theta d\phi
-\]
+
+\[ \dif V = R^2\sin{\theta}\dif R\dif\theta \dif\phi \]
 On peut donc calculer la contribution du terme en $\mu^\text{Nu}_{mk}$ :
+
 \begin{align*}
-    \mu_{mk} &= \int^{\infty}_0\psi_v''(q)\psi_v'(q)\mu^\text{Nu}(R)dR\\
-    &= \int^{2\pi}_0\int^{\pi}_0 Y_J''^M{}''Y_J'^M{}'(||\mu(R)||\sin{(\theta)}\cos{(\phi)}\hat{x} + ||\mu(R)||\sin{(\theta)}\sin{(\phi)}\hat{y} +||\mu(R)||\cos{(\theta)}\hat{z})d\theta d\phi
+    \mu_{mk} =& \int^{\infty}_0\psi_v''(q)\psi_v'(q)\mu^\text{Nu}(R)\dif R \\
+    & \cdot \int^{2\pi}_0\int^{\pi}_0 Y_J''^{M''}Y_J'^{M'}   \big[||\mu(R)||\sin{(\theta)}\cos{(\phi)}\hat{x} + ||\mu(R)||\sin{(\theta)}\sin{(\phi)}\hat{y} +||\mu(R)||\cos{(\theta)}\hat{z}   \big]\dif\theta \dif\phi \\ 
+    \equiv & \int^{\infty}_0\psi_v''(q)\psi_v'(q)\mu^\text{Nu}(R)\dif R \cdot I_\text{ang}
 \end{align*}
-Cette dernière double intégrale sera notée Ang dans la suite, elle permet d'obtenir les règles de sélection sur le moment angulaire $J$ et sa projection $M$. Celles-ci sont les suivantes :
+L'intégrale sur les coordonnées angulaires est notée $I_\text{ang}$ dans la suite. Elle permet d'obtenir les règles de sélection sur le moment angulaire $J$ et sa projection $M$. Celles-ci sont les suivantes :
+
 \begin{align*}
     \Delta J &= \pm1\\
     \Delta M &= 0 \textrm{ ($\mu_Z$),} \pm1 \textrm{ ($\mu_{X,Y}$)}
 \end{align*}
 L'intégrale suivant $R$ peut être évaluée grâce à un développement de Taylor du moment dipolaire autour de la position d'équilibre :
+
 \[
-\mu^\text{Nu}(R) = \mu^\text{Nu}(R_e) + \fdif{\mu^\text{Nu}}{R}\left.\right|_{R_e}(R-R_e) + \dfrac{1}{2}\ffdif{\mu^\text{Nu}}{R}\left.\right|_{R_e}(R-R_e)^2
+    \mu^\text{Nu}(R) = \mu^\text{Nu}(R_e) + \left.\fdif{\mu^\text{Nu}}{R}\right|_{R_e}(R-R_e) + \dfrac{1}{2}\left.\ffdif{\mu^\text{Nu}}{R}\right|_{R_e}(R-R_e)^2
 \]
 On peut alors écrire :
 \begin{align*}
-    \mu_{mk} =& \int^{\infty}_0\psi_v''(q)\psi_v'(q)\mu^\text{Nu}(R)dRAng\\
-        =& \int^{\infty}_0\psi_v''(q)\psi_v'(q)\mu^\text{Nu}(R_e)dRAng \; \neq 0 \textrm{ Si $v' = v''$}\\
-        &+ \fdif{\mu^\text{Nu}}{R}\left.\right|_{R_e}\int^{\infty}_0\psi_v''(q)\psi_v'(q)(R-R_e)(R_e)dRAng \; \neq 0 \textrm{ Si $v' = v''\pm1$}\\
-        &+ \dfrac{1}{2}\ffdif{\mu^\text{Nu}}{R}\left.\right|_{R_e}\int^{\infty}_0\psi_v''(q)\psi_v'(q)(R-R_e)^2(R_e)dRAng \; \neq 0 \textrm{ Si $v' = v''\pm2$}\\
+    \mu_{mk} =& \int^{\infty}_0\psi_v''(q)\psi_v'(q)\mu^\text{Nu}(R)\dif R \cdot I_\text{ang}\\
+        =& \int^{\infty}_0\psi_v''(q)\psi_v'(q)\mu^\text{Nu}(R_e)\dif R \cdot I_\text{ang} \; \neq 0 \textrm{ Si $v' = v''$}\\
+        &+ \left.\fdif{\mu^\text{Nu}}{R}\right|_{R_e}\int^{\infty}_0\psi_v''(q)\psi_v'(q)(R-R_e)(R_e)\dif R \cdot I_\text{ang} \; \neq 0 \textrm{ Si $v' = v''\pm1$}\\
+        &+ \dfrac{1}{2}\left.\ffdif{\mu^\text{Nu}}{R}\right|_{R_e}\int^{\infty}_0\psi_v''(q)\psi_v'(q)(R-R_e)^2(R_e)\dif R \cdot I_\text{ang} \; \neq 0 \textrm{ Si $v' = v''\pm2$}\\
         &+ \hdots
 \end{align*}
 Plus le potentiel électronique sera proche du potentiel harmonique plus la série de Taylor convergera rapidement. Le terme principal sera donc celui des rotations pures ($\Delta v = 0$) ou éventuellement des bandes fondamentales ($\Delta v = \pm1$).
@@ -909,24 +897,26 @@ Plus le potentiel électronique sera proche du potentiel harmonique plus la sér
 
 \subsection{Transitions électroniques}
 
-
 Reprenons maintenant le terme de transitions entre états :
+
 \[
-\int \phi^\text{Nu}_m\left[\int \psi^\text{el}_m\mu^\text{el}\psi^\text{el}_kd\tau_\text{el} \right]\phi^\text{Nu}_kd\tau_\text{Nu}
+    \int \phi^\text{Nu}_m\left[\int \psi^\text{el}_m\mu^\text{el}\psi^\text{el}_kd\tau_\text{el} \right]\phi^\text{Nu}_kd\tau_\text{Nu}
 \]
 Définissons :
+
 \[
-\mu^\text{el}_{mk} \equiv \int \psi^\text{el}_m\mu^\text{el}\psi^\text{el}_kd\tau_\text{el}
+    \mu^\text{el}_{mk} \equiv \int \psi^\text{el}_m\mu^\text{el}\psi^\text{el}_kd\tau_\text{el}
 \]
 On peut alors décomposer $\phi_m^\text{Nu}$ en une composante vibrationnelle et rotationnelle :
-\[
-\phi_m^\text{Nu} = \psi_{vm}Y_J^M(\theta,\phi)
-\]
+
+\[ \phi_m^\text{Nu} = \psi_{vm}Y_J^M(\theta,\phi) \]
 Si on considère que $\mu^\text{el}_{mk}$ est indépendant des coordonnées nucléaires (approximation du centroïde), on peut réécrire la première intégrale comme :
+
 \[
-\mu^\text{el}_{mk} \int \phi^\text{Nu}_m\phi^\text{Nu}_kd\tau_\text{Nu}
+    \mu^\text{el}_{mk} \int \phi^\text{Nu}_m\phi^\text{Nu}_kd\tau_\text{Nu}
 \]
 Où l'intégrale est appelée facteur de Franck-Condon. Avec cette approximation, on aura un transfert de paquet d'ondes rovibrationnelle d'un état à un autre, appelé <<transition verticale>>. L'intensité de la transition va dépendre du recouvrement des fonctions d'ondes vibrationnelles associées à deux états électroniques et vibrationnels différents. On peut, après quelques développements, trouver les règles de sélection suivantes :
+
 \begin{align*}
     \Delta S &= 0\\
     \Delta\Lambda &= 0,\pm1\\
@@ -934,9 +924,7 @@ Où l'intégrale est appelée facteur de Franck-Condon. Avec cette approximation
     g &\leftrightarrow u \textrm{ pour les molécules homonucléaires}
 \end{align*}
 La propension à avoir des transitions intenses pour $\Delta v = 0$ ou $\Delta v \neq 0$ va être fonction de la différence de géométrie d'équilibre et d'anharmonicité.
-
-
-On peut voir sur la figure \ref{fig:recouvrement} que pour des géométries de départ et d'arrivée très proches (figure de gauche), la transition la plus intense sera celle de l'état $v'=0$ vers $v''=0$, car le recouvrement entre ces deux états est important. À l'inverse, lorsque les géométries sont différentes, la transition 0-0 est faible, le maximum étant décalé (ici sur la transition 3-0).
+On peut voir sur la figure \ref{fig:recouvrement} que pour des géométries de départ et d'arrivée très proches (figure de gauche), la transition la plus intense sera celle de l'état $v'=0$ vers $v''=0$, car le recouvrement entre ces deux états est important. À l'inverse, lorsque les géométries sont différentes, la transition $0-0$ est faible, le maximum étant décalé (ici sur la transition $3-0$).
 \begin{figure}
 \centering
 \includegraphics[scale=0.8]{Images3/Recouvrement.PNG}
@@ -947,35 +935,32 @@ En résumé, l'intensité d'une transition sera donc fonction de  :
 \begin{itemize}
     \item $\abs{\mu_{mk}^\text{el}}^2$
     \item Le facteur de Franck Condon
-    \item Le facteur de Hönl-London : $\abs{\sum\limits_{M''M'}\iint Y_{J''}^{M''}Y_{J'}^{M'}\sin{(\theta)}d\theta d\phi}^2$
+    \item Le facteur de Hönl-London : 
+    \[
+        \abs{\sum\limits_{M''M'}\iint Y_{J''}^{M''}Y_{J'}^{M'}\sin{(\theta)}\dif\theta \dif\phi}^2
+    \]
 \end{itemize}
 
 
 \subsection{Analyse de spectre}
 
-
 Le nombre d'onde $\Tilde{\nu}[\si{cm^{-1}}]=\dfrac{1}{\lambda}$ d'une transition électronique peut être estimé comme suit :
+
 \[
-\Tilde{\nu} = [T_\text{el}'-T_\text{el}''] + [G_{v'}-G_{v''}] + [F_{J'}-F_{J''}]
+    \Tilde{\nu} = [T_\text{el}'-T_\text{el}''] + [G_{v'}-G_{v''}] + [F_{J'}-F_{J''}]
 \]
 Avec
+
 \begin{align*}
     G_v &= \omega_e(v+\dfrac{1}{2})-x_e\omega_e(v+\dfrac{1}{2})^2 + \hdots\\
     F_J &= B_vJ(J+1) - DJ^2(J+1)^2
 \end{align*}
 En phase gazeuse on peut mesurer des transitions rovibrationnelles isolées et on définit une branche P quand $\Delta J =-1$ et une branche $R$ quand $\Delta J =+1$. On peut donc calculer les nombres d'ondes associés à ces deux branches en posant $J' = J''+1$ pour une branche $R$ et $J' = J'' - 1$ pour une branche P. On obtient alors les expressions suivantes en négligeant la distorsion centrifuge :
+
 \begin{align*}
     \Tilde{\nu_R} &= \Tilde{\nu_0} + 2B_{v'} + (3B_{v'}-B_{v''})J + (B_{v'}-B_{v''})J^2\\
     \Tilde{\nu_P} &= \Tilde{\nu_0} - (B_{v'}+B_{v''})J + (B_{v'}-B_{v''})J^2
 \end{align*}
 Où $\Tilde{\nu_0}$ est défini comme l'origine de bande, et peut être une différence d'énergie vibrationnelle ou vibronique (électronique, vibrationnel et rotationnel couplés).
 
-
 Par ce type d’étude, on obtient des informations sur la dynamique du système (par le profil des transitions), sur la concentration (aire sous la courbe de la transition), une information sur l’identité chimique, la pression, la température, le couplage de moment angulaire et dans le cas de transitions électroniques on peut établir s’il y a une variation de géométrie d’équilibre entre les deux états électroniques considérés.
-
-
-
-
-
-
-\clearpage
