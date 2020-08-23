@@ -43,7 +43,7 @@ Le tableau de Mendeleïev (1869) représente tous les éléments chimiques, ordo
     \caption{Tableau de Mendeleïev}
 \end{figure}
 
-Les atomes se situant dans la même période, c'est-à-dire dans la même ligne du tableau, possèdent le même nombre quantique principal n. Les éléments des même groupes (i.e. même colonne) ont eux des configurations électroniques similaires et donc des propriétés chimiques similaires. On a différents groupes en fonction de la colonne: les métaux alcalins (1), les alcalino-terreux (2), ..., les halogènes (17), les gaz nobles (18). Enfin, les blocs sont des groupes d'éléments dont les électrons de valence occupent des orbitales qui partagent le même nombre quantique l (l=0,1,...n-1 correspondant à s, p, d,...)
+Les atomes se situant dans la même période, c'est-à-dire dans la même ligne du tableau, possèdent le même nombre quantique principal n. Les éléments des même groupes (i.e. même colonne) ont eux des configurations électroniques similaires et donc des propriétés chimiques similaires. On a différents groupes en fonction de la colonne: les métaux alcalins (1), les alcalino-terreux (2), ..., les halogènes (17), les gaz nobles (18). Enfin, les blocs sont des groupes d'éléments dont les électrons de valence occupent des orbitales qui partagent le même nombre quantique $l$ ($l=0,1, \dots, n-1$ correspondant à s, p, d,...)
 
 Les éléments de ce tableau, les atomes, sont des objets très complexes dont la composition (pour le moment admise) est représentée ci-dessous, avec quelques ordres de grandeurs. L'électron est un degré de liberté de l'atome, qui possède une charge et un spin, mais pas de position...
 
@@ -307,9 +307,9 @@ La preuve expérimentale de l'existence des électrons est le résultat de 3 exp
 Elle se fit via l'expérience de la goutte d'huile de Millikan, qui consiste à pulvériser de minuscules gouttes d'huiles électrisées entre les 2 électrodes horizontales d'un condensateur plan chargé. Les gouttes sont soumises à plusieurs forces qui s'équilibrent rapidement, elles se déplacent donc à une vitesse constante qu'on peut mesurer.
 
 \begin{figure}[ht]
-\centering
-\includegraphics[scale=0.60]{Images1/millikan.PNG}
-\caption{Expérience de la goutte d'huile de Millikan}
+    \centering
+    \includegraphics[scale=0.60]{Images1/millikan.PNG}
+    \caption{Expérience de la goutte d'huile de Millikan}
 \end{figure}
 
 Le principe est de sélectionner une goutte, et  d'analyser son mouvement sous l'action des forces agissant sur elle  à différentes valeurs d'ionisation.
@@ -402,26 +402,26 @@ qui engendre un transfert d'énergie
 \]
 Par unité de distance, on a donc la perte d'énergie
 \[
-    -\fdif{E}{x}=\int_{b_{min}}^{b_{max}} \fdif{T_e(b)}{x}=\Big(\dfrac{\rho N_A}{A}\Big)Z\dfrac{z^2e^4}{4\pi \epsilon_0^2m_ev^2}\ln{\Big(\dfrac{b_{max}}{b_{min}}\Big)}
+    -\fdif{E}{x}=\int_{b_\text{min}}^{b_\text{max}} \fdif{T_e(b)}{x}=\Big(\dfrac{\rho N_A}{A}\Big)Z\dfrac{z^2e^4}{4\pi \epsilon_0^2m_ev^2}\ln{\Big(\dfrac{b_\text{max}}{b_\text{min}}\Big)}
 \]
-Cependant, on a un problème puisque cette intégrale diverge. On doit donc en limiter les bornes en utilisant des arguments qualitatifs à savoir les estimation de $b_{min}$ et $b_{max}$:
+Cependant, on a un problème puisque cette intégrale diverge. On doit donc en limiter les bornes en utilisant des arguments qualitatifs à savoir les estimation de $b_\text{min}$ et $b_\text{max}$:
 
 \begin{itemize}[label=$\rightarrow$]
     \item \underline{\textbf{b grand $\Leftrightarrow\Delta E(b)$ petit}}\\[0,2cm]
     Les électrons sont liés aux noyaux. Le transfert d'énergie est plus petit que l'énergie moyenne d'ionisation $I$ des électrons et le processus n'est plus efficace. On imposera donc que $\Delta E(b) > I$, ce qui donne
     \[
-        \dif E_e=\dfrac{1}{(4\pi \epsilon_0)^2}.\dfrac{2z^2e^4}{b_{max}^2v^2m_e}=I
+        \dif E_e=\dfrac{1}{(4\pi \epsilon_0)^2}.\dfrac{2z^2e^4}{b_\text{max}^2v^2m_e}=I
     \]
     \item \underline{\textbf{b petit $\Longleftrightarrow\Delta E(b)$ grand}}\\[0,2cm]
     L'énergie maximale transférable est
     \[
-        \Delta E_{max}=T_{e,max}=\dfrac{2m_e\beta^2\gamma^2c^2}{1+\left(\dfrac{m_e}{m_0}\right)^2+2\cdot\dfrac{m_e\gamma}{m_0}}
+        \Delta E_\text{max}=T_{e,max}=\dfrac{2m_e\beta^2\gamma^2c^2}{1+\left(\dfrac{m_e}{m_0}\right)^2+2\cdot\dfrac{m_e\gamma}{m_0}}
     \]
     où $m_0$ est la masse de la particule incidente.
 \end{itemize}
 La perte d'énergie par ionisation est donc de la forme
 \[
-    \dfrac{1}{\rho}\fdif{E}{x} \sim K\dfrac{z^2}{\beta^2}\dfrac{Z}{A}  \ln{\left(\dfrac{T_{max}}{I}\right)}
+    \dfrac{1}{\rho}\fdif{E}{x} \sim K\dfrac{z^2}{\beta^2}\dfrac{Z}{A}  \ln{\left(\dfrac{T_\text{max}}{I}\right)}
 \]
 
 On peut détecter le dépôt d'énergie au moyen de techniques telles que l'émulsion photographique, la chambre à brouillards, la chambre à bulles, le scintillateur, la détection du rayonnement Cerenkov,...
@@ -714,7 +714,7 @@ Pour une épaisseur x
 \]
 Si on intègre sur l'angle phi, on obtient la définition de \textbf{section efficace différentielle}
 \[
-    \fdif{\sigma}{\Omega}=\dfrac{2\pi b \dif b}{\dif \Omega}=\dfrac{2\pi~b~\dif b}{2\pi \sin{\theta}d\theta}=\dfrac{b}{\sin{\theta}}\abs{\fdif{b}{\theta}}
+    \fdif{\sigma}{\Omega}=\dfrac{2\pi b \dif b}{\dif \Omega}=\dfrac{2\pi~b~\dif b}{2\pi \sin{\theta}\dif\theta}=\dfrac{b}{\sin{\theta}}\abs{\fdif{b}{\theta}}
 \]
 
 \subsubsection{Section efficace de Rutherford}
@@ -741,7 +741,7 @@ La rétrodiffusion de particules $\alpha$ ne peut s’expliquer que par des choc
 \end{figure}
 La distance d'approche minimale calculée par Rutherford satisfait à l'équation
 
-$$\dfrac{1}{2}mv_0^2=\dfrac{1}{4\pi\epsilon_0}\dfrac{Zze^2}{r_{min}}$$
+$$\dfrac{1}{2}mv_0^2=\dfrac{1}{4\pi\epsilon_0}\dfrac{Zze^2}{r_\text{min}}$$
 
 Si on projette des $\alpha$ de plus haute énergie sur du plomb par exemple, on observe une diminution du nombre de particules rétrodiffusées à cause de l'interaction forte à courte distance. En effet, les $\alpha$ sont alors absorbés par les noyaux.
 
@@ -853,7 +853,7 @@ où m a une vitesse initiale v et M est au repos, on a que la vitesse maximale d
 \[
     \dfrac{2mv}{(m+M)}
 \]
-Sachant que les vitesses maximales pour le proton de recul et l'azote sont respectivement \SI{3.7e9}{cm/s} et \SI{1.7e8}{cm/s}, on obtient $m$ = $90\%~M_{proton}$. En bons physiciens, on considère donc que $M_{proton}$ = $M_{neutron}$. (En vrai, des mesures plus précises ont indiqué que la différence entre le deux vaut 0,14 pourcent de la masse moyenne du proton et du neutron.)
+Sachant que les vitesses maximales pour le proton de recul et l'azote sont respectivement \SI{3.7e9}{cm/s} et \SI{1.7e8}{cm/s}, on obtient $m$ = $90\%~M_\text{proton}$. En bons physiciens, on considère donc que $M_\text{proton}$ = $M_{neutron}$. (En vrai, des mesures plus précises ont indiqué que la différence entre le deux vaut 0,14 pourcent de la masse moyenne du proton et du neutron.)
 
 \subsection{Mesure de la masse des noyaux et énergie de liaison}
 Expérimentalement, on détermine la masse des noyaux via la technique de spectrographie de masse (Fig. \ref{fig:spectro_masse}). Elle consiste à identifier les masses des composants d'un échantillon de manière individuelle grâce à un faisceau d'ions. Une source produit ce faisceau possédant une certaine distribution de vitesses. Un sélecteur de vitesses permet seulement aux ions ayant une vitesse particulière de passer (le reste du faisceau est défléchi), et la sélection de moments grâce à un champ magnétique permet l'identification des masses individuelles.
