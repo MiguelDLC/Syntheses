@@ -1,22 +1,12 @@
 \documentclass[fr,skiptoc]{../../../eplsummary}
-
-%\usepackage[french]{babel} % déjà dans eplcommon
-%\usepackage[utf8]{inputenc} % déjà dans eplbase
-%\usepackage[T1]{fontenc}%T1: pour les accents % déjà dans eplbase
 \usepackage{graphicx}
-% \usepackage{vmargin}
 \input{url_breaks.tex}
 \usepackage{enumitem}
-%\usepackage{textcomp}
-\usepackage{gensymb}  %avec le symbole 'degrés'
-%\usepackage{amsmath,amsfonts,amssymb} % déjà dans eplcommon
-%\usepackage{mathtools} % déjà dans eplcommon
+\usepackage{gensymb}
 \usepackage{verbatim}
 \usepackage{wrapfig}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-%\usepackage{xcolor} % déjà dans eplbase
 \usepackage{physics}
-%\usepackage{float} % déjà dans eplbase
 \usepackage{tabu}
 \usepackage{wrapfig}
 \usepackage{siunitx}
@@ -25,13 +15,11 @@
 
 \numberwithin{equation}{section} %Numéroter les équations par section
 \numberwithin{figure}{section}   %Numéroter les figures par section
-\numberwithin{table}{section}   %Numéroter les tables par section
+\numberwithin{table}{section}    %Numéroter les tables par section
 \newtheorem{rem}{Remarque}[section]
-%\setlength{\parindent}{0pt} %Modifier l'alinéa des paragraphes
-%\usepackage{blindtext} %faire des minipages
 
 \usepackage[nodisplayskipstretch]{setspace}
-\setstretch{1.1}      %Ajuster l'espace entre les lignes
+%\setstretch{1.1}      %Ajuster l'espace entre les lignes
 
 %pour simplifier les expression mathématiques
 \newcommand{\eq}{\; = \;}
@@ -45,10 +33,6 @@
 
 \newcommand{\Cdot}{\boldsymbol{\cdot}}
 \DeclareMathOperator{\sinc}{sinc}
-%\usepackage{titlesec} %Modifier la taille des titres
-%\titleformat*{\section}{\LARGE\bfseries}
-%\titleformat*{\subsection}{\Large\bfseries}
-%\titleformat*{\subsubsection}{\large\bfseries}
 
 
 
@@ -110,21 +94,6 @@ Ce document est une proposition de support de cours à destination des étudiant
     En cas de questions ou de remarques sur cette partie : contactez Pierre Laboureur ou Valentin Fonck.
 \end{center}
 \input{Part4}
-%\newpage
-%\input{Part4_2}
-%\newpage
-%\input{Part4_3}
-%\newpage
-%\input{Part4_4}
-%\newpage
-%\input{Part4_5}
-%\newpage
-%\input{Part4_6}
-%\newpage
-%\input{Part4_7}
-%\newpage
-%\input{Part4_8}
-%\begin{document} % à supprimer, c'est pour que VScode comprenne
 
 
 \end{document}
