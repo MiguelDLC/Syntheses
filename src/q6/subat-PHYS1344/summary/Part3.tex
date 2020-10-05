@@ -386,13 +386,17 @@ Pour tester les modèles et développements, on va étudier le système le plus 
     H_\text{el} = -\dfrac{\hbar^2}{2m}\nabla^2_i-\dfrac{Z_Ae^2}{4\pi \epsilon_0||r_i - R_A||}-\dfrac{Z_Be^2}{4\pi \epsilon_0||r_i - R_B||} +\dfrac{Z_AZ_B}{4\pi\epsilon_0R}
 \]
 Que l'on peut réécrire en coordonnées confocales $(\mu, \nu, \phi)$, avec :
+
 \begin{align*}
     \mu &= \dfrac{r_a + r_b}{R}\\
     \nu &= \dfrac{r_a-r_b}{R}
 \end{align*}
-\[
-    H_\text{el} = -\dfrac{\hbar^2}{2m_eR^2}\dfrac{4}{\mu^2-\nu^2}\left[\fpart{}{\mu}(\mu^2-1)\fpart{}{\mu}+\fpart{}{\nu}(1-\nu^2)\fpart{}{\nu}+\left(\dfrac{1}{\mu^2-1}+\dfrac{1}{1-\nu^2}\right)\ffpart{}{\phi}\right] - \dfrac{2e^2}{R}\left(\dfrac{1}{\nu + \mu}+\dfrac{1}{\mu-\nu}\right) + \dfrac{e^2}{R}
-\]
+ce qui donne
+
+\begin{align*}
+    H_\text{el} =& -\dfrac{\hbar^2}{2m_eR^2}\dfrac{4}{\mu^2-\nu^2}\left[\fpart{}{\mu}(\mu^2-1)\fpart{}{\mu}+\fpart{}{\nu}(1-\nu^2)\fpart{}{\nu}+\left(\dfrac{1}{\mu^2-1}+\dfrac{1}{1-\nu^2}\right)\ffpart{}{\phi}\right] \\ 
+    &- \dfrac{2e^2}{R}\left(\dfrac{1}{\nu + \mu}+\dfrac{1}{\mu-\nu}\right) + \dfrac{e^2}{R}
+\end{align*}
 Les solutions de cet Hamiltonien seront de la forme :
 
 \[ \psi(\mu,\nu,\phi) = F(\mu,\nu)e^{im\phi} \]

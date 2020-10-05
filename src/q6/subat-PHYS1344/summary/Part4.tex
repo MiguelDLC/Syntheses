@@ -196,7 +196,7 @@ Ainsi, l'élément de volume infinitésimal s'écrit comme  $\dif^3\vec{r} = \di
       \dfrac{\hbar}{\imag qr}\exp(\dfrac{\imag qr}{\hbar}u)
     \right]^{1}_{-1}
     \dif r 
-    \qquad \quad \text{via le changement de variable} \quad u = \cos(\beta)\\
+    \qquad \quad \text{via changement de var. } u = \cos(\beta)\\
         &\eq
     2 \pi \int_{0}^{+\infty} r
     \cdot \dfrac{2\hbar \sin(\dfrac{qr}{\hbar})}{qr} \dif r\\
@@ -208,7 +208,7 @@ Ainsi, l'élément de volume infinitésimal s'écrit comme  $\dif^3\vec{r} = \di
     \dfrac{4\pi\hbar^2}{q^2} \lim_{\epsilon \rightarrow 0}\dfrac{1}{1 + \epsilon^2}\\
         &\eq
     \dfrac{4\pi\hbar^2}{q^2}
-    \qquad \quad \text{via 1 changement de variables, 1 limite et 2 intégrales par partie\footnotemark} 
+    \qquad \quad \text{via un changement de var., une limite et 2 intégrales par partie\footnotemark} 
 \end{align*}
 \footnotetext{Il va sans dire qu'il s'agit d'une exercice trivial laissé à la sagacité de l'infortuné lecteur}
 Par conséquent, l'élément de matrice $T_{fi}$, nécessaire pour obtenir l'expression du taux de transition, s'écrit:
@@ -463,7 +463,7 @@ En se rappelant que nous travaillons avec un faisceau d'électrons ($z_2 = 1$) e
 \begin{equation}
     \left(  \fdif{\sigma}{\Omega}  \right)^\text{el}_\text{Ruth}
     \eq
-    \dfrac{Z^2}{4}\dfrac{\alpha^2}{E^2}\dfrac{1}{\sin{^4\left(\dfrac{\theta}{2}\right)}}
+    \dfrac{Z^2}{4}\dfrac{\alpha^2}{E^2}\dfrac{1}{\sin^4(\theta/2)}
     \label{sect_eff_ponct}
 \end{equation}
 L'expression \ref{sect_eff_ponct} décrit, pour rappel, la section efficace différentielle de Rutherford dans le cas d'une diffusion élastique sans recul d'électrons ultra-relativistes par un noyau ponctuel. Regardons maintenant ce que vaut cette section de Rutherford dans le cas d'un noyau non-ponctuel.
@@ -472,14 +472,14 @@ L'expression \ref{sect_eff_ponct} décrit, pour rappel, la section efficace diff
 \subsection{Cas d'un noyau non-ponctuel}\label{sec:noyau_non_ponctuel}
 
 
-Si maintenant le noyau n'est plus ponctuel, nous devons modifier nos calculs. Nous supposons cependant que ce noyau a une symétrie sphérique (la densité de charge n'est fonction que du rayon par rapport au centre : $\rho_{ch} = \rho_{ch}(\vec{R}) = \rho_{ch}(R)$. En outre, on peut normaliser cette distribution de charge : $\rho_{ch} = ze\cdot \rho(R)$ tel que l'intégrale de $\rho(R)$ sur tout l'espace des $R$ soit égale à 1 ($ze$ est la charge totale du noyau).
+Si maintenant le noyau n'est plus ponctuel, nous devons modifier nos calculs. Nous supposons cependant que ce noyau a une symétrie sphérique (la densité de charge n'est fonction que du rayon par rapport au centre : $\rho_\text{ch} = \rho_\text{ch}(\vec{R}) = \rho_\text{ch}(R)$. En outre, on peut normaliser cette distribution de charge : $\rho_\text{ch} = ze\cdot \rho(R)$ tel que l'intégrale de $\rho(R)$ sur tout l'espace des $R$ soit égale à 1 ($ze$ est la charge totale du noyau).
 
 L'interaction se fait comme suivant : l'onde plane (état non-lié $\Rightarrow$ continuum d'énergie) interagit en un point donné avec le noyau. Cette interaction se fait via le potentiel d'interaction H$_\text{int}$ (énergie du photon virtuel émis) qui dépend de la position d'un point d'interaction par rapport au centre de la sphère. Si ce point est situé loin du noyau, on doit retomber sur l'interaction dans le cas du modèle ponctuel du noyau.
 
 \begin{figure}[htpb]
     \centering
     \includegraphics[scale=0.2]{Images4/schema_interaction.png}
-    \caption{P est la particule qui interagit avec le noyau. $\vec{R}$ est le vecteur position de l'élément de volume nucléaire chargé dans le noyau. $\vec{r}$ est le vecteur position du point auquel on considère le potentiel. $\vec{r}-\vec{R}$ est la distance entre la particule incidente et l'élément de volume chargé du noyau.}
+    \caption{$P$ est la particule qui interagit avec le noyau. $\vec{R}$ est le vecteur position de l'élément de volume nucléaire chargé dans le noyau. $\vec{r}$ est le vecteur position du point auquel on considère le potentiel. $\vec{r}-\vec{R}$ est la distance entre la particule incidente et l'élément de volume chargé du noyau.}
     \label{fig:schema_interaction}
 \end{figure}
 
@@ -587,7 +587,7 @@ Par conséquent, la section efficace pour un noyau ponctuel de masse finie (donc
     \cdot \dfrac{E'}{E}
     \qquad \text{avec} \quad
     \dfrac{E'}{E} \eq
-    \dfrac{1}{1+E/M(1-\cos(\theta))} 
+    \dfrac{1}{1+\dfrac{E}{M}(1-\cos(\theta))} 
     \quad \text{tq $M$ est la masse du noyau} \quad 
 \]
 En utilisant ce résultat pour décrire la section efficace de la diffusion d'un électron par un noyau non-ponctuel en tenant compte du recul du noyau :
@@ -638,8 +638,7 @@ Dans l'élaboration d'une théorie, on passe souvent par des modèles très simp
         \overset{\text{norm.}}= 
         \dfrac{1}{D}\dfrac{1}{D}\delta(z)
         \qquad \text{si} \quad
-        x,y \;\in\; \big[ -\dfrac{D}{2},\dfrac{D}{2} \big]
-    \\[7pt]
+        x,y \;\in\; \big[ -\dfrac{D}{2},\dfrac{D}{2} \big] \\[7pt]
         0 \qquad \qquad \qquad \qquad \qquad \qquad \quad \text{sinon}
     \end{array}
     \right.
