@@ -1,4 +1,4 @@
-Concernant cette partie, 2 syllabus écrits par Prof. Mariko Terao sont disponibles sur Moodle. Il reste donc les slides de Xavier Urbain à traiter.
+﻿Concernant cette partie, 2 syllabus écrits par Prof. Mariko Terao sont disponibles sur Moodle. Il reste donc les slides de Xavier Urbain à traiter.
 
 \section{Rappels sur l'atome d'hydrogène}
 
@@ -49,12 +49,12 @@ Rappelons donc quelques identités impliquant les harmoniques sphériques:
 \[
     L_zY_{lm}\eq-\imag\hbar\dfrac{\partial}{\partial\phi}Y_{lm}\eq m\hbar Y_{lm}
 \]
-Les harmoniques sphériques sont donc bien des fonctions propres de $L^2$ (resp. $L_z$) de valeurs propres $l(l+1)\hbar^2$ (resp. $m\hbar$). Etant donné que les opérateurs $H$, $L_z$ et $L^2$ commutent, les harmoniques sphériques sont également fonctions propres de $H$. Ainsi, ces dernières sont forcément de la forme
+Les harmoniques sphériques sont donc bien des fonctions propres de $L^2$ (resp. $L_z$) de valeurs propres $l(l+1)\hbar^2$ (resp. $m\hbar$). Étant donné que les opérateurs $H$, $L_z$ et $L^2$ commutent, les harmoniques sphériques sont également fonctions propres de $H$. Ainsi, ces dernières sont forcément de la forme
 
 \[
     \Psi_{Elm}(r,\theta,\phi)\eq R Y_{lm}(\theta,\phi)
 \]
-où $R$ est un facteur indépendant des coordonnées angulaires. Les fonctions propres de $H$ étant dépendantes de ces coordonnées angulaires mais également de $r$, le facteur $R$ doit donc être fonction de $r$, ce qui donne finalement
+où $R$ est un facteur indépendant des coordonnées angulaires. Les fonctions propres de $H$ étant dépendantes de ces coordonnées angulaires, mais également de $r$, le facteur $R$ doit donc être fonction de $r$, ce qui donne finalement
 
 \begin{equation}
     \Psi_{Elm}(r,\theta,\phi)\eq R_{Elm}(r) Y_{lm}(\theta,\phi)
@@ -123,7 +123,7 @@ où on a défini le potentiel effectif
 \]
 Le premier terme est le potentiel coulombien et le deuxième est le `potentiel' centrifuge. Plus $l$ est grand, plus ce potentiel s'ajoutant au coulombien va être grand près de l'origine, ce qui va pousser la fonction d'onde à plus grande distance. On a un effet similaire sur un carrousel : un point sur un carrousel tournant ressentira une force voulant l'expulser de l'attraction.
 
-la figure \ref{fig:potentieleffectif} représente le potentiel effectif pour différentes valeurs de $l$ (et pour Z=1).
+La figure \ref{fig:potentieleffectif} représente le potentiel effectif pour différentes valeurs de $l$ (et pour Z=1).
 
 \begin{figure}[htp]
     \centering
@@ -131,10 +131,10 @@ la figure \ref{fig:potentieleffectif} représente le potentiel effectif pour dif
     \caption{Potentiel effectif $V_\text{eff}$ pour Z=1}
     \label{fig:potentieleffectif}
 \end{figure}
-A courte distance, on observe que le terme en $\dfrac{1}{r^2}$ domine. Sans moment angulaire, on a juste un potentiel coulombien. En ajoutant un terme en $\dfrac{1}{r^2}$ (<<potentiel centrifuge>>, n'existe que quand on a un moment angulaire non nul) on obtient une barrière de potentiel à courte distance. Ainsi, le moment angulaire va empêcher l'électron d'approcher du noyau (c'est-à-dire du proton dans notre cas de l'hydrogène). On s'attend donc, lorsque qu'on va calculer la fonction d'onde radiale, à ce qu'elle soit localisée près du noyau lorsque $l=0$ et de plus en plus loin du noyau au fur et à mesure que $l$ grandit.
+À courte distance, on observe que le terme en $\dfrac{1}{r^2}$ domine. Sans moment angulaire, on a juste un potentiel coulombien. En ajoutant un terme en $\dfrac{1}{r^2}$ (<<potentiel centrifuge>>, n'existe que quand on a un moment angulaire non nul) on obtient une barrière de potentiel à courte distance. Ainsi, le moment angulaire va empêcher l'électron d'approcher du noyau (c'est-à-dire du proton dans notre cas de l'hydrogène). On s'attend donc, lorsque qu'on va calculer la fonction d'onde radiale, à ce qu'elle soit localisée près du noyau lorsque $l=0$ et de plus en plus loin du noyau au fur et à mesure que $l$ grandit.
 
 
-Il est possible de faire en sorte que l'équation soit plus simple et en unités réduites. Pour que le comportement colle avec ce qu'on sait déjà, il faut qu'à l'infini la probabilité de présence de l'électron tende exponentiellement vers 0, quelque soit la valeur de $l$ car quand on s'éloigne, on atteint une zone où l'énergie totale est inférieure à l'énergie potentielle donc la probabilité de présence de l'onde dans cette zone doit tendre vers 0. C'est une région qui est classiquement interdite, mais tenant compte des effets tunnels, la fonction d'onde y est présente, mais décroît de façon exponentielle.
+Il est possible de faire en sorte que l'équation soit plus simple et en unités réduites. Pour que le comportement colle avec ce qu'on sait déjà, il faut qu'à l'infini la probabilité de présence de l'électron tende exponentiellement vers 0, quelle que soit la valeur de $l$ car quand on s'éloigne, on atteint une zone où l'énergie totale est inférieure à l'énergie potentielle donc la probabilité de présence de l'onde dans cette zone doit tendre vers 0. C'est une région qui est classiquement interdite, mais tenant compte des effets tunnel, la fonction d'onde y est présente, mais décroît de façon exponentielle.
 
 
 Posons, pour simplifier les notations, les quantités sans dimension
@@ -214,7 +214,7 @@ Le spectre d'énergie de l'atome d'hydrogène (c'est-à-dire les valeurs de l'é
     \caption{Spectre d'énergies de l'atome d'hydrogène. Les énergies sont exprimées en Hartree}
     \label{fig:spectreH}
 \end{figure}
-Pour chaque nombre quantique principal, on a un certain nombre de sous-niveaux qui est croissant avec $n$ (pour $n=1$ on a le niveau 1s, pour $n=2$ on a 2s et 2p,...). Il y a donc une dégénérescence des niveaux d'énergie qui peuvent donc correspondre à des fonctions d'onde différentes, ce qui va compliquer le spectre. Cette dégénérescence est due (c'est non trivial) à la dépendance en $r^{-1}$ du potentiel coulombien et peut être levée par l'action d'un champ électrique ou magnétique (effets Stark et Zeeman).
+Pour chaque nombre quantique principal, on a un certain nombre de sous-niveaux qui est croissant avec $n$ (pour $n=1$ on a le niveau 1s, pour $n=2$ on a 2s et 2p...). Il y a donc une dégénérescence des niveaux d'énergie qui peuvent donc correspondre à des fonctions d'onde différentes, ce qui va compliquer le spectre. Cette dégénérescence est due (c'est non trivial) à la dépendance en $r^{-1}$ du potentiel coulombien et peut être levée par l'action d'un champ électrique ou magnétique (effets Stark et Zeeman).
 
 Comme la puissance du polynôme $g_{El}$ vaut $n_r=n-l-1$ qui est forcément nul ou positif, il y a $n-1$ valeurs possibles de $l$ pour chaque valeur de $n$: $l=0, 1, ..., n-1$. De plus il y a $2l+1$ valeurs possibles de $m$ pour chaque valeur de $l$: $m=-l, -l+1, ..., l-1, l$. Le degré de dégénérescence du niveau $E_n$ vaut donc
 
@@ -234,7 +234,7 @@ L'équation \eqref{gel} est similaire à cette équation, et en les comparant on
 \[
     g_{El}(\rho)\eq L_{n-l-1}^{2l+1}(\rho)
 \]
-En regroupant les résultats des sous-sections précédentes on a donc comme solution pour les fonctions d'onde normalisées des états liés de l'atome d'hydrogène:
+En regroupant les résultats des sous-sections précédentes, on a donc comme solution pour les fonctions d'onde normalisées des états liés de l'atome d'hydrogène:
 
 \begin{equation}
     \Psi_{nlm}(r,\theta,\phi)\eq -\left[\left(\dfrac{2Z}{na_{\mu}}\right)^3\dfrac{(n-l-1)!}{2n[(n+l)!]^3}\right]^{1/2}e^{-\rho/2}\rho^l L_{n-l-1}^{2l+1}(\rho)Y_{lm}(\theta,\phi)
@@ -265,7 +265,7 @@ En s'aidant d'une table contenant les polynômes de Laguerre \textbf{généralis
 On remarque que les fonctions d'onde s ont une amplitude non nulle en $r = 0$, contrairement aux fonctions
 d'onde des états $l\neq 0$ qui se comportent en $r^l$ près de l'origine. C'est le potentiel centrifuge $l(l+1)\hbar^2/2\mu r^2$ qui empêche l'électron de pénétrer dans le noyau. Pour une même valeur de n, les états de plus bas $l$ ont une amplitude plus importante près de $r = 0$.
 
-À le figure \ref{fig:fcx_rad_1} sont représentées les fonctions d'onde radiales ($R_{nl}$) et fonctions de distribution radiales ($D_{nl}(r)=r^2|R_{nl}(r)|^2$) (qui est la probabilité par unité de longueur de trouver l'électron à une distance $r$ du noyau) de quelques états de l'atome d'hydrogène ($Z=1$):
+À la figure \ref{fig:fcx_rad_1} sont représentées les fonctions d'onde radiales ($R_{nl}$) et fonctions de distribution radiales ($D_{nl}(r)=r^2|R_{nl}(r)|^2$) (qui est la probabilité par unité de longueur de trouver l'électron à une distance $r$ du noyau) de quelques états de l'atome d'hydrogène ($Z=1$):
 \begin{figure}[htp]
     \centering
     \includegraphics[scale=0.8]{Images2/ex.PNG}
@@ -275,12 +275,12 @@ d'onde des états $l\neq 0$ qui se comportent en $r^l$ près de l'origine. C'est
 Quelques remarques à propos de ces figures:
 
 \begin{itemize}[label=$\bullet$]
-    \item Si on veut savoir quelle est la probabilité que l'électron se trouve à une distance $r$ du noyau, il faut prendre le carré de la fonction d'onde et intégrer sur le volume, cette probabilité de trouver l'électron dans une coque sphérique comprise entre $r$ et $r+\dif r$ est donc $r^2|R_{nl}(r)|^2\dif r\int \dif\Omega |Y_{lm}(\theta,\phi))|^2$. Il y aura donc apparition d'un facteur $r^2$ venant des coordonnées sphériques. Ce qu'on va calculer c'est donc la densité radiale de probabilité. L'intégrale porte aussi bien sûr sur la partie angulaire de la fonction d'onde mais ce n'est pas ce qui nous intéresse. La densité radiale est en fait la probabilité de présence à une certaine distance $r$ du noyau.
+    \item Si on veut savoir quelle est la probabilité que l'électron se trouve à une distance $r$ du noyau, il faut prendre le carré de la fonction d'onde et intégrer sur le volume, cette probabilité de trouver l'électron dans une coque sphérique comprise entre $r$ et $r+\dif r$ est donc $r^2|R_{nl}(r)|^2\dif r\int \dif\Omega |Y_{lm}(\theta,\phi))|^2$. Il y aura donc apparition d'un facteur $r^2$ venant des coordonnées sphériques. Ce qu'on va calculer c'est donc la densité radiale de probabilité. L'intégrale porte aussi bien sûr sur la partie angulaire de la fonction d'onde, mais ce n'est pas ce qui nous intéresse. La densité radiale est en fait la probabilité de présence à une certaine distance $r$ du noyau.
     \item Dans un état 1s, l'électron se trouve à une distance moyenne d'un rayon de Bohr, par définition. Sa distribution est centrée à une unité atomique.
     \item Dans l'état 2s, la majeure partie de la probabilité se trouve à plus grande distance que pour l'état 1s. De 1 u.a. (pour 1s), on est passé à environ 4 u.a. (pour 2s).
     \item Le nuage électronique s'étend rapidement au fur et à mesure que $n$ augmente (évolution en $n^2$)
     \item La courbe de distribution radiale de l'état 1s montre un confinement tout près de $r=0$.
-    \item On remarque la présence de lobes sur les courbes, le nombre changeant avec le moment angulaire: en effet les fonction radiales dépendent de $l$.
+    \item On remarque la présence de lobes sur les courbes, le nombre changeant avec le moment angulaire: en effet les fonctions radiales dépendent de $l$.
     \item Les polynômes de Laguerre ont un indice $n-l-1$ et cet indice indique le nombre de noeuds de la fonction.
 \end{itemize}
 
@@ -289,7 +289,7 @@ Les figures \ref{fig:fcx_rad_2} et \ref{fig:fcx_rad_3} sont quelques représenta
 \begin{figure}[htp]
     \centering
     \includegraphics{Images2/p.PNG}
-    \caption{Fonction d'onde radiale et fonction de distribution radiale des 4 premiers états p (courbe 2p bien centrée à 4 rayons de Bohr). La courbe noir correspond à 2p et la courbe bleue à 5p}
+    \caption{Fonction d'onde radiale et fonction de distribution radiale des 4 premiers états p (courbe 2p bien centrée à 4 rayons de Bohr). La courbe noire correspond à 2p et la courbe bleue à 5p.}
     \label{fig:fcx_rad_2}
 \end{figure}
 
@@ -300,9 +300,9 @@ Les figures \ref{fig:fcx_rad_2} et \ref{fig:fcx_rad_3} sont quelques représenta
     \label{fig:fcx_rad_3}
 \end{figure}
 
-Les états de moment angulaire maximum ($l=n-1$) sont beaucoup plus simples à comprendre que les autres qui ont un comportement ondulatoire (présence de noeuds et ventres dans leur fonction d'onde). En effet, l'électron peut être vu comme une onde piégée dans un potentiel qui va, sous l'action de ce dernier, former une espèce d'onde stationnaire : ce sont les noeuds et les ventres que l'on observe (L'électron a une probabilité de présence nulle sur un noeud et une probabilité forte sur un ventre). On peut donner une image assez classique de ces noeuds et ventres. Lorsqu'on a des noeuds et des ventre, on peut voir l'électron comme une onde stationnaire qui fait des aller-retours entre le noyau et le bord du potentiel. Cependant, lorsque $l$ est maximal (i.e. $l=n-1$), la partie radiale de la fonction d'onde $R_{n,l=n-1}$ ne présente plus qu'un seul ventre sans noeuds. Dès lors, on doit ainsi plus voir l'électron comme orbitant à une distance moyenne constante du noyau. Attention que ceci est une image fort classique pour la mécanique quantique. Cependant plus $n$ est grand, plus on se rapproche de cette image et on peut donc considérer l'électron comme étant une particule classique orbitant autour d'un noyau (surtout à partir de $n=100$).
+Les états de moment angulaire maximum ($l=n-1$) sont beaucoup plus simples à comprendre que les autres qui ont un comportement ondulatoire (présence de noeuds et ventres dans leur fonction d'onde). En effet, l'électron peut être vu comme une onde piégée dans un potentiel qui va, sous l'action de ce dernier, former une espèce d'onde stationnaire : ce sont les noeuds et les ventres que l'on observe (l'électron a une probabilité de présence nulle sur un noeud et une probabilité forte sur un ventre). On peut donner une image assez classique de ces noeuds et ventres. Lorsqu'on a des noeuds et des ventres, on peut voir l'électron comme une onde stationnaire qui fait des allers-retours entre le noyau et le bord du potentiel. Cependant, lorsque $l$ est maximal (i.e. $l=n-1$), la partie radiale de la fonction d'onde $R_{n,l=n-1}$ ne présente plus qu'un seul ventre sans noeuds. Dès lors, on doit ainsi plus voir l'électron comme orbitant à une distance moyenne constante du noyau. Attention que ceci est une image fort classique pour la mécanique quantique. Cependant plus $n$ est grand, plus on se rapproche de cette image et on peut donc considérer l'électron comme étant une particule classique orbitant autour d'un noyau (surtout à partir de $n=100$).
 
-Plus le nombre quantique $n$ d'un état est élevé, plus l'état correspondant est excité. Un état de grand $n$ est appelé état de Rydberg. A l'échelle atomique, la fonction d'onde d'un tel état s'étend sur de très grandes distances, comme suggère l'expression du maximum de la fonction de distribution radiale
+Plus le nombre quantique $n$ d'un état est élevé, plus l'état correspondant est excité. Un état de grand $n$ est appelé état de Rydberg. À l'échelle atomique, la fonction d'onde d'un tel état s'étend sur de très grandes distances, comme suggère l'expression du maximum de la fonction de distribution radiale
 
 \[
     r\eq \dfrac{n^2}{Z}a_{\mu}
@@ -334,13 +334,13 @@ Les alcalins sont les éléments de la première colonne du tableau périodique.
 \end{center}
 Pour chaque sous-couche pleine, on rappelle qu'on a $\sum_i l_i = 0$.
 
-Nous allons essayer de décrire ces atomes comme un atome d'hydrogène. Tout d'abord, nous nous intéressons au lithium. Dans cette approche de l'atome d'hydrogène on peut voir l'électron 2s comme lié à un ion Li$^{+}$ que l'on peut considérer approximativement comme un proton dans le sens où c'est une charge positive. Puisque c'est un électron 2s, nous savons qu'il a une probabilité de présence non-nulle près du noyau, c'est-à-dire dans le volume occupé par les deux autres électrons.
+Nous allons essayer de décrire ces atomes comme un atome d'hydrogène. Tout d'abord, nous nous intéressons au lithium. Dans cette approche de l'atome d'hydrogène, on peut voir l'électron 2s comme lié à un ion Li$^{+}$ que l'on peut considérer approximativement comme un proton dans le sens où c'est une charge positive. Puisque c'est un électron 2s, nous savons qu'il a une probabilité de présence non nulle près du noyau, c'est-à-dire dans le volume occupé par les deux autres électrons.
 
 
-Étant donné que tout cela est probabiliste, il se peut que l'électron 2s se trouve plus proche du noyau que les autres électrons (<<plus proche>> d'une façon tout à fait schématique) et que donc il <<voit>> une charge qui n'est pas $1e$ mais $2e$ ou $3e$ car il n'y a plus d'effet d'écrantage.
+Étant donné que tout cela est probabiliste, il se peut que l'électron 2s se trouve plus proche du noyau que les autres électrons (<<plus proche>> d'une façon tout à fait schématique) et que donc il <<voit>> une charge qui n'est pas, $1e$ mais $2e$ ou, $3e$ car il n'y a plus d'effet d'écrantage.
 
 Nous avons donc $Z$ qui augmente et l'énergie de liaison $E_n \propto 1/n^2$ aussi. Nous corrigeons par conséquent le nombre quantique principal qui n'est donc plus un nombre entier. Cette correction s’appelle le \textbf{défaut quantique}, notée $\delta_l$, et c’est une bonne solution pour décrire la perturbation de ces électrons dits externes lorsque nous faisons varier le nombre quantique principal.
-Le défaut quantique sera toujours du même ordre de grandeur pour tous les alcalins car il ne dépend pas de $n$ mais seulement de $l$. En effet, la probabilité de présence près du noyau de l'électron diminue avec l'augmentation de $l$, donc le défaut quantique sera plus grand pour les plus petits $l$. Pour des moments angulaires plus importants ($l$ élevé), le potentiel effectif (dû au terme centrifuge) va empêcher les électrons externes d’aller à courtes distances et donc ils ne seront pas perturbés par la présence des autres électrons.
+Le défaut quantique sera toujours du même ordre de grandeur pour tous les alcalins, car il ne dépend pas de, $n$ mais seulement de $l$. En effet, la probabilité de présence près du noyau de l'électron diminue avec l'augmentation de $l$, donc le défaut quantique sera plus grand pour les plus petits $l$. Pour des moments angulaires plus importants ($l$ élevé), le potentiel effectif (dû au terme centrifuge) va empêcher les électrons externes d’aller à courtes distances et donc ils ne seront pas perturbés par la présence des autres électrons.
 
 \[
     \delta_s>\delta_p>\delta_d>\delta_f\simeq 0
@@ -356,9 +356,9 @@ NB: pas de facteur 2 au dénominateur quand on est en eV ; on est en Hartree dan
 
 
 Si nous nous intéressons maintenant au cas du sodium nous constatons que la correction dépasse 1 pour $l=0$ : $\delta_l = 1.35$. Cela signifie que le remplissage des couches ne se fera pas suivant la règle de Madelung (ou  Klechkowski). \textcolor{red}{Sûr de ça? Parce qu'il y a aussi l'effet joué par la correction du terme $l=1$ à prendre en compte si on veut `classer' les couches}
-En effet, pour le potassium (K) par exemple, le 3 de la sous-couche 3d devient 2.75 tandis que le 4 de la sous couche 4s devient 1.81. Par conséquent, l’énergie de la 4s est plus petite que celle du 3d comme l'indique la formule \ref{eq:def_quant}. La sous-couche 4s sera donc remplie avant la 3d.
+En effet, pour le potassium (K) par exemple, le 3 de la sous-couche 3d devient 2.75 tandis que le 4 de la sous-couche 4s devient 1.81. Par conséquent, l’énergie de la 4s est plus petite que celle du 3d comme l'indique la formule \ref{eq:def_quant}. La sous-couche 4s sera donc remplie avant la 3d.
 
-Ce phénomène ne se limite pas seulement aux alcalins. Pour  n'importe quel atome excité nous pouvons calculer le défaut quantique. (cf exercice sur l'hélium vu en TP).
+Ce phénomène ne se limite pas seulement aux alcalins. Pour  n'importe quel atome excité, nous pouvons calculer le défaut quantique. (cf. exercice sur l'hélium vu en TP).
 
 
 
@@ -369,7 +369,7 @@ Ce phénomène ne se limite pas seulement aux alcalins. Pour  n'importe quel ato
 
 Nous allons ici développer un outil très important pour l'identification des éléments. Il a notamment servi à identifier la présence d'éléments terrestres dans le Soleil, ce qui n'avait a priori rien d'évident. En bombardant un matériau d'électrons de haute énergie, on observe l'émission de rayons X caractéristiques de sa structure.\\
 
-Dans un atome à plusieurs électrons, nous savons que l'énergie ne suit plus exactement la loi de Balmer obtenue pour l'atome d'H ($E_n \propto Z/n^2$). En effet, il y a un effet dû aux autres électrons. Comme nous l'avons vu, cet effet peut être pris en compte en considérant un `défaut quantique' (formule \ref{eq:def_quant}). Cependant, une autre façon de voir les choses est d'utiliser une charge effective mais de laisse le nombre quantique inchangé. Cette charge effective $Z^{*}$ perçue par chaque électron est définie comme \[ Z^{*}=Z-\sigma \] où $\sigma$ représente l'effet d'écran produit sur l'électron d'intérêt par les électrons plus proches du noyau. Dès lors, l'énergie s'exprime comme
+Dans un atome à plusieurs électrons, nous savons que l'énergie ne suit plus exactement la loi de Balmer obtenue pour l'atome d'H ($E_n \propto Z/n^2$). En effet, il y a un effet dû aux autres électrons. Comme nous l'avons vu, cet effet peut être pris en compte en considérant un `défaut quantique' (formule \ref{eq:def_quant}). Cependant, une autre façon de voir les choses est d'utiliser une charge effective, mais de laisse le nombre quantique inchangé. Cette charge effective $Z^{*}$ perçue par chaque électron est définie comme \[ Z^{*}=Z-\sigma \] où $\sigma$ représente l'effet d'écran produit sur l'électron d'intérêt par les électrons plus proches du noyau. Dès lors, l'énergie s'exprime comme
 
 \begin{equation}
     E_n \eq -\dfrac{1}{2} \dfrac{(Z-\sigma_n)^2}{n^2} \; [\si{ua} = \si{Ha}]
@@ -402,7 +402,7 @@ Dans la réalité, la perte d'énergie par unité de longueur en fonction de la 
 \subsubsection{Émission de rayons X}
 
 
-Les fréquences auxquelles on observe les phénomènes de résonance dans le spectre du rayonnement de freinage (= les fréquence où on a des pics d'absorption) correspondent aux fréquences des transitions d'orbitales $n = 2$ vers $n = 1$. Pour caractériser ces transitions, on peut se servir de la loi empirique de Moseley, qui n'est qu'une généralisation des différentes séries de Lyman, Balmer, etc\footnote{En fait, on peut l'obtenir en faisant simplement la différence entre deux niveaux d'énergie distincts via la formule \ref{eq:energie_effective} où on considère un écrantage `moyen' (=la moyenne des écrantages des deux niveaux dont on fait la différence)}.
+Les fréquences auxquelles on observe les phénomènes de résonance dans le spectre du rayonnement de freinage (= les fréquences où on a des pics d'absorption) correspondent aux fréquences des transitions d'orbitales $n = 2$ vers $n = 1$. Pour caractériser ces transitions, on peut se servir de la loi empirique de Moseley, qui n'est qu'une généralisation des différentes séries de Lyman, Balmer, etc\footnote{En fait, on peut l'obtenir en faisant simplement la différence entre deux niveaux d'énergie distincts via la formule \ref{eq:energie_effective} où on considère un écrantage `moyen' (=la moyenne des écrantages des deux niveaux dont on fait la différence).}.
 \begin{equation}
     h\nu
     \eq E_{n_1} - E'_{n_2}
@@ -410,15 +410,15 @@ Les fréquences auxquelles on observe les phénomènes de résonance dans le spe
     \label{eq:Moseley}
 \end{equation}
 
-Mais dis-moi Jamy, pourquoi est-ce que les atomes émettent ces rayons X? Hé bien Fred, c'est très simple : lors du passage de la particule incidente dans l'atome, on va observer des chocs entre elle et les électrons de coeur (de $n=1$ voire $n=2$) qui sont fortement liés au noyau (en effet, les électrons proche du noyau ne subissent aucun effet d'écrantage atténuant l'action du noyau). Ces chocs avec les électrons de coeur entraînent des trous dans la couche qui sera comblé par la transition d'un électron d'un couche de $n$ plus élevé ($n=2$ sur la figure \ref{fig:Rayons X}). Le rayon X est donc l'émission qui s'associe au passage de l'électron d'une orbitale d'un $n$ élevé à l'orbitale de coeur qui a perdu un électron.
+Mais dis-moi Jamy, pourquoi est-ce que les atomes émettent ces rayons X? Hé bien Fred, c'est très simple : lors du passage de la particule incidente dans l'atome, on va observer des chocs entre elle et les électrons de coeur (de $n=1$ voire $n=2$) qui sont fortement liés au noyau (en effet, les électrons proches du noyau ne subissent aucun effet d'écrantage atténuant l'action du noyau). Ces chocs avec les électrons de coeur entraînent des trous dans la couche qui sera comblée par la transition d'un électron d'une couche de $n$ plus élevé ($n=2$ sur la figure \ref{fig:Rayons X}). Le rayon X est donc l'émission qui s'associe au passage de l'électron d'une orbitale d'un $n$ élevé à l'orbitale de coeur qui a perdu un électron.
 \begin{figure}[htp]
     \centering
     \includegraphics[scale=0.8]{Images2/Rayons X.PNG}
     \caption{Schéma de l'émission de rayons X suite à une ionisation de coeur.}
     \label{fig:Rayons X}
 \end{figure}
-Grâce aux rayons X, on peut calculer l'effet d'écran d'un certaine couche, c'est-à-dire <<de combien la charge du noyau diminue quand on se trouve au-delà de cette couche et donc que les électrons de cette couche agissent comme un écran?>>. Lors d'une ionisation depuis $n=1$, on a deux électrons dans la couche s1 et donc l'écrantage est approximativement 2. Après ionisation, il ne reste plus qu'un seul électron dans cette couche et par conséquent l'effet d'écran n'est plus que 1 approximativement : Z est à peu près diminué de 1. Ainsi, l'ionisation a bien diminué l'effet d'écran de 1.\\
-Pour ce qui est des ionisations de la couche (complète : 8 électrons) $n=2$, on observe après ionisation un effet d'écran de 7.4 dans cette couche de 7 électrons, ce qui est cohérent. Ces valeurs de correction ont été découvertes empiriquement (cfr. l'équation de Moseley \ref{eq:Moseley}).
+Grâce aux rayons X, on peut calculer l'effet d'écran d'une certaine couche, c'est-à-dire <<de combien la charge du noyau diminue-t-elle quand on se trouve au-delà de cette couche et donc que les électrons de cette couche agissent comme un écran?>>. Lors d'une ionisation depuis $n=1$, on a deux électrons dans la couche s1 et donc l'écrantage est approximativement 2. Après ionisation, il ne reste plus qu'un seul électron dans cette couche et par conséquent l'effet d'écran n'est plus que 1 approximativement : Z est à peu près diminué de 1. Ainsi, l'ionisation a bien diminué l'effet d'écran de 1.\\
+Pour ce qui est des ionisations de la couche (complète : 8 électrons) $n=2$, on observe après ionisation un effet d'écran de 7.4 dans cette couche de 7 électrons, ce qui est cohérent. Ces valeurs de correction ont été découvertes empiriquement (cf. l'équation de Moseley \ref{eq:Moseley}).
 On calcule donc les fréquences des photons associées aux transitions $2\rightarrow1$ et $3\rightarrow2$:
 \[
     \nu_{12}
@@ -443,7 +443,7 @@ On sait par la formule \ref{eq:Moseley} que la différence d'énergie entre le s
 
 Dès lors, dans notre exemple à la figure \ref{fig : Auger}, le rayon X libéré par l'électron $^2P_{1/2}$ a une énergie suffisante pour ioniser l'autre électron $^2P_{1/2}$. Cet autre électron, ionisé, est appelé <<électron Auger>> et peut en pratique se situer n'importe où ailleurs dans l'atome (il ne se trouve pas forcément au même terme que l'électron qui bouche la couche 1s). Ainsi, on se retrouve avec un atome ayant perdu 2 électrons au total. En outre, on peut avoir 3 électrons manquant à la fin si le rayonnement provoqué par l'ionisation de l'électron Auger ionise encore un autre électron (ce phénomène est moins intense cependant).
 
-Il est dès lors probable que, à la place d'émettre un rayon X, notre atome émette un électron. Cette électron émis aura l'énergie du rayon X (qui est la différence entre les niveaux d'énergie) diminuée du potentiel d'ionisation. On peut ainsi observer un spectre de fréquence à la figure \ref{fig:SpectreAuger} pour ces électrons émis, et ce spectre est structuré de la même façon que le spectre d'émission des rayons X. En fait, la seule différence entre le spectre d'émission d'électrons et le spectre d'émission de rayons X par un atome soumis à un rayonnement ionisant est le potentiel d'ionisation : les électrons doivent effectuer un travail pour sortir de la matière, contrairement aux photons.
+Il est dès lors probable que, à la place d'émettre un rayon X, notre atome émette un électron. Cet électron émis aura l'énergie du rayon X (qui est la différence entre les niveaux d'énergie) diminuée du potentiel d'ionisation. On peut ainsi observer un spectre de fréquence à la figure \ref{fig:SpectreAuger} pour ces électrons émis, et ce spectre est structuré de la même façon que le spectre d'émission des rayons X. En fait, la seule différence entre le spectre d'émission d'électrons et le spectre d'émission de rayons X par un atome soumis à un rayonnement ionisant est le potentiel d'ionisation : les électrons doivent effectuer un travail pour sortir de la matière, contrairement aux photons.
 \begin{figure}[htp]
     \centering
     \includegraphics[scale=0.8]{Images2/Auger.PNG}
@@ -466,13 +466,13 @@ Il est dès lors probable que, à la place d'émettre un rayon X, notre atome é
 
 \subsection{Le laser}
 
-\subsubsection{Émission spontanée, émission et absorption stimulés}
+\subsubsection{Émission spontanée, émission et absorption stimulées}
 
 
 
 
 On détaille ici les équations qui gouvernent ces phénomènes. L'analogie avec la cinétique chimique pour des réactions d'ordre 1 ou la radioactivité est directe. <<Un atome ne vieillit pas>> et un état non plus, la probabilité de transition par unité de temps est donc une constante.\\
-Nous allons donc dans cette section décrire les différents phénomènes d'émission et d'absorption à l'aide d'équations différentielles. Nous allons également utiliser des taux de transitions $A_{ij}$ et $B_{ij}$ (= probabilité de transition par seconde) tel que $i$ est l'état de départ et $j$ l'état d'arrivée.
+Nous allons donc dans cette section décrire les différents phénomènes d'émission et d'absorption à l'aide d'équations différentielles. Nous allons également utiliser des taux de transitions $A_{ij}$ et $B_{ij}$ (= probabilité de transition par seconde) tels que $i$ est l'état de départ et $j$ l'état d'arrivée.
 \begin{figure}[htp]
     \centering
     \includegraphics[scale=0.8]{Images2/Emission Spontanée.PNG}
@@ -490,12 +490,12 @@ où $N_2(t)$ est la population atomique dans l'état d'énergie $E_2$.
 Avant de continuer, quelques remarques :
 \begin{itemize}[label=$\bullet$]
     \item L'émission `spontanée' n'existe pas vraiment. En effet, il faut toujours qu'il y ait une excitation qui pousse un électron à émettre un rayonnement. Ce qu'on dénote par <<émission spontanée>> est l'émission d'un photon par l'électron sous une excitation interne à l'atome (pas de photon externe à l'atome venant l'exciter). Ces photons <<internes>> sont les photons du champ E : selon la QED, le champ EM est composé de photons virtuels et ce sont ces photons virtuels qui excitent nos électrons.
-    \item L'émission stimulée, bien que contre-intuitive, découle simplement de la micro-réversibilité de l'absorption stimulée : Einstein savait que la physique aimait la <<micro-réversibilité>> et il devait par conséquent avoir un phénomène opposé à l'absorption stimulée.
+    \item L'émission stimulée, bien que contre-intuitive, découle simplement de la micro réversibilité de l'absorption stimulée : Einstein savait que la physique aimait la <<micro-réversibilité>> et il devait par conséquent avoir un phénomène opposé à l'absorption stimulée.
     \item Pour ce qui est des émissions (stimulée comme spontanée), on se rend bien compte que la solution à l'équation différentielle sera une exponentielle décroissante avec le temps. D'une certaine population, on va avoir une atténuation exponentielle avec un temps de vie caractéristique qui est l'inverse de la constante $A_{ij}$ ou $B_{ij}$. Ceci n'est valide que lorsqu'on a uniquement de l'émission stimulée ou uniquement de l'émission spontanée.
     \item On a ici décomposé l'élément de la matrice de perturbation associé aux états concernés $W_{ij}(\nu)$ en un facteur indépendant de l'onde incidente $B_{ij}$ et la densité d'énergie incidente $\rho(\nu)$.
-    \item On a pas de relation à ce stade entre $B_{12}$ et $B_{21}$.
+    \item On n’a pas de relation à ce stade entre $B_{12}$ et $B_{21}$.
 \end{itemize}
-On peut exprimer, de manière tout à fait générale, l'évolution des populations\footnote{le terme `population' désigne le nombre de particules dans un certain état dans un système. Plus précisément on parle dans notre cas d'une population d'électrons ayant la même énergie dans un gaz macroscopique par exemple} en fonction des taux de transition ($A_{ij}$ et $B_{ij}$) et de la densité énergétique ($\rho(\nu)$).\\
+On peut exprimer, de manière tout à fait générale, l'évolution des populations\footnote{Le terme `population' désigne le nombre de particules dans un certain état dans un système. Plus précisément on parle dans notre cas d'une population d'électrons ayant la même énergie dans un gaz macroscopique par exemple.} en fonction des taux de transition ($A_{ij}$ et $B_{ij}$) et de la densité énergétique ($\rho(\nu)$).\\
 En effet, dans un système à deux états, l'évolution de la population $N_1$ est dictée par son approvisionnement depuis l'état 2 (émissions spontanée et stimulée) en même temps que sa dépopulation pour aller vers l'état 2 (absorption stimulée):
 \begin{equation}
 \boxed{
@@ -532,10 +532,10 @@ Grâce à la théorie quantique du corps noir (on n'a plus l'évolution en $T^4$
 \begin{figure}[htp]
     \centering
     \includegraphics[scale=1.1]{Images2/corps_noir.png}
-    \caption{Spectre d'un corps noir à divers températures}
+    \caption{Spectre d'un corps noir à diverses températures}
     \label{fig : Corps noir}
 \end{figure}
-Nous savons que la répartition entre les états 1 et 2 doit respecter la distribution de Maxwell-Boltzmann en prenant en compte les dégénérescences en énergie. Ces dégénérescence sont notées $g_1$ et $g_2$. L'excitation depuis l'état fondamental 1 vers l'état excité 2 qui est plus probable se fait thermiquement (via l'énergie $k_BT$) et est d'autant plus probable que $h\nu$, la différence d'énergie entre l'état 1 et l'état 2, est petite :
+Nous savons que la répartition entre les états 1 et 2 doit respecter la distribution de Maxwell-Boltzmann en prenant en compte les dégénérescences en énergie. Ces dégénérescences sont notées $g_1$ et $g_2$. L'excitation depuis l'état fondamental 1 vers l'état excité 2 qui est plus probable se fait thermiquement (via l'énergie $k_BT$) et est d'autant plus probable que $h\nu$, la différence d'énergie entre l'état 1 et l'état 2, est petite :
 \[
     N_2 \eq \dfrac{g_2}{g_1} \; \exp\left(\dfrac{-h\nu}{k_BT}\right) \;N_1
 \]
@@ -580,7 +580,7 @@ On remarque donc que pour un $A_{21}$ important par rapport à $B_{21}$, l'émis
 \end{figure}
 Le concept du laser est relativement simple : en se servant de l'émission stimulée, on met en place une réaction en chaîne qui transformera l'énergie fournie au système (via le courant créé par les électrodes) en émission de lumière dans une gamme extrêmement précise de fréquences. En pratique, l'amplification se fait dans la chambre à gaz, la lumière se propage selon l'axe $z$ jusqu'à un miroir à 99\% qui permet de laisser sortir une partie du faisceau (celle dont on se sert) et de réfléchir le reste dans le système pour à nouveau l'amplifier.
 
-On s'était permis plus tôt une hypothèse simplificatrice que l'on ne peut conserver : on avait supposé que les états absorbaient de la lumière à toutes les fréquences. C'est le cas pour un solide cristallin possédant suffisamment d'états (de degrés de liberté) mais c'est faux pour un gaz dont les fréquences d'absorption sont celles des atomes : il n'y a pas de forme macroscopique dans un gaz pour créer beaucoup de niveaux d'énergie. Pour remédier à cela, nous introduisons une fonction $g(\nu - \nu_0)$ qui doit représenter l'atténuation de la stimulation dès qu'on s'éloigne de la fréquence de résonance $\nu_0$. On repart des équations \ref{eq:N1} et \ref{eq:N2} et des relations qu'on a trouvées grâce à l'équilibre thermodynamique \ref{eq:equilire1} et \ref{eq:equilire2}. On réécrit cependant les taux de transition $A_{ij}$ et $B_{ij}$ avec $\tau_{sp}$, le temps de vie de l'état 2:
+On s'était permis plus tôt une hypothèse simplificatrice que l'on ne peut conserver : on avait supposé que les états absorbaient de la lumière à toutes les fréquences. C'est le cas pour un solide cristallin possédant suffisamment d'états (de degrés de liberté), mais c'est faux pour un gaz dont les fréquences d'absorption sont celles des atomes : il n'y a pas de forme macroscopique dans un gaz pour créer beaucoup de niveaux d'énergie. Pour remédier à cela, nous introduisons une fonction $g(\nu - \nu_0)$ qui doit représenter l'atténuation de la stimulation dès qu'on s'éloigne de la fréquence de résonance $\nu_0$. On repart des équations \ref{eq:N1} et \ref{eq:N2} et des relations qu'on a trouvées grâce à l'équilibre thermodynamique \ref{eq:equilire1} et \ref{eq:equilire2}. On réécrit cependant les taux de transition $A_{ij}$ et $B_{ij}$ avec $\tau_{sp}$, le temps de vie de l'état 2:
 \[
     \dfrac{g_1}{g_2}W_{12} \eq W_{21}^{st} \eq B_{21} \rho(\nu) g(\nu - \nu_0)
 \]
@@ -600,8 +600,8 @@ On définit un facteur d'amplification $\gamma\ [\si{m^{-1}}]$, un gain qui repr
     I_\nu(z) \eq I_\nu(0) e^{\gamma z} \eq c\rho(\nu)
 \]
 %pas sûr d'avoir très bien compris comment intégrer la dépendance en z dans l'expression avec rho mais grosso modo c'est ça
-On a ici négligé l'émission spontanée, elle a pourtant bien lieu mais son caractère isotrope l'empêche de contribuer significativement au mécanisme. Il s'agit néanmoins d'une limitation technique qui entraîne une perte pour le système en fonctionnement.
-Pour avoir un gain, il nous faut donc une augmentation du nombre de photons, on exprime donc la variation du nombre de photons par unité de volume [\si{1/m^3}], $N_{ph}$, au cours du temps. On a deux contribution à la variation de $N_{ph}$ : l'émission depuis l'état 2 vers l'état 1 (terme positif) et l'absorption depuis l'état 1 vers l'état 2 (terme négatif).
+On a ici négligé l'émission spontanée, elle a pourtant bien lieu, mais son caractère isotrope l'empêche de contribuer significativement au mécanisme. Il s'agit néanmoins d'une limitation technique qui entraîne une perte pour le système en fonctionnement.
+Pour avoir un gain, il nous faut donc une augmentation du nombre de photons, on exprime donc la variation du nombre de photons par unité de volume [\si{1/m^3}], $N_{ph}$, au cours du temps. On a deux contributions à la variation de $N_{ph}$ : l'émission depuis l'état 2 vers l'état 1 (terme positif) et l'absorption depuis l'état 1 vers l'état 2 (terme négatif).
 \[
     \fdif{N_{ph}}{t}
     \eq N_2 W_{21}^{st} - N_1 W_{12}
@@ -642,13 +642,13 @@ Pour expliquer l'inversion de population, l'auteur, dans sa grande sagesse, a ch
     \caption{Un joli petit escalier}
     \label{fig:escalier}
 \end{figure}
-Imaginons maintenant que, bravant la volonté divine, on amène une échelle (= une grosse marche à côté de l'escalier) d'où l'on fait monter des billes. Dès lors, on se retrouve avec plus de billes sur la marche desservie par cette échelle que sur la marche d'en dessous : nous ne sommes plus à l'équilibre. Par conséquent, les billes vont tomber progressivement de marche en marche pour ré-obtenir la configuration d'équilibre recherchée : il y a plus de billes sur la dernière marche que sur l'avant-dernière. Nous avons ainsi obtenu une inversion de population grâce à notre échelle : nous avons réussi à avoir plus de billes dans un état excité (marche du haut) que dans un état fondamental (marche du bas).\\
+Imaginons maintenant que, bravant la volonté divine, on amène une échelle (= une grosse marche à côté de l'escalier) d'où l'on fait monter des billes. Dès lors, on se retrouve avec plus de billes sur la marche desservie par cette échelle que sur la marche d'en dessous : nous ne sommes plus à l'équilibre. Par conséquent, les billes vont tomber progressivement de marche en marche pour ré obtenir la configuration d'équilibre recherchée : il y a plus de billes sur la dernière marche que sur l'avant-dernière. Nous avons ainsi obtenu une inversion de population grâce à notre échelle : nous avons réussi à avoir plus de billes dans un état excité (marche du haut) que dans un état fondamental (marche du bas).\\
 
 
 
 Dans cette analogie, vous aurez compris que les marches représentent les niveaux d'énergie, les billes les électrons. Quand nous n'avions pas l'échelle, nous nous contentions d'exciter le système <<par le bas>> : seule l'excitation thermique (distribution de Maxwell-Boltzmann) nous permettait de faire monter les billes. Amener l'échelle est donc équivalent à un procédé qui permettrait d'amener en une fois les électrons à un niveau d'énergie bien supérieur. Ce procédé correspond au choc entre des atomes d'hélium chargés avec des atomes de néon.\\
 
-L'Hélium étant un composé à faible Z, la différence d'énergie entre son fondamental et son premier état excité est nettement plus grande que la même différence pour le Néon. Lors du passage du courant à travers le gaz, l'Hélium s'excite donc naturellement à ce niveau (on amène donc les billes en haut de l'échelle). De son côté, le Néon subit également des excitations qui amènent des électrons à des niveaux supérieurs d'énergie mais conformément à la volonté de notre Dieu mesquin, marche par marche.
+L'Hélium étant un composé à faible Z, la différence d'énergie entre son état fondamental et son premier état excité est nettement plus grande que la même différence pour le Néon. Lors du passage du courant à travers le gaz, l'Hélium s'excite donc naturellement à ce niveau (on amène donc les billes en haut de l'échelle). De son côté, le Néon subit également des excitations qui amènent des électrons à des niveaux supérieurs d'énergie, mais conformément à la volonté de notre Dieu mesquin, marche par marche.
 
 Or, les atomes de Néon subissent également des chocs avec les atomes d'Hélium de l'enceinte contenant le mélange des deux gaz. L'énergie est donc transférée de l'un à l'autre et amène des électrons du néon à de hauts niveaux d'énergie : on a notre inversion de population ! Il s'ensuit une \textbf{cascade radiative} qui ramène progressivement les électrons de l'Hélium à leur état fondamental. Pour donner la fin qu'elle mérite à cette analogie, on a mis en contact l'escalier de l'Helium (composés de hautes marches = échelles) à l'escalier du Néon (composé de petites marches) afin de provoquer l'inversion de population des billes dans le Néon. En tombant de marche en marche (voire plusieurs marches à la fois), les billes retombent dans leur état d'équilibre : cette descente est une cascade radiative.
 
@@ -660,7 +660,7 @@ Quantitativement, on a donc ici une émission de \SI{632.8}{nm}, ce qui correspo
     \caption{Un joli petit escalier et une jolie petite échelle}
     \label{fig:Analogie}
 \end{figure}
-On a choisi pour ce laser le néon et l'hélium car le premier niveau d'excitation du second correspond très bien avec un état de haute énergie du second, la longueur de l'échelle correspond à une marche précise et haute de l'escalier en somme.\\
+On a choisi pour ce laser le néon et l'hélium, car le premier niveau d'excitation du second correspond très bien avec un état de haute énergie du second, la longueur de l'échelle correspond à une marche précise et haute de l'escalier en somme.\\
 \begin{figure}[htp]
     \centering
     \includegraphics[scale=0.8]{Images2/hélium-néon.png}
@@ -811,7 +811,7 @@ On a donc les règles de sélection pour une transition dipolaire électrique (E
 \newpage %je pense que c'est le mieux pour avoir les images au bon endroit (NP)
 \subsection{Résumé des règles de sélection}
 
-De façon tout à fait équivalente, mais en considérant le terme en $\vec{k}\Cdot\vec{r}$ dans l'équation \eqref{eq:dvpl_expo}, nous pouvons trouver les règles de sélection pour les transitions interdites. Tout ceci est fait dans le syllabus du Pr. Terao-Dunseath.
+De façon tout à fait équivalente, mais en considérant le terme en $\vec{k}\Cdot\vec{r}$ dans l'équation \eqref{eq:dvpl_expo}, nous pouvons trouver les règles de sélection pour les transitions interdites. Tout ceci est fait dans le syllabus du Pr Terao-Dunseath.
 
 
 \begin{figure}[htp]
@@ -887,17 +887,17 @@ On peut donc réécrire l'interaction $W_\text{SO}$ comme suit,
     \label{eq:Hamilt_SO}
 \end{equation}
 
-avec $\vec{l}$ le moment angulaire et $\sum_i...$ la somme sur les opérateurs mono-électroniques. Il y a différentes façons de dériver l’hamiltonien spin-orbite : on peut partir de l’équation de Dirac\footnote{Il s'agit d'une équation de Schrödinger relativiste pour les fermions, donc les électrons} ou alors traiter l’hamiltonien spin-orbite comme étant l’interaction du moment de spin, qu’on définit par analogie avec le moment magnétique d’une boucle de courant pour autant qu’on introduise le rapport gyromagnétique ($g$) à peu près égal à 2. A coté de ça, on a un champ magnétique $B$ qui est essentiellement causé par la présence d’un champ électrique dans le voisinage du noyau. Ce champ électrique pointe dans la direction radiale si on a un potentiel à symétrie centrale.\footnote{Ou alors on peut utiliser le raisonnement fait en quantique 2 en disant que c'est le proton qui tourne autour de l'électron et que le spin de l'électron interagit avec la champ magnétique créé par le noyau.}\\
+avec $\vec{l}$ le moment angulaire et $\sum_i...$ la somme sur les opérateurs mono électroniques. Il y a différentes façons de dériver l’hamiltonien spin-orbite : on peut partir de l’équation de Dirac\footnote{Il s'agit d'une équation de Schrödinger relativiste pour les fermions, donc les électrons} ou alors traiter l’hamiltonien spin-orbite comme étant l’interaction du moment de spin, qu’on définit par analogie avec le moment magnétique d’une boucle de courant pour autant qu’on introduise le rapport gyromagnétique ($g$) à peu près égal à 2. À côté de ça, on a un champ magnétique $B$ qui est essentiellement causé par la présence d’un champ électrique dans le voisinage du noyau. Ce champ électrique pointe dans la direction radiale si on a un potentiel à symétrie centrale.\footnote{Ou alors on peut utiliser le raisonnement fait en quantique 2 en disant que c'est le proton qui tourne autour de l'électron et que le spin de l'électron interagit avec le champ magnétique créé par le noyau.}\\
 
-Pour chaque électron, cette interaction spin-orbite est proportionnelle au produit scalaire du moment angulaire de cet électron et du spin de ce même électron (l'interaction spin-orbite concerne un électron et son propre moment angulaire). La fonction $\zeta(r)$ cache un peu tout ce qui va dépendre de la distance électron-noyau. Le facteur en $\dfrac{1}{r}$ implique que ce potentiel agit essentiellement au voisinage du noyau : l'interaction SO se passera donc surtout proche du noyau. Quand on a plusieurs électrons on va faire une somme.
+Pour chaque électron, cette interaction spin-orbite est proportionnelle au produit scalaire du moment angulaire de cet électron et du spin de ce même électron (l'interaction spin-orbite concerne un électron et son propre moment angulaire). La fonction $\zeta(r)$ cache un peu tout ce qui va dépendre de la distance électron-noyau. Le facteur en $\dfrac{1}{r}$ implique que ce potentiel agit essentiellement au voisinage du noyau : l'interaction SO se passera donc surtout proche du noyau. Quand on a plusieurs électrons, on va faire une somme.
 
-Nous allons maintenant effectuer une approximation de l'expression \eqref{eq:Hamilt_SO} : nous allons remplacer la somme d’opérateurs mono-électroniques par le produit scalaire du moment angulaire total et du spin total. Étant donné que nous devons travailler en terme de $\vec{J}$ et non en terme de $\vec{L}$ ou $\vec{S}$, on va travailler avec des états de $\vec{J}$ total défini (pas de $\vec{L}$ ou de $\vec{S}$ défini). On peut donc passer d’une base à l’autre en réécrivant l’opérateur $\vec{L}\Cdot\vec{S}$.
+Nous allons maintenant effectuer une approximation de l'expression \eqref{eq:Hamilt_SO} : nous allons remplacer la somme d’opérateurs mono électroniques par le produit scalaire du moment angulaire total et du spin total. Étant donné que nous devons travailler en termes de $\vec{J}$ et non en termes de $\vec{L}$ ou $\vec{S}$, on va travailler avec des états de $\vec{J}$ total défini (pas de $\vec{L}$ ou de $\vec{S}$ défini). On peut donc passer d’une base à l’autre en réécrivant l’opérateur $\vec{L}\Cdot\vec{S}$.
 
 \begin{equation}
     \vec{L}\Cdot\vec{S} \eq  \dfrac{1}{2}(J^2-L^2-S^2) \qquad \mathrm{avec} \quad \vec{J} \eq  \vec{L}+\vec{S}
     \label{eq:JLS}
 \end{equation}
-On se retrouve avec un élément de matrice de la forme donnée à l'équation \eqref{eq:Hamilt_SO_J1} où nous avons introduit un préfacteur $A(\gamma L S)$\footnote{Le $gamma$ représente les autres noöbres quantiques, si jamais on a un ECOC avec plus d'observables} qui cache la structure atomique mais qui est supposé représenter le facteur $\zeta(r_i)$. Nous avons donc une expression ne faisant plus intervenir que le moment angulaire total et non plus sur le moment angulaire de chaque électron.
+On se retrouve avec un élément de matrice de la forme donnée à l'équation \eqref{eq:Hamilt_SO_J1} où nous avons introduit un préfacteur $A(\gamma L S)$\footnote{Le $gamma$ représente les autres nombres quantiques, si jamais on a un ECOC avec plus d'observables} qui cache la structure atomique, mais qui est supposé représenter le facteur $\zeta(r_i)$. Nous avons donc une expression ne faisant plus intervenir que le moment angulaire total et non plus sur le moment angulaire de chaque électron.
 
 \begin{align}
     \langle \gamma LSM_LM_S|H_\text{SO}|\gamma LSM_L'M_S' \rangle &\eq  A(\gamma LS)\langle \gamma LSM_LM_S|\vec{L}\Cdot\vec{S}|\gamma LSM_L'M_S' \rangle
@@ -906,7 +906,7 @@ On se retrouve avec un élément de matrice de la forme donnée à l'équation \
     \dfrac{1}{2}A(\gamma LS)\left( J(J+1)-L(L+1)-S(S+1)\right)
     \label{eq:Hamilt_SO_J2}
 \end{align}
-La formule \eqref{eq:JLS} nous permet d’écrire l'équation \eqref{eq:Hamilt_SO_J2}, et cette formulation nous permet d'établir la règle de Landé (cfr. figure \ref{fig:RegleLandé} où la colonne des $J$ est celle des états de structure fine) : pour une même valeur de $L$ et de $S$, l’écart en énergie entre le niveau $J$ et le niveau $J-1$ est proportionnel à $J$.
+La formule \eqref{eq:JLS} nous permet d’écrire l'équation \eqref{eq:Hamilt_SO_J2}, et cette formulation nous permet d'établir la règle de Landé (cf. figure \ref{fig:RegleLandé} où la colonne des $J$ est celle des états de structure fine) : pour une même valeur de $L$ et de $S$, l’écart en énergie entre le niveau $J$ et le niveau $J-1$ est proportionnel à $J$.
 
 \begin{figure}[htp]
     \centering
@@ -961,7 +961,7 @@ En posant $\vec{G} = \vec{L} - \vec{S} + 3(\vec{S}\Cdot\hat{r}) \hat{r}$, l'hami
 \begin{equation}
     W_\text{hyp} \eq  \dfrac{\mu_0}{2\p\imag\hbar^2}g_\text{I}\mu_\text{N}\mu_\text{B}\langle\dfrac{1}{r^3}\rangle \vec{G}\Cdot\vec{I}.
 \end{equation}
-Pour avoir l’énergie d’interaction résultant de la prise en compte du spin nucléaire, il nous faut évaluer le produit scalaire $\vec{G} \Cdot \vec{I}$. Ce produit scalaire n’est sous une forme que nous pouvons utiliser mais nous allons le réécrire via le théorème de Wigner-Eckart. On notera que lorsqu’on a un opérateur vectoriel $\vec{K}$, ses éléments de matrice peuvent toujours se réexprimer comme des éléments de matrice du moment cinétique $\vec{J}$.
+Pour avoir l’énergie d’interaction résultant de la prise en compte du spin nucléaire, il nous faut évaluer le produit scalaire $\vec{G} \Cdot \vec{I}$. Ce produit scalaire n’est pas sous une forme que nous pouvons utiliser, mais nous allons le réécrire via le théorème de Wigner-Eckart. On notera que lorsqu’on a un opérateur vectoriel $\vec{K}$, ses éléments de matrice peuvent toujours se réexprimer comme des éléments de matrice du moment cinétique $\vec{J}$.
 
 
 
@@ -1016,9 +1016,9 @@ Cette correction fait intervenir tous les états de même $J$. On définit un no
     &\;\equiv\;
     \dfrac{C}{2} \left( F(F+1) - J(J+1) - I(I+1) \right)
 \end{align*}
-(Bien que ce soit répris tel quel dans les slides, nous avons un doute quant à l'absorption du facteur $\dfrac{L(L+1)}{J(J+1)}$ par la constante $C$).
+(Bien que ce soit repris tel quel dans les slides, nous avons un doute quant à l'absorption du facteur $\dfrac{L(L+1)}{J(J+1)}$ par la constante $C$).
 
-En prenant maintenant toutes les corrections que nous avons faites à $H_\text{HF}=H_\text{Hartree-Fock}$ (c'est-à-dire $H_\text{corr}$\footnote{Corrections dues aux différents termes}, $H_\text{SO}$ et $H_\text{Hyperfin}$), nous obtenons à la figure \ref{fig:regle_lande2} une généralisation de la figure \ref{fig:RegleLandé} pour un atome de Na ($I=\dfrac{3}{2}$). Nous obtenons ainsi la généralisation de la règle de Landé qui inclut la correction hyperfine : la différence entre deux niveaux consécutifs (en terme de $F$) de même $L$, $S$ et $I$ est proportionnel à $F$.
+En prenant maintenant toutes les corrections que nous avons faites à $H_\text{HF}=H_\text{Hartree-Fock}$ (c'est-à-dire $H_\text{corr}$\footnote{Corrections dues aux différents termes}, $H_\text{SO}$ et $H_\text{Hyperfin}$), nous obtenons à la figure \ref{fig:regle_lande2} une généralisation de la figure \ref{fig:RegleLandé} pour un atome de Na ($I=\dfrac{3}{2}$). Nous obtenons ainsi la généralisation de la règle de Landé qui inclut la correction hyperfine : la différence entre deux niveaux consécutifs (en termes de $F$) de même $L$, $S$ et $I$ est proportionnel à $F$.
 En outre, on remarque que le nombre de niveaux hyperfins va augmenter au fur et à mesure qu'on va monter en moment angulaire total $J$.
 \begin{figure}[htp]
     \centering
@@ -1028,7 +1028,7 @@ En outre, on remarque que le nombre de niveaux hyperfins va augmenter au fur et 
 \end{figure}
 
 
-Nous venons donc de traiter d'une correction hyperfine, celle traitant du spin du noyau. Pour le fun, nous pouvons également calculer la correction hyperfine liée à la non-sphéricité du noyau grâce à l'opérateur $\vec{K}$. Ce calcul est fort compliqué (selon les dires du professeur) et c'est pourquoi nous ne présentons que le résultat (Fig. \ref{fig:eq_correcK}), en se rappelaqnt que $\vec{F} \eq \vec{J} \; + \; \vec{I}$.
+Nous venons donc de traiter d'une correction hyperfine, celle traitant du spin du noyau. Pour le fun, nous pouvons également calculer la correction hyperfine liée à la non-sphéricité du noyau grâce à l'opérateur $\vec{K}$. Ce calcul est fort compliqué (selon les dires du professeur) et c'est pourquoi nous ne présentons que le résultat (Fig. \ref{fig:eq_correcK}), en se rappelant que $\vec{F} \eq \vec{J} \; + \; \vec{I}$.
 \begin{figure}[htp]
     \centering
     \includegraphics[scale=0.80]{Images2/CorrecK.PNG}
@@ -1051,7 +1051,7 @@ où A,B et C sont des constantes déterminées pour chaque atome décrivant ces 
 
 
 
-Dans le cas de deux isotopes d'un même élément, on va observer deux graphes identiques jusqu'à la correction hyperfine de volume nucléaire. Là, on observera deux spins nucléaires différents qui permettront de déterminer l'isotope observé.\footnote{Rappel : le neutron est un fermion de spin $\dfrac{1}{2}$.} Prenons deux isotope de l'atome de Rubidium par exemple :
+Dans le cas de deux isotopes d'un même élément, on va observer deux graphes identiques jusqu'à la correction hyperfine de volume nucléaire. Là, on observera deux spins nucléaires différents qui permettront de déterminer l'isotope observé.\footnote{Rappel : le neutron est un fermion de spin $\dfrac{1}{2}$.} Prenons deux isotopes de l'atome de Rubidium par exemple :
 \begin{figure}[htp]
     \centering
     \includegraphics[scale=0.8]{Images2/ComparaisonRb.PNG}
@@ -1066,7 +1066,7 @@ Sachant que le Rb est un métal alcalin (sa structure électronique est celle d'
 \subsubsection{Spectroscopie par absorption}
 
 
-Nous souhaitons observer expérimentalement toutes ces transitions, dont les fréquences ont un même ordre de grandeur. Une schéma expérimental possible pour observer ces transitions est donné à la figure \ref{fig:SchemaAbso}.
+Nous souhaitons observer expérimentalement toutes ces transitions, dont les fréquences ont un même ordre de grandeur. Un schéma expérimental possible pour observer ces transitions est donné à la figure \ref{fig:SchemaAbso}.
 \begin{figure}[htp]
     \centering
     \includegraphics[scale=1.0]{Images2/SchémaAbso.PNG}
@@ -1075,7 +1075,7 @@ Nous souhaitons observer expérimentalement toutes ces transitions, dont les fr�
 \end{figure}
 De la lumière est émise dans un spectre contrôlé de fréquence sur un échantillon d'atomes selon l'axe z. Une partie de l'intensité émise est absorbée par des phénomènes de résonance avec les niveaux d'énergie des atomes du milieu. On a donc en sortie de l'expérience un graphe d'absorption (avec des bosses) on de transmission (avec des creux).\\
 
-Expérimentalement, le fait de ne pas travailler à température nulle entraîne des effets Doppler qui nous empêchent d'observer des pics bien définis aux fréquences de transition. Plus explicitement, seules les transition concernant des atomes se déplaçant perpendiculairement à la direction z vont se faire à la fréquence définie. Les autres atomes subissent un redshift s'ils se déplacent vers la droite ou un blueshift s'ils se déplacent vers la gauche. On observe donc une gaussienne conformément à la distribution de Maxwell-Boltzmann. A noter que l'on peut donc extraire à partir de ce genre d'expérience la température du milieu (applications en astrophysique). On obtient en sortie ce genre de figure.\\
+Expérimentalement, le fait de ne pas travailler à température nulle entraîne des effets Doppler qui nous empêchent d'observer des pics bien définis aux fréquences de transition. Plus explicitement, seules les transitions concernant des atomes se déplaçant perpendiculairement à la direction z vont se faire à la fréquence définie. Les autres atomes subissent un redshift s'ils se déplacent vers la droite ou un blueshift s'ils se déplacent vers la gauche. On observe donc une gaussienne conformément à la distribution de Maxwell-Boltzmann. À noter que l'on peut donc extraire à partir de ce genre d'expérience la température du milieu (applications en astrophysique). On obtient en sortie ce genre de figure.\\
 
 \begin{figure}[htp]
     \centering
@@ -1086,9 +1086,9 @@ Expérimentalement, le fait de ne pas travailler à température nulle entraîne
 
 La montée générale en transmission en augmentant la fréquence (en allant vers la gauche donc, attention à l'axe) provient du comportement des diodes émettrices et n'est pas liée à un phénomène physique dans l'enceinte.
 
-En plus de l'effet Doppler, il y a également une limitation fondamentale propre à la mécanique quantique qui nous empêche d'avoir des pics de largeur infinitésimale. Le temps de vie des états excités est typiquement assez faible, par le principe d'incertitude temps/énergie on a donc des ré-émissions dans une gamme d'énergie <<inexactes>> et cela tout à fait indépendamment du dispositif expérimental. En mots profanes, dû au temps de vie très faible des atomes (très faible incertitude sur leur temps de vie), les atomes introduisent une part d'incertitude dans les fréquences qu'ils ré-émettent (gamme très large d'énergie) après désexcitation à cause du principe d'Heisenberg (pour le temps et l'énergie).\\
+En plus de l'effet Doppler, il y a également une limitation fondamentale propre à la mécanique quantique qui nous empêche d'avoir des pics de largeur infinitésimale. Le temps de vie des états excités est typiquement assez faible, par le principe d'incertitude temps/énergie on a donc des ré-émissions dans une gamme d'énergie <<inexactes>>, et cela tout à fait indépendamment du dispositif expérimental. En mots profanes, dû au temps de vie très faible des atomes (très faible incertitude sur leur temps de vie), les atomes introduisent une part d'incertitude dans les fréquences qu'ils ré-émettent (gamme très large d'énergie) après désexcitation à cause du principe d'Heisenberg (pour le temps et l'énergie).\\
 
-Sur la figure \ref{fig:abso}, on peut donc distinguer deux isotopes. Comme dit précédemment, la différence hyperfine de spectre entre les deux est induite par une modification du spin nucléaire par l'ajout de deux neutrons. L'intensité relative des pics (=hauteur/profondeur des gaussiennes) nous informe sur la composition isotopique du mélange. Attention cependant, dans ce genre d'expériences on surestime toujours largement la température de l'environnement car la gaussienne est le produit de la superposition de plusieurs gaussiennes plus petites correspondant à des transitions entre états excités. Pour faire apparaître le détail de ces petites gaussiennes, on se sert de la spectroscopie pas absorption saturée.
+Sur la figure \ref{fig:abso}, on peut donc distinguer deux isotopes. Comme dit précédemment, la différence hyperfine de spectre entre les deux est induite par une modification du spin nucléaire par l'ajout de deux neutrons. L'intensité relative des pics (=hauteur/profondeur des gaussiennes) nous informe sur la composition isotopique du mélange. Attention cependant, dans ce genre d'expériences on surestime toujours largement la température de l'environnement, car la gaussienne est le produit de la superposition de plusieurs gaussiennes plus petites correspondant à des transitions entre états excités. Pour faire apparaître le détail de ces petites gaussiennes, on se sert de la spectroscopie pas absorption saturée.
 
 
 \subsubsection{Spectroscopie par absorption saturée}
@@ -1099,9 +1099,9 @@ Avis au lecteur : cette partie s'inspire fortement de Wikipédia ; on a essayé 
     \caption{Schéma expérimental pour l'absorption saturée}
 \label{fig:absoSatu}
 \end{figure}
-L'idée de ce montage expérimental est d'exploiter notre contrôle sur la direction de propagation de la lumière. On va superposer deux faisceaux de même fréquence : d'une part nous auront un faisceau \textbf{sonde} (\textit{probe}) de faible intensité allant dans la direction $+z$ et d'autre part nous auront un faisceau \textbf{pompe} (\textit{pump}) de forte intensité allant dans la direction $-z$. On note également que ce qui est observé dans le détecteur est le résultat de la propagation du faisceau <<sonde>> dans l'environnement ; le faisceau pompe n'a aucune incidence directe sur notre détecteur.
+L'idée de ce montage expérimental est d'exploiter notre contrôle sur la direction de propagation de la lumière. On va superposer deux faisceaux de même fréquence : d'une part nous aurons un faisceau \textbf{sonde} (\textit{probe}) de faible intensité allant dans la direction $+z$ et d'autre part nous aurons un faisceau \textbf{pompe} (\textit{pump}) de forte intensité allant dans la direction $-z$. On note également que ce qui est observé dans le détecteur est le résultat de la propagation du faisceau <<sonde>> dans l'environnement ; le faisceau pompe n'a aucune incidence directe sur notre détecteur.
 
-Supposons que la fréquence des faisceaux soit légèrement désaccordée vers le rouge par rapport à la fréquence propre des atomes. Alors le faisceau pompe va interagir avec les atomes dont la vitesse suivant l'axe $z$ sera positive, qui se rapprochent de la source de photons ; ainsi grâce à l'effet Doppler le faisceau pompe est à la bonne fréquence pour ces atomes. Le faisceau sonde, lui va interagir avec d'autres atomes, à savoir ceux dont la vitesse suivant l'axe $z$ est négative. Un même raisonnement peut être tenu pour une fréquence légèrement décalée vers le bleu. Ce comportement est représenté à la figure \ref{fig:vit2}. Attention il ne s'agit pas d'un motif que l'on retrouve expérimentalement (car les vitesse étant isotropes, les effets symétriques se compensent).
+Supposons que la fréquence des faisceaux soit légèrement désaccordée vers le rouge par rapport à la fréquence propre des atomes. Alors le faisceau pompe va interagir avec les atomes dont la vitesse suivant l'axe $z$ sera positive, qui se rapprochent de la source de photons ; ainsi grâce à l'effet Doppler le faisceau pompe est à la bonne fréquence pour ces atomes. Le faisceau sonde, lui va interagir avec d'autres atomes, à savoir ceux dont la vitesse suivant l'axe $z$ est négative. Un même raisonnement peut être tenu pour une fréquence légèrement décalée vers le bleu. Ce comportement est représenté à la figure \ref{fig:vit2}. Attention il ne s'agit pas d'un motif que l'on retrouve expérimentalement (car les vitesses étant isotropes, les effets symétriques se compensent).
 
 \begin{figure}[htp]
     \centering
@@ -1110,7 +1110,7 @@ Supposons que la fréquence des faisceaux soit légèrement désaccordée vers l
 \label{fig:vit2}
 \end{figure}
 
-Si maintenant les faisceaux sont exactement à la fréquence propre des atomes, alors les faisceaux pompe et sonde interagissent avec les mêmes atomes, ceux dont la vitesse suivant l'axe $z$ est nulle (pas besoin d'effet Doppler pour être résonnant). Comme le faisceau pompe est intense, il sature la transition atomique, ce qui signifie qu'un photon issu de la sonde arrivant sur un atome dont la vitesse selon $z$ est nulle a une forte probabilité de trouver l'atome dans son état excité. L'interaction entre le photon et l'atome n'est alors pas une absorption mais correspond au phénomène d'émission stimulée, et a pour conséquence que le photon issu de la sonde continue son chemin et fini par sortir de l'échantillon : le faisceau sonde est beaucoup moins absorbé qu'en l'absence du faisceau pompe (ce qui correspondrait à une spectroscopie classique). En regroupant les résultats du détecteur pour différents fréquences des faisceaux sonde et pompe, on voit donc apparaître un profil gaussien dû à l'effet Doppler, et au milieu de ce profil un pic étroit qui correspond à une transmission à nouveau élevée : la position de ce pic correspond à la fréquence de transition de l'atome.
+Si maintenant les faisceaux sont exactement à la fréquence propre des atomes, alors les faisceaux pompe et sonde interagissent avec les mêmes atomes, ceux dont la vitesse suivant l'axe $z$ est nulle (pas besoin d'effet Doppler pour être résonnant). Comme le faisceau pompe est intense, il sature la transition atomique, ce qui signifie qu'un photon issu de la sonde arrivant sur un atome dont la vitesse selon $z$ est nulle a une forte probabilité de trouver l'atome dans son état excité. L'interaction entre le photon et l'atome n'est alors pas une absorption, mais correspond au phénomène d'émission stimulée, et a pour conséquence que le photon issu de la sonde continue son chemin et fini par sortir de l'échantillon : le faisceau sonde est beaucoup moins absorbé qu'en l'absence du faisceau pompe (ce qui correspondrait à une spectroscopie classique). En regroupant les résultats du détecteur pour différentes fréquences des faisceaux sonde et pompe, on voit donc apparaître un profil gaussien dû à l'effet Doppler, et au milieu de ce profil un pic étroit qui correspond à une transmission à nouveau élevée : la position de ce pic correspond à la fréquence de transition de l'atome.
 
 En pratique ces pics plus étroits permettent d'identifier des transitions hyperfines qui étaient cachées par la largeur de la gaussienne principale.
 \begin{figure}[htp]
@@ -1187,7 +1187,7 @@ On a donc obtenu l'expression de $c$\footnote{Il manque selon nous un delta de D
     &\eq
     \dfrac{\hbar m_J}{\hbar^2 J(J+1)} \bra{b}\vec{S}\Cdot\vec{J}\ket{a}
 \end{align*}
-On s'aperçoit déjà à ce stade qu'un état de moment magnétique total nul (i.e. dont $m_J = 0$) ne subira pas l'effet Zeeman. On peut comprendre cela simplement : l'interaction d'une boucle de courant avec un champ magnétique se fait via un produit scalaire, or un état possédant un  $m_J = 0$ présente donc une projection de son moment magnétique sur l'axe z nulle. Il est donc tout à fait logique que le produit scalaire du vecteur le représentant avec $\vec{B}$ soit nul car les deux vecteurs sont perpendiculaires.\\
+On s'aperçoit déjà à ce stade qu'un état de moment magnétique total nul (i.e. dont $m_J = 0$) ne subira pas l'effet Zeeman. On peut comprendre cela simplement : l'interaction d'une boucle de courant avec un champ magnétique se fait via un produit scalaire, or un état possédant un  $m_J = 0$ présente donc une projection nulle de son moment magnétique sur l'axe $z$. Il est donc tout à fait logique que le produit scalaire du vecteur le représentant avec $\vec{B}$ soit nul car les deux vecteurs sont perpendiculaires.\\
 On a donc obtenu précédemment que l'élément de matrice associé à $S_z$ est proportionnel à celui de $\vec{S}\Cdot\vec{J}$, on va donc essayer de réexprimer ce dernier. On se sert pour cela de notre petit tour de passe-passe habituel.
 
 \[
@@ -1210,7 +1210,7 @@ On a donc obtenu précédemment que l'élément de matrice associé à $S_z$ est
     &\eq
     \hbar m_J \dfrac{J(J+1) + S(S+1) - L(L+1) }{2J(J+1)} \delta_{ab}
 \end{align*}
-On constate donc que l'effet Zeeman couple les états de même $m_J$ mais de $J$ différents. On va donc constater un couplage entre des états appartenant à des $n$ différents. En effet, la représentation matricielle de l'interaction aura des entrées non-nulles par exemple pour $J_1\neq J_2$ mais $S_1\neq S_2$ et $L_1 \eq L_2$, ce qui correspond à un état de $J$ différent mais de même $m_J$. Il s'agit d'états non-diagonaux. Ils se traduiront dans le graphe d'énergie par un repoussement de ces états de même $m_J$ mais de $J$ différents.\\
+On constate donc que l'effet Zeeman couple les états de même, $m_J$ mais de $J$ différents. On va donc constater un couplage entre des états appartenant à des $n$ différents. En effet, la représentation matricielle de l'interaction aura des entrées non nulles par exemple pour $J_1\neq J_2$ mais $S_1\neq S_2$ et $L_1 \eq L_2$, ce qui correspond à un état de $J$ différent, mais de même $m_J$. Il s'agit d'états non diagonaux. Ils se traduiront dans le graphe d'énergie par un repoussement de ces états de même, $m_J$ mais de $J$ différents.\\
 D'autre part, on a bien évidemment :
 
 \[
@@ -1226,11 +1226,11 @@ avec $g_J$, le facteur de Landé défini comme suivant et tel que $1\leq g_J \le
 \[
     g_J \eq  1 + \dfrac{J(J+1) + S(S+1) - L(L+1)}{2J(J+1)}
 \]
-Avis au lecteur : dans les notes c'est $\bra{a}$ et non $\bra{\tau J M_J}$ mais comme après il y a la même erreur mais qu'il l'a corrigée, je pense que c'est ici aussi une erreur. Le delta est aussi un ajout qui semble coller aux conclusions et à nos calculs personnels mais n'est pas repris dans les slides.\\
+Avis au lecteur : dans les notes c'est $\bra{a}$ et non, $\bra{\tau J M_J}$ mais comme après il y a la même erreur, mais qu'il l'a corrigée, je pense que c'est ici aussi une erreur. Le delta est aussi un ajout qui semble coller aux conclusions et à nos calculs personnels, mais n'est pas repris dans les slides.\\
 
 Dans cette expression de $g_J$, on comprend facilement que si on s'était limité au moment angulaire orbital $\vec{L}$ on aurait eu que le terme 1 ($S=0 \rightarrow J=L$). Le reste de l'expression provient du couplage spin-orbitale et s'exprime d'ailleurs de façon tout à fait analogue à la correction fine de couplage SO. De manière générale, on observe deux couplages simultanés:
 \begin{itemize}[label=$\bullet$]
-    \item le couplage des moments magnétiques (de spin et d'orbite) ensemble : il s'agit de la correction spin-orbite, c'est ce qui nous oblige à travailler en terme de $\vec{J}$ et non $\vec{L}$ et $\vec{S}$.
+    \item le couplage des moments magnétiques (de spin et d'orbite) ensemble : il s'agit de la correction spin-orbite, c'est ce qui nous oblige à travailler en termes de $\vec{J}$ et non $\vec{L}$ et $\vec{S}$.
     \item l'interaction du moment magnétique total avec le champ extérieur
 \end{itemize}
 Dans le cas d'un champ magnétique important $B>>\SI{1}{T}$, on s'aperçoit en comparant ces deux effets que le couplage spin-orbite est négligeable. Il nous reste donc séparément le couplage du moment magnétique orbital avec $B$ et le couplage du moment magnétique de spin avec $B$. On va donc pouvoir découpler $L$ et $S$. On obtient tout simplement cette expression :
@@ -1248,16 +1248,16 @@ avec $g_J$, le facteur de Landé défini comme suivant et tel que $1\leq g_J \le
 \[
     g_F \eq  g_J \dfrac{F(F+1) + J(J+1) - I(I+1)}{2F(F+1)}
 \]
-De façon analogue à ce qui a été dit pour le cas $I=0$, cette interaction va mettre en relation des états de même $m_F$ mais de $F$ différents. Nous pouvons illustrer ceci à l'aide de la figure \eqref{fig:Zeeman} :
+De façon analogue à ce qui a été dit pour le cas $I=0$, cette interaction va mettre en relation des états de même, $m_F$ mais de $F$ différents. Nous pouvons illustrer ceci à l'aide de la figure \eqref{fig:Zeeman} :
 \begin{figure}[htp]
     \centering
     \includegraphics[width=\textwidth]{Images2/ZeemanHyperfin.PNG}
     \caption{Modification des états hyperfins initialement dégénérés en $m_F$ selon le champ magnétique externe $B_z$}
     \label{fig:Zeeman}
 \end{figure}
-Commençons par le graphe de droite. La subtilité ici est que les deux familles d'états représentés sont très éloignées en énergie et donc n'interagissent quasiment pas (voir théorie des perturbations). On a donc ici le cas simple d'une modification linéaire selon $B_z$ des niveaux d'énergie, ce qui est bien ce qu'on observe. On peut également le comprendre en voyant que la matrice d'interaction ne contient que des termes diagonaux. En effet, les termes non-diagonaux sont divisés par le différentiel d'énergie entre les états couplés, il ets ici très grand et on néglige donc ces termes.\\
+Commençons par le graphe de droite. La subtilité ici est que les deux familles d'états représentés sont très éloignées en énergie et donc n'interagissent quasiment pas (voir théorie des perturbations). On a donc ici le cas simple d'une modification linéaire selon $B_z$ des niveaux d'énergie, ce qui est bien ce qu'on observe. On peut également le comprendre en voyant que la matrice d'interaction ne contient que des termes diagonaux. En effet, les termes non diagonaux sont divisés par le différentiel d'énergie entre les états couplés, il est ici très grand et on néglige donc ces termes.\\
 
-Pour ce qui est du graphe de gauche, il correspond à un autre terme atomique. Ici, à cause de la valeur de spin non-nulle, la valeur maximale de $F$ est plus grande et, par conséquent, le nombre d'états de $F$ différent associés à une même valeur de $m_F$ est plus grand. A cause de la proximité en énergie des niveaux, ils vont donc avoir des comportements non-linéaires en fonction du champ magnétique $B_z$, car leurs termes non-diagonaux ne seront pas négligeables cette fois. On peut le voir aisément pour l'état $(F = 0;m_F = 0)$ qui interagit avec les trois autres états $(F=1,2,3;m_F = 0)$ : son comportement est fortement non-linéaire. On voit également que les états $(F = 3;m_F = \pm3)$ ont bien un comportement linéaire car ils ne sont couplés avec aucun autre état (ce sont les seuls états ayant $m_F=\pm3$) leurs termes sont donc uniquement diagonaux.\\
+Pour ce qui est du graphe de gauche, il correspond à un autre terme atomique. Ici, à cause de la valeur de spin non nulle, la valeur maximale de $F$ est plus grande et, par conséquent, le nombre d'états de $F$ différents associés à une même valeur de $m_F$ est plus grand. À cause de la proximité en énergie des niveaux, ils vont donc avoir des comportements non linéaires en fonction du champ magnétique $B_z$, car leurs termes non diagonaux ne seront pas négligeables cette fois. On peut le voir aisément pour l'état $(F = 0;m_F = 0)$ qui interagit avec les trois autres états $(F=1,2,3;m_F = 0)$ : son comportement est fortement non-linéaire. On voit également que les états $(F = 3;m_F = \pm3)$ ont bien un comportement linéaire, car ils ne sont couplés avec aucun autre état (ce sont les seuls états ayant $m_F=\pm3$) leurs termes sont donc uniquement diagonaux.\\
 
 Enfin, de manière générale, l'effet de la perturbation entre deux états liés est de créer une répulsion entre eux.
 
@@ -1288,7 +1288,7 @@ En temps normal, un atome isolé n'a pas de moment dipolaire permanent : sa sym�
 \[
     \vec{D}_\text{induit} \eq \alpha \vec{\epsilon} \;\; \text{où}\; \alpha \; \text{est la polarisabilité dipolaire statique de l'atome}
 \]
-On présente ensuite le développement classique de la théorie des perturbation (cf Mécanique Quantique 2).
+On présente ensuite le développement classique de la théorie des perturbations (cf. Mécanique Quantique 2).
 
 \[
     H\psi_n \eq E_n \psi_n
@@ -1296,7 +1296,7 @@ On présente ensuite le développement classique de la théorie des perturbation
 \[
     E_n \eq \sum_{i=0}^{\infty} \lambda^i E_n^{(i)}\; ; \; \psi_n \eq \sum_{i=0}^{\infty} \lambda^i \psi_n^{(i)}
 \]
-A l'ordre 0 en $\lambda$, l'Hamiltonien non-perturbé correspond aux fonctions de bases à l'ordre 0. L'ensemble des fonctions $\{\psi_k^{(0)}\}$, avec $k$ prenant toutes les valeurs possibles, est donc une base de l'espace des solutions.
+À l'ordre 0 en $\lambda$, l'Hamiltonien non perturbé correspond aux fonctions de bases à l'ordre 0. L'ensemble des fonctions $\{\psi_k^{(0)}\}$, avec $k$ prenant toutes les valeurs possibles, est donc une base de l'espace des solutions.
 
 \[
     H_0 \psi_n^{(0)} \eq E_n^{(0)} \psi_n^{(0)}
@@ -1326,7 +1326,7 @@ On distingue donc deux cas selon si on se trouve sur la diagonale des éléments
 \[
     n \neq l\;:\;\;\; a^{(1)}_{nl} \eq \dfrac{H'_{ln}}{E^{(0)}_n-E^{(0)}_l}
 \]
-On a donc ici une correction diagonale à l'énergie sous la forme de $E^{(1)}_n$ qui ne concerne que l'état lui-même\footnote{A priori, car nous allons voir tout de suite que la symétrie sphérique de l'atome entraîne que cette correction est nulle.} et une correction non-diagonale aux vecteurs propres qui fait potentiellement intervenir d'autres états couplés par l'effet Stark avec l'état $n$. On va donc développer à l'ordre deux pour obtenir la correction à l'énergie entraînée par ce couplage.
+On a donc ici une correction diagonale à l'énergie sous la forme de $E^{(1)}_n$ qui ne concerne que l'état lui-même\footnote{A priori, car nous allons voir tout de suite que la symétrie sphérique de l'atome entraîne que cette correction est nulle.} et une correction non diagonale aux vecteurs propres qui fait potentiellement intervenir d'autres états couplés par l'effet Stark avec l'état $n$. On va donc développer à l'ordre deux pour obtenir la correction à l'énergie entraînée par ce couplage.
 
 %il faudrait taper cette partie en LaTeX plutot qu'une image
 %À l'ordre 2 en $\lambda$:
@@ -1344,7 +1344,7 @@ On obtient donc $E_n^{(2)}$ qui représente la correction en énergie au second 
     \includegraphics[scale=0.65]{Images2/ordre2.2.PNG}
 \end{figure}
 
-En faisant explicitement le calcul de $H'_{nn}$, on fait l'intégrale du produit d'une fonction paire, $|\psi|^2$, et d'une fonction impaire, $\sum_i \vec{r}_i$ : le résultat est donc nul. On retrouve bien le résultat pressenti : un atome ne peut posséder de dipôle permanent car sa parité est définie, ce qui est une condition analogue ici à présenter une symétrie sphérique.
+En faisant explicitement le calcul de $H'_{nn}$, on fait l'intégrale du produit d'une fonction paire, $|\psi|^2$, et d'une fonction impaire, $\sum_i \vec{r}_i$ : le résultat est donc nul. On retrouve bien le résultat pressenti : un atome ne peut posséder de dipôle permanent, car sa parité est définie, ce qui est une condition analogue ici à présenter une symétrie sphérique.
 
 Par le calcul de la correction à l'énergie au second ordre $E_n^{(2)}$, on a obtenu une expression pour la polarisabilité de l'atome $\bar{\alpha}$.
 
@@ -1359,7 +1359,7 @@ Dans l'atome d'hydrogène, dû à la forte symétrie de sa structure, les états
 \[
     \ket{nlm}\eq \ket{200},\ket{210},\ket{211},\ket{21\bar{1}}\;\;\text{sont dégénérés}
 \]
-On représente donc ce mélange d'orbitales de parité différentes par la décomposition sur la base des $\{\psi_{nlm}\}$. Attention on conserve $m = 0$ car la projection du moment angulaire orbital sur l'axe z doit rester le même. %Honnêtement je suis pas sûr d'avoir compris à 100% pourquoi
+On représente donc ce mélange d'orbitales de parités différentes par la décomposition sur la base des $\{\psi_{nlm}\}$. Attention on conserve, $m = 0$ car la projection du moment angulaire orbital sur l'axe z doit rester le même. %Honnêtement je suis pas sûr d'avoir compris à 100% pourquoi
 
 \[
     \psi_n^{(0)} \eq \sum_l c_l \psi_{nl0}
@@ -1383,7 +1383,7 @@ Grâce à l'hybridation des orbitales, le moment dipolaire permanent de l'hydrog
     \includegraphics[scale=0.8]{Images2/correcordre.PNG}
 \end{figure}
 
-On voit tout de suite que seuls les états proches en énergie seront couplés par la perturbation, ce qui veut explique que l'hybridation d'orbitales dans l'hydrogène fonctionne si bien car les états hybridés sont (quasi) dégénérés en énergie, on a donc un fort couplage entre eux. En somme, on peut alors parler de polarisabilité de multiplets car cette notion ne concerne de toute façon que les états d'énergies proches, c'est-à-dire situés dans le même multiplet.\\
+On voit tout de suite que seuls les états proches en énergie seront couplés par la perturbation, ce qui veut explique que l'hybridation d'orbitales dans l'hydrogène fonctionne si bien, car les états hybridés sont (quasi) dégénérés en énergie, on a donc un fort couplage entre eux. En somme, on peut alors parler de polarisabilité de multiplets, car cette notion ne concerne de toute façon que les états d'énergies proches, c'est-à-dire situés dans le même multiplet.\\
 
 On se retrouve donc avec un état fondamental particulier pour l'atome d'hydrogène. Cette particularité sous un champ électrique va nous permettre de réaliser des transitions exotiques. On va par exemple pouvoir réaliser des transitions entre le 2s perturbé (mélange de 2s et 2p) vers l'état 4s (mélange de 4s, 4p, 4d, 4f) ce qui est normalement impossible. On va également pouvoir réaliser des transitions entre ce 2s et le 3s ce qui est normalement impossible à cause de la parité des états.\\
 
@@ -1392,7 +1392,7 @@ On se retrouve donc avec un état fondamental particulier pour l'atome d'hydrog�
     \includegraphics[width=0.65\textwidth]{Images2/EffetStark.PNG}
 \end{figure}
 
-On exprime $\psi$ la fonction d'onde sous perturbation comme une combili des $\psi_a$ et $\psi_b$, les fonctions d'onde du système non-perturbé. En diagonalisant la matrice de l'Hamiltonien perturbé, on obtient $E^{\pm}$. On distingue deux régimes, soit les énergies sont éloignées $(E_a - E_b)^2 >> 0$ on obtient donc $E^+ = E_a$ et $E^- = E_b$. On a donc pas d'effet pour des énergies très éloignées. Si $4e^2\bra{b}\sum_iz_i\ket{a} = 4|H'_{ba}|^2<<(E_a - E_b)^2 $, par le développement de Taylor de $(1 + x)^2\eq 1 + \dfrac{x}{2} - \dfrac{x^2}{8} + \bigO(x^3)$ ; $x<<1$, on a une modification quadratique en $\epsilon$ des niveaux d'énergie. Si on ne peut pas faire ce raisonnement, on a une évolution linéaire (Fig. \ref{fig:stark_lin}).
+On exprime $\psi$ la fonction d'onde sous perturbation comme une combili des $\psi_a$ et $\psi_b$, les fonctions d'onde du système non perturbé. En diagonalisant la matrice de l'Hamiltonien perturbé, on obtient $E^{\pm}$. On distingue deux régimes, soit les énergies sont éloignées $(E_a - E_b)^2 >> 0$ on obtient donc $E^+ = E_a$ et $E^- = E_b$. On a donc pas d'effet pour des énergies très éloignées. Si $4e^2\bra{b}\sum_iz_i\ket{a} = 4|H'_{ba}|^2<<(E_a - E_b)^2 $, par le développement de Taylor de $(1 + x)^2\eq 1 + \dfrac{x}{2} - \dfrac{x^2}{8} + \bigO(x^3)$ ; $x<<1$, on a une modification quadratique en $\epsilon$ des niveaux d'énergie. Si on ne peut pas faire ce raisonnement, on a une évolution linéaire (Fig. \ref{fig:stark_lin}).
 
 \begin{figure}[htp]
     \centering
@@ -1422,7 +1422,7 @@ On a finalement une évolution en $n^2$ pour l'orbite moyenne (bien qu'il ne s'a
     E_\text{ion} \; \propto\; \dfrac{1}{n^4}
 \]
 
-Quand on augmente le nombre quantique principal n, les électrons deviennent moins liés au noyau et donc plus polarisables, l'effet Stark est d'autant plus important. Finalement, pour des $n$ importants, on arrive dans une situation chaotique où les nombres quantiques vont se mélanger et on obtient le genre de graphe présenté au-dessus. A un certain stade, le potentiel coulombien est tellement déformé qu'il laisse s'échapper l'électron comme représenté sur le dessin suivant (Fig. \ref{fig:fig_stark}).\\
+Quand on augmente le nombre quantique principal n, les électrons deviennent moins liés au noyau et donc plus polarisables, l'effet Stark est d'autant plus important. Finalement, pour des $n$ importants, on arrive dans une situation chaotique où les nombres quantiques vont se mélanger et on obtient le genre de graphe présenté au-dessus. À un certain stade, le potentiel coulombien est tellement déformé qu'il laisse s'échapper l'électron comme représenté sur le dessin suivant (Fig. \ref{fig:fig_stark}).\\
 
 \begin{figure}[H]
     \centering
@@ -1447,11 +1447,11 @@ Dans la haute atmosphère, le $O_2$ entre en collision avec les électrons de ha
     &\longrightarrow\; O(^3P)\; +\; O(^1D)
 \end{align*}
 
-Les deux termes excités de même configuration que l'état fondamental sont $^1D$ et $^1S$ (singulet D et singulet S). Chaque processus d'ionisation-recombinaison va produire soit l'un soit l'autre dans certaines proportions mesurables ainsi qu'un $O(^3P)$. On va donc avoir des longueurs d'onde bien précises qui correspondent à deux transitions interdites parce que ces termes sont de mêmes configuration donc forcément de même parité. Dans la cascade de désexcitation de l'oxygène $^1S$ on va avoir une longueur d'onde de \SI{527}{nm} de couleur verte qui correspond à une transition E2 (quadripolaire électrique, transition interdite) de  $^1S$ vers $^1D$, pas de changement de spin, pas de changement de parité. Un temps de vie de 0.7 secondes est associé à cette transition.\\
+Les deux termes excités de même configuration que l'état fondamental sont $^1D$ et $^1S$ (singulet D et singulet S). Chaque processus d'ionisation-recombinaison va produire soit l'un soit l'autre dans certaines proportions mesurables ainsi qu'un $O(^3P)$. On va donc avoir des longueurs d'onde bien précises qui correspondent à deux transitions interdites parce que ces termes sont de même configuration donc forcément de même parité. Dans la cascade de désexcitation de l'oxygène, $^1S$ on va avoir une longueur d'onde de \SI{527}{nm} de couleur verte qui correspond à une transition E2 (quadripolaire électrique, transition interdite) de  $^1S$ vers $^1D$, pas de changement de spin, pas de changement de parité. Un temps de vie de 0.7 seconde est associé à cette transition.\\
 
-Si on regarde la transition du $^1D$ vers le $^3P$, on observe une transition beaucoup plus lente (108 secondes) car on a un changement de spin. Il s'agit donc d'une transition de type M1, dipolaire magnétique avec deux longueurs d'onde possibles car deux états de J possibles. On a pas accès à $J=0$ mais $J=1,2$ sont possibles car on avait $J=2$ dans l'état $^1D$. Dans une phase gazeuse à haute pression donc basse altitude, il est impossible que l'atome passent 108 secondes sans choc avec un autre atome. Par contre à haute altitude, la densité d'atomes est bien inférieure et il devient possible pour un atome de ne rencontrer aucun autre corps sur son temps de désexcitation (108 secondes) et de donc rester exciter jusque émission. Il y a donc une altitude minimale pour une aurore boréale de ce type, sous cette altitude elle change de régime.\\
+Si on regarde la transition du $^1D$ vers le $^3P$, on observe une transition beaucoup plus lente (108 secondes), car on a un changement de spin. Il s'agit donc d'une transition de type M1, dipolaire magnétique avec deux longueurs d'onde possibles, car deux états de J possibles. On a pas accès à, $J=0$ mais $J=1,2$ sont possibles, car on avait $J=2$ dans l'état $^1D$. Dans une phase gazeuse à haute pression donc basse altitude, il est impossible que l'atome passe 108 secondes sans choc avec un autre atome. Par contre à haute altitude, la densité d'atomes est bien inférieure et il devient possible pour un atome de ne rencontrer aucun autre corps sur son temps de désexcitation (108 secondes) et de donc rester exciter jusque émission. Il y a donc une altitude minimale pour une aurore boréale de ce type, sous cette altitude elle change de régime.\\
 
-Résumons : on a une injection de particules chargées le long des pôles (ceinture de Van Allen) par le vent solaire, ce qui va créer un arc le long duquel vont se former les aurores boréales. Les phénomènes d'ionisation-recombinaison émettent des photons à des longueurs bien spécifiques et caractéristiques de transitions interdites dans la molécule d'oxygène. On a deux régimes différents séparés par une limite d'altitude, au-dessus de celle-ci la transition de type M1 (rouge) à long temps de vie a le temps de se faire car la densité gazeuse est assez faible pour lui permettre de ne heurter aucune autre molécule entre-temps. Sous cette altitude, on observe uniquement la transition E2 de court temps de vie de couleur verte. On a donc dans certains cas, des aurores boréales de couleurs vertes et rouges qui semblent superposées suite à ce phénomène, comme sur la photo.\\
+Résumons : on a une injection de particules chargées le long des pôles (ceinture de Van Allen) par le vent solaire, ce qui va créer un arc le long duquel vont se former les aurores boréales. Les phénomènes d'ionisation-recombinaison émettent des photons à des longueurs bien spécifiques et caractéristiques de transitions interdites dans la molécule d'oxygène. On a deux régimes différents séparés par une limite d'altitude, au-dessus de celle-ci la transition de type M1 (rouge) à long temps de vie a le temps de se faire, car la densité gazeuse est assez faible pour lui permettre de ne heurter aucune autre molécule entre-temps. Sous cette altitude, on observe uniquement la transition E2 de court temps de vie de couleur verte. On a donc dans certains cas, des aurores boréales de couleurs vertes et rouges qui semblent superposées suite à ce phénomène, comme sur la photo.\\
 
 Dans la réalité, il y a bien plus de types d'aurores boréales avec des corps plus lourds comme des molécules ou d'autres atomes.\\
 
