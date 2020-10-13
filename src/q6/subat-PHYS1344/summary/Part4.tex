@@ -15,9 +15,9 @@ Nous allons utiliser la théorie des perturbations pour décrire ce problème :
 Étant donné que nous étudions la diffusion de particules $\alpha$ par des noyaux d'or, l'hamiltonien d'interaction est simplement une interaction électrostatique, c'est-à-dire le potentiel (classique) coulombien. L'hamiltonien d'interaction peut ainsi se ré-écrire, avec $Z_1$, $Z_2$ la charge des particules :
 \begin{equation*}
     H_{int} \eq 
-    \frac{Z_1 Z_2 e^2}{4\pi \epsilon_0 r} 
-    \eq \frac{Z_1 Z_2 q^2}{r} 
-    \eq \frac{Z_1 Z_2 \alpha \hbar c}{r}
+    \dfrac{Z_1 Z_2 e^2}{4\pi \epsilon_0 r} 
+    \eq \dfrac{Z_1 Z_2 q^2}{r} 
+    \eq \dfrac{Z_1 Z_2 \alpha \hbar c}{r}
 \end{equation*}
 On présente ensuite la \textbf{règle d'or de Fermi}, qui peut être considérée comme acquise\footnote{En fait, si nous la considérons comme une hypothèse, le fait que nous obtenons le bon résultat pour la section efficace nous garantira la validité de cette hypothèse.} :\\
 \vspace{.2cm}
@@ -27,7 +27,7 @@ On présente ensuite la \textbf{règle d'or de Fermi}, qui peut être considér�
   \begin{equation*}
   \boxed{
     \lambda_{fi} \eq
-    \frac{2\pi}{\hbar }|\mel{\psi_f}{t_{fi}}{\psi_i}|^2 \dfrac{dn_f}{dE}
+    \dfrac{2\pi}{\hbar }|\mel{\psi_f}{t_{fi}}{\psi_i}|^2 \fdif{n_f}{E}
     \label{fermi}
    }
    \end{equation*}
@@ -40,12 +40,12 @@ On présente ensuite la \textbf{règle d'or de Fermi}, qui peut être considér�
   \begin{itemize}[label=$\bullet$]
       \item $\lambda_{fi}$ est le taux de transition (= probabilité par unité de temps) pour aller de l'état i vers l'état f. Il peut aussi s'interpréter comme l'inverse du temps de demie-vie d'une particule dans l'état i.
       \item $\mel{\psi_f}{t_{fi}}{\psi_i} \equiv T_{fi}$ décrit le couplage créé par l'interaction entre les deux états. Il s'agit d'un terme dépendant du processus physique d'interaction ; ce terme est donc \textbf{purement quantique}. En première approximation, $t_{fi} = H_{int}$\footnote{En réalité, $t_{fi} \eq H_{int} + \dfrac{H_{int}^2}{E-H_0} + \mathcal{O}(H_{int}^3) $. Si on arrive à une résonnance (E$\rightarrow$H$_0$), alors on doit considérer le terme quadratique et éventuellement les termes d'ordre supérieur en $\mathcal{O}(H_{int}^2)$ }
-      \item $\dfrac{dn_f}{dE}$ décrit la densité d'états dans la région d'arrivée de \textbf{l'espace des phases} (et non l'espace des états) par unité d'énergie. Il s'agit d'un terme issu de la \textbf{physique statistique}.
+      \item $\fdif{n_f}{E}$ décrit la densité d'états dans la région d'arrivée de \textbf{l'espace des phases} (et non l'espace des états) par unité d'énergie. Il s'agit d'un terme issu de la \textbf{physique statistique}.
   \end{itemize}
 \end{minipage}
 \vspace{0.2cm}
 
-La règle d'or de Fermi a déjà été implicitement utilisée dans la partie atomique du cours ; elle permet en effet de décrire la transitions entre deux états. Cependant, le terme $\dfrac{dn_f}{dE}$, n'est explicitement pas présent dans la théorie des perturbations appliquée à des états liés (typiquement un atome) car les états accessibles par la particule sont alors discrétisés : la fonction de densité est donc un delta de Dirac (sauf dans le cas de l'ionisation où l'état d'arrivée se trouve bien dans un continuum). Ici, nous décrivons la transition de notre particule $\alpha$ depuis un état du continuum vers un autre état de ce même continuum, justifiant ainsi la présence de la densité d'états.\\
+La règle d'or de Fermi a déjà été implicitement utilisée dans la partie atomique du cours ; elle permet en effet de décrire la transitions entre deux états. Cependant, le terme $\fdif{n_f}{E}$, n'est explicitement pas présent dans la théorie des perturbations appliquée à des états liés (typiquement un atome) car les états accessibles par la particule sont alors discrétisés : la fonction de densité est donc un delta de Dirac (sauf dans le cas de l'ionisation où l'état d'arrivée se trouve bien dans un continuum). Ici, nous décrivons la transition de notre particule $\alpha$ depuis un état du continuum vers un autre état de ce même continuum, justifiant ainsi la présence de la densité d'états.\\
 En outre, nous pouvons remarquer qu'un modification de l'interaction (autre noyau cible ou autre cinématique par exemple) n'affectera que l'élément de matrice $T_{fi}$.\\
 
 Exprimons maintenant notre probabilité de transition expérimentale, qui peut symboliquement s'exprimer comme suivant :
@@ -55,9 +55,9 @@ Exprimons maintenant notre probabilité de transition expérimentale, qui peut s
 En traduisant en des termes un peu plus rigoureux :
 \begin{equation}
     \lambda_{fi}^{exp} \eq
-    \Big(   \frac{N_{inc} v_1 A}{V}   \Big) \cdot
+    \Big(   \dfrac{N_{inc} v_1 A}{V}   \Big) \cdot
     \Big(
-    \int_{\Delta \Omega} \dfrac{d\sigma}{d\Omega} d\Omega \frac{1}{A}
+    \int_{\Delta \Omega} \fdif{\sigma}{\Omega} \dif\Omega \dfrac{1}{A}
     \Big)
     \label{lambda_exp}
 \end{equation}
@@ -75,12 +75,12 @@ On peut ici interpréter les termes:
     \dfrac{\mbox{\#particules}\ \alpha}{s}$  =  Flux de particules $\alpha$ (de vitesse $v_1$ sur la surface $A$)\\
     
 \begin{itemize}[label=$\bullet$]  
-    \item $d\sigma$, dans l'intégrale, correspond à un élément de surface associé à chaque particule de la cible : il s'agit d'une surface effective qui représente les cibles avec lesquelles la particule $\alpha$ pourra effectuer une collision (puisque ces cibles sont entourées de vide : on néglige les électrons). $\frac{d\sigma}{A}$ est donc la probabilité de collision dans la feuille d'or.
+    \item $\dif\sigma$, dans l'intégrale, correspond à un élément de surface associé à chaque particule de la cible : il s'agit d'une surface effective qui représente les cibles avec lesquelles la particule $\alpha$ pourra effectuer une collision (puisque ces cibles sont entourées de vide : on néglige les électrons). $\dfrac{\dif\sigma}{A}$ est donc la probabilité de collision dans la feuille d'or.
     
-    \item $\int_{\Delta \Omega} \dfrac{d\sigma/d\Omega}{A}d\Omega$ est la probabilité qu'il y ait une interaction et que la particule diffusée soit détectée dans l'angle solide $\Delta \Omega$ couvert par le détecteur.\\
+    \item $\int_{\Delta \Omega} \dfrac{\dif\sigma/\dif\Omega}{A}\dif\Omega$ est la probabilité qu'il y ait une interaction et que la particule diffusée soit détectée dans l'angle solide $\Delta \Omega$ couvert par le détecteur.\\
 \end{itemize}
 
-$\Rightarrow \lambda^{exp}_{fi} \eq \dfrac{N_{inc}}{V}v_1\int_{\Delta \Omega}\dfrac{d\sigma}{d\Omega}d\Omega \;$  est le \# de particules $\alpha$ détectées par seconde (indépendant de la surface A)
+$\Rightarrow \lambda^{exp}_{fi} \eq \dfrac{N_{inc}}{V}v_1\int_{\Delta \Omega}\fdif{\sigma}{\Omega}\dif\Omega \;$  est le \# de particules $\alpha$ détectées par seconde (indépendant de la surface A)
 
 
 \subsection{Fonctions d'onde}\label{fct_onde}
@@ -88,7 +88,7 @@ $\Rightarrow \lambda^{exp}_{fi} \eq \dfrac{N_{inc}}{V}v_1\int_{\Delta \Omega}\df
 
 Comme dit précédemment, la particule incidente demeure une particule libre après l'interaction (hypothèse de collision élastique) ; seule la quantité de mouvement de la particule est affectée par la collision. La fonction d'onde de la particule $\alpha$ est donc une onde plane et s'écrit comme suit :
 \begin{equation*}
-    \psi \eq \sqrt{\frac{N_0}{V}} \; exp\Big( \;\frac{i}{\hbar}(\vec{p}\cdot\vec{r} - Et) \; \Big)
+    \psi \eq \sqrt{\dfrac{N_0}{V}} \; exp\Big( \;\dfrac{i}{\hbar}(\vec{p}\cdot\vec{r} - Et) \; \Big)
 \end{equation*}
 Ainsi, $N_0$ représente le nombre de particules dans le volume $V$.\\
 Nous devons normaliser cette fonction d'onde (i.e. imposer $|\psi|^2 = 1$). Puisque $|\psi|^2$ représente le nombre de particules avec une quantité de mouvement $\vec{p}$ et une énergie $E$ dans le volume $V$, on normalise en imposant que le volume $V$ ne contient qu'une particule : $N_0 = 1$.\\
@@ -97,7 +97,7 @@ Nous imposons également que V soit suffisamment grand pour éviter les effets d
 
 Par la conservation de l'énergie (collision élastique), nous pouvons écrire : $E_4 + E_3 - E_1 - E_2 = 0$. Par conséquent, on peut déjà se rendre compte que :
 \begin{equation*}
-    T_{fi} \; \propto \; exp\Big( \;\frac{i}{\hbar} (E_4 + E_3 - E_1 - E_2) \; \Big) = 1
+    T_{fi} \; \propto \; exp\Big( \;\dfrac{i}{\hbar} (E_4 + E_3 - E_1 - E_2) \; \Big) = 1
 \end{equation*}
 Ainsi, le produit de toutes les fonctions d'onde des particules se résumera au produit des parties liées aux quantités de mouvement (nous y reviendrons pour simplifier des expressions futures).
 
@@ -121,9 +121,9 @@ Nous allons maintenant expliciter $\lambda_{fi}$, le taux de transition par unit
 \begin{equation*}
   \lambda_{fi} 
   \eq
-  \frac{2\pi}{\hbar }|\mel{\psi_f}{t_{fi}}{\psi_i}|^2 \dfrac{dn_f}{dE}
+  \dfrac{2\pi}{\hbar }|\mel{\psi_f}{t_{fi}}{\psi_i}|^2 \fdif{n_f}{E}
   \eq
-  \frac{2\pi}{\hbar }|T_{fi}|^2 \dfrac{dn_f}{dE}
+  \dfrac{2\pi}{\hbar }|T_{fi}|^2 \fdif{n_f}{E}
 \end{equation*}
 
 \subsubsection{Calcul de l'élément de matrice $T_{fi}$}\label{calcul_Tfi}
@@ -157,17 +157,17 @@ Nous pouvons également remplacer l'hamiltonien d'interaction $H_{int}$ par son 
     \int \psi_f^* \cdot H_{int} \cdot \psi_i \quad d^3\vec{r}\\
     %    &\eq
     %\dfrac{1}{V} 
-    %\int e^{\frac{-i}{\hbar}\vec{p_1}\cdot\vec{r}}    \cdot
-    %e^{\frac{-i}{\hbar}\vec{p_2}\cdot\vec{r}}         \cdot
+    %\int e^{\dfrac{-i}{\hbar}\vec{p_1}\cdot\vec{r}}    \cdot
+    %e^{\dfrac{-i}{\hbar}\vec{p_2}\cdot\vec{r}}         \cdot
     %\dfrac{z_1 z_2\alpha\hbar c}{r}                   \cdot
-    %e^{\frac{i}{\hbar}\vec{p_3}\cdot\vec{r}}          \cdot
-    %e^{\frac{i}{\hbar}\vec{p_4}\cdot\vec{r}}
+    %e^{\dfrac{i}{\hbar}\vec{p_3}\cdot\vec{r}}          \cdot
+    %e^{\dfrac{i}{\hbar}\vec{p_4}\cdot\vec{r}}
     %\quad d^3\vec{r}\\
         &\eq
     \dfrac{1}{V} 
-    \int e^{\frac{-i}{\hbar}\vec{p_3}\cdot\vec{r}}    \cdot
+    \int e^{\dfrac{-i}{\hbar}\vec{p_3}\cdot\vec{r}}    \cdot
     \dfrac{z_1 z_2\alpha\hbar c}{|\vec{r}|}                   \cdot
-    e^{\frac{i}{\hbar}\vec{p_1}\cdot\vec{r}}
+    e^{\dfrac{i}{\hbar}\vec{p_1}\cdot\vec{r}}
     \quad d^3\vec{r}
     %\qquad \text{car} \quad p_2\;\equiv\;0
     %\quad  \text{et}  \quad p_4\;\approx\;0
@@ -175,38 +175,38 @@ Nous pouvons également remplacer l'hamiltonien d'interaction $H_{int}$ par son 
         &\eq
     \dfrac{z_1 z_2\alpha\hbar c}{V} 
     \int 
-    \dfrac{1}{|\vec{r}|} \cdot e^{\frac{i}{\hbar}\vec{q}\cdot\vec{r}}
+    \dfrac{1}{|\vec{r}|} \cdot e^{\dfrac{i}{\hbar}\vec{q}\cdot\vec{r}}
     \quad d^3\vec{r} 
     \qquad \text{avec} \quad \boxed{ \vec{q} \equiv \vec{p_1}-\vec{p_3}}
 \end{align*}
 Il faut maintenant résoudre l'intégrale. Étant donné qu'on évalue l'intégrand sur tout l'espace, on peut placer notre système d'axes comme on le souhaite. Ainsi, pour nous faciliter la vie, on choisit un système d'axes pour lequel $\vec{q} // \hat{z}$ tel qu'en utilisant les coordonnées sphériques : $\vec{q}\cdot\vec{r} = (0,0,q)\cdot(0,0,r\cos{\beta}) = q\cdot r \cdot cos(\beta)$ avec $\beta$ qui varie entre 0 et $\pi$. Pourquoi prendre $\beta$ au lieu $\theta$ vous demandez-vous en insultant l'auteur de ce déplorable choix. Simplement parce que $\theta$ est déjà réservé comme étant l'angle de diffusion entre $\vec{p}_1$ et $\vec{p_3}$ dans le système d'axes pour lequel $\vec{p_1} // \hat{z}$ qui n'est donc pas le même que celui utilisé pour l'intégrale\footnote{Ça va la géométrie ?}. Cet angle $\theta$ est bien fixé puisque l'on s'intéresse ici au taux de transition entre état initial et un état final donné.\\
-Ainsi, l'élément de volume infinitésimal s'écrit comme  $d^3\vec{r} = dr \cdot r d\beta \cdot r sin(\beta) d\phi $ et l'intégrale devient :
+Ainsi, l'élément de volume infinitésimal s'écrit comme  $d^3\vec{r} = dr \cdot r \dif\beta \cdot r sin(\beta) \dif\phi $ et l'intégrale devient :
 \begin{align*}
-    \int \dfrac{1}{r} \cdot e^{\frac{i}{\hbar}\vec{q}\cdot\vec{r}}
+    \int \dfrac{1}{r} \cdot e^{\dfrac{i}{\hbar}\vec{q}\cdot\vec{r}}
     \quad d^3\vec{r}
         &\eq
-    \int_{0}^{2 \pi} d\phi
+    \int_{0}^{2 \pi} \dif\phi
     \int_{0}^{+\infty} \dfrac{1}{r}r^2 
     \Bigg( 
         \int_{0}^{\pi}
-        e^{\frac{iqr}{\hbar}cos(\beta)} \cdot sin(\beta) d\beta
+        e^{\dfrac{iqr}{\hbar}cos(\beta)} \cdot sin(\beta) \dif\beta
     \Bigg) dr\\
         &\eq
     2 \pi \cdot \int_{0}^{+\infty} r 
     \Big[
-      \frac{\hbar}{iqr}e^{\frac{iqr}{\hbar}u}
+      \dfrac{\hbar}{iqr}e^{\dfrac{iqr}{\hbar}u}
     \Big]^{1}_{-1}
     dr 
     \qquad \quad \text{via le changement de variable} \quad u = cos(\beta)\\
         &\eq
     2 \pi \int_{0}^{+\infty} r
-    \cdot \frac{2\hbar sin(\frac{qr}{\hbar})}{qr} dr\\
+    \cdot \dfrac{2\hbar sin(\dfrac{qr}{\hbar})}{qr} dr\\
         &\eq
-    2 \pi \dfrac{2\hbar}{q} \int_{0}^{+\infty} sin(\frac{qr}{\hbar}) \; dr\\
+    2 \pi \dfrac{2\hbar}{q} \int_{0}^{+\infty} sin(\dfrac{qr}{\hbar}) \; dr\\
         &\eq
-    \dfrac{4\pi\hbar^2}{q^2} lim_{\epsilon \rightarrow 0}\int_{0}^{+\infty}e^{-\epsilon \beta} sin(\beta) \; d\beta\\
+    \dfrac{4\pi\hbar^2}{q^2} lim_{\epsilon \rightarrow 0}\int_{0}^{+\infty}e^{-\epsilon \beta} sin(\beta) \; \dif\beta\\
         &\eq
-    \dfrac{4\pi\hbar^2}{q^2} lim_{\epsilon \rightarrow 0}\frac{1}{1 + \epsilon^2}\\
+    \dfrac{4\pi\hbar^2}{q^2} lim_{\epsilon \rightarrow 0}\dfrac{1}{1 + \epsilon^2}\\
         &\eq
     \dfrac{4\pi\hbar^2}{q^2}
     \qquad \quad \text{via 1 changement de variables, 1 limite et 2 intégrales par partie\footnotemark} 
@@ -221,10 +221,10 @@ Par conséquent, l'élément de matrice $T_{fi}$, nécessaire pour obtenir l'exp
 
 
 
-\subsubsection{Détermination de densité d'états $\dfrac{dn_f}{dE}$}
+\subsubsection{Détermination de densité d'états $\dif n_f/ \dif E$}
 
 
-Pour évaluer la densité d'états, on en revient aux principes de la physique statistique. Il s'agit d'évaluer le nombre de cellules élémentaires comprise dans un volume de l'espace des états. Le volume d'une cellule élémentaire de l'espace de $k$ est de $\frac{(2\pi)^3}{V}$.
+Pour évaluer la densité d'états, on en revient aux principes de la physique statistique. Il s'agit d'évaluer le nombre de cellules élémentaires comprise dans un volume de l'espace des états. Le volume d'une cellule élémentaire de l'espace de $k$ est de $\dfrac{(2\pi)^3}{V}$.
  \begin{figure}[H]
     \centering
     \includegraphics[scale=0.80]{Images4/dens.PNG}
@@ -241,15 +241,15 @@ Supposons que l'on considère tous les vecteurs possédant une norme entre $P_f$
         &\eq
     \dfrac{4\pi k^2 \cdot dk}{(2\pi)^3 / V}\\
         &\eq
-    \frac{1}{\hbar^3}\frac{4\pi P^{2}_f \cdot dP_f}{(2\pi)^3 / V} 
+    \dfrac{1}{\hbar^3}\dfrac{4\pi P^{2}_f \cdot dP_f}{(2\pi)^3 / V} 
     \qquad \quad \text{puisque} \quad
     \vec{P} \eq \hbar \cdot \vec{k} \qquad \text{(Longueur d'onde de De Broglie)}
 \end{align*}
-Cependant, dans notre problème, nous ne considérons qu'une section de ce cercle, correspondant à un angle infinitésimal $d\Omega$. Remarquant que $4\pi$ est l'angle solide d'une sphère entière, nous la remplaçons donc par $d\Omega$\footnote{Voilà le genre de rigueur qu'on obtient quand ce sont des ingénieurs qui font un document} : ceci nous permet de ne prendre que la fraction de cette sphère qui nous intéresse (= l'angle solide couvert par le détecteur). On obtient donc l'expression suivante pour la densité d'état finale : 
+Cependant, dans notre problème, nous ne considérons qu'une section de ce cercle, correspondant à un angle infinitésimal $\dif\Omega$. Remarquant que $4\pi$ est l'angle solide d'une sphère entière, nous la remplaçons donc par $\dif\Omega$\footnote{Voilà le genre de rigueur qu'on obtient quand ce sont des ingénieurs qui font un document} : ceci nous permet de ne prendre que la fraction de cette sphère qui nous intéresse (= l'angle solide couvert par le détecteur). On obtient donc l'expression suivante pour la densité d'état finale : 
 \begin{equation*}
-    dn_f \eq \frac{1}{\hbar^3}\frac{P^{2}_f \cdot dP_f \cdot d\Omega}{(2\pi)^3 / V}
+    dn_f \eq \dfrac{1}{\hbar^3}\dfrac{P^{2}_f \cdot dP_f \cdot \dif\Omega}{(2\pi)^3 / V}
 \end{equation*}
- Cependant, dans l'expression de la règle d'or de Fermi, c'est $ \frac{dn_f}{dE}$ qui apparaît. Par conséquent, nous devons nous pencher sur le terme $dE\equiv dE_0$ car nous définissons $E_0 = E_3 + E_4 = E_1 + E_2$ (collision élastique). La différentielle d'énergie est donc:
+ Cependant, dans l'expression de la règle d'or de Fermi, c'est $ \fdif{n_f}{E}$ qui apparaît. Par conséquent, nous devons nous pencher sur le terme $dE\equiv dE_0$ car nous définissons $E_0 = E_3 + E_4 = E_1 + E_2$ (collision élastique). La différentielle d'énergie est donc:
 \begin{align*}
     dE_0 
         &\eq 
@@ -265,20 +265,20 @@ Cependant, dans notre problème, nous ne considérons qu'une section de ce cercl
 \end{align*}
 Dès lors, la densité d'état par unité d'énergie (ce qu'on veut) est :
 \begin{align*}
-    \dfrac{dn_f}{dE_0} \;\equiv\; \dfrac{dn_f}{dE_f}
+    \fdif{n_f}{E_0} \;\equiv\; \fdif{n_f}{E_f}
         &\eq
-    \frac{1}{\hbar^3}\frac{ d\Omega \cdot P^{2}_f}{(2\pi)^3 / V} \dfrac{dP_f}{dE_f}
+    \dfrac{1}{\hbar^3}\dfrac{ \dif\Omega \cdot P^{2}_f}{(2\pi)^3 / V} \dfrac{dP_f}{dE_f}
     \eq
-    \frac{V P_f^2}{(2\pi\hbar)^3} \dfrac{dP_f}{dE_f} d\Omega
+    \dfrac{V P_f^2}{(2\pi\hbar)^3} \dfrac{dP_f}{dE_f} \dif\Omega
     \\
         &\eq
-    \frac{V P_f^2}{(2\pi\hbar)^3} \dfrac{E_3}{c^2P_3} d\Omega
+    \dfrac{V P_f^2}{(2\pi\hbar)^3} \dfrac{E_3}{c^2P_3} \dif\Omega
     \qquad \qquad \text{via} \quad E_3=E_f \quad \text{et formule d'Einstein développée au-dessus} \\ 
         &\eq
-    \frac{V P_f^2}{(2\pi\hbar)^3}\dfrac{m_3 c^2}{c^2 m_3 v_3}  d\Omega
+    \dfrac{V P_f^2}{(2\pi\hbar)^3}\dfrac{m_3 c^2}{c^2 m_3 v_3}  \dif\Omega
     \qquad \quad \text{car} \quad E_{\text{cinétique}} << E_{\text{masse}} \quad \text{(vérifié avec valeurs sur Wiki)}\\
         &\eq
-    \frac{V P_f^2}{(2\pi\hbar)^3}\dfrac{1}{v_3}  d\Omega
+    \dfrac{V P_f^2}{(2\pi\hbar)^3}\dfrac{1}{v_3}  \dif\Omega
 \end{align*}
 
 
@@ -315,47 +315,47 @@ OUI MAIS SA QDM DOIT PAS ETRE NULLE CAR ON MULTIPLIE PAR SA MASSE QUI EST INFINI
 \subsubsection{Expression de $\lambda_{fi}$}
 
 
-Nous avons donc obtenu l'élément de matrice $T_{fi}$ et la densité d'états finaux $ \frac{dn_f}{dE_f}$. Nous avons donc $\lambda_{fi}^{exp}$ le taux de \textit{détection} dans un angle solide $d\Omega$ grâce à l'équation \eqref{lambda_exp} et $\lambda_{fi}$ le taux de \textit{transition} d'un état i vers un continuum d'états f situés dans un angle solide $d\Omega$ grâce à la règle d'or de Fermi. Nous réécrivons ces deux taux :
+Nous avons donc obtenu l'élément de matrice $T_{fi}$ et la densité d'états finaux $ \fdif{n_f}{E_f}$. Nous avons donc $\lambda_{fi}^{exp}$ le taux de \textit{détection} dans un angle solide $\dif\Omega$ grâce à l'équation \eqref{lambda_exp} et $\lambda_{fi}$ le taux de \textit{transition} d'un état i vers un continuum d'états f situés dans un angle solide $\dif\Omega$ grâce à la règle d'or de Fermi. Nous réécrivons ces deux taux :
 \begin{equation*}
     \left\{
     \begin{array}{ll}
         \lambda_{fi} \eq
-        \dfrac{2\pi}{\hbar} |T_{fi}|^2 \dfrac{dn_f}{dE}
+        \dfrac{2\pi}{\hbar} |T_{fi}|^2 \fdif{n_f}{E}
         \eq
         \dfrac{2\pi}{\hbar} 
         \Big(
             \dfrac{z_1 z_2\alpha\hbar c}{V} \cdot \dfrac{4 \pi \hbar^2}{q^2}  
         \Big)^2
         \Big(
-        \dfrac{V P_f^2}{(2\pi\hbar)^3}\dfrac{1}{v_3}  d\Omega
+        \dfrac{V P_f^2}{(2\pi\hbar)^3}\dfrac{1}{v_3}  \dif\Omega
         \Big)
     \\[13pt]
         \lambda_{fi}^{exp} 
             \; \equiv \;
-        \dfrac{N_{inc}}{V} v_1 \dfrac{d\sigma}{d\Omega} d\Omega
+        \dfrac{N_{inc}}{V} v_1 \fdif{\sigma}{\Omega} \dif\Omega
             \eq
         \dfrac{1}{V} v_1
-        \dfrac{d\sigma}{d\Omega} d\Omega \qquad \qquad \text{En normalisant à une particule par unité de volume}
+        \fdif{\sigma}{\Omega} \dif\Omega \qquad \qquad \text{En normalisant à une particule par unité de volume}
     \end{array}
     \right.
 \end{equation*}
-Si l'on considère que le détecteur est parfait (efficacité de 100\% : il détecte toutes les particules qui l'atteignent), on peut égaliser ces deux taux en les associant au même angle solide $d\Omega$. Ainsi, on peut obtenir l'expression de la section efficace différentielle $\dfrac{d\sigma}{d\Omega}$. Il est à noter que le terme $I = \dfrac{v_1}{V} \left[\dfrac{\# \alpha}{m^2\cdot s}\right]$ est l'intensité normalisée ($N_{inc} = 1$):
+Si l'on considère que le détecteur est parfait (efficacité de 100\% : il détecte toutes les particules qui l'atteignent), on peut égaliser ces deux taux en les associant au même angle solide $\dif\Omega$. Ainsi, on peut obtenir l'expression de la section efficace différentielle $\fdif{\sigma}{\Omega}$. Il est à noter que le terme $I = \dfrac{v_1}{V} \left[\dfrac{\# \alpha}{m^2\cdot s}\right]$ est l'intensité normalisée ($N_{inc} = 1$):
 \begin{equation*}
-    \dfrac{d\sigma}{d\Omega}
+    \fdif{\sigma}{\Omega}
         \eq
-    \lambda_{fi} \cdot \dfrac{V}{v_1 d\Omega}
+    \lambda_{fi} \cdot \dfrac{V}{v_1 \dif\Omega}
         \; \equiv \;
-    \dfrac{ \lambda_{fi}}{I d\Omega}
+    \dfrac{ \lambda_{fi}}{I \dif\Omega}
         \eq
     \dfrac{2\pi}{\hbar} 
     \Big(
         \dfrac{z_1 z_2\alpha\hbar c}{V} \cdot \dfrac{4 \pi \hbar^2}{q^2}  
     \Big)^2
     \Big(
-    \dfrac{V P_f^2}{(2\pi\hbar)^3}\dfrac{1}{v_3}  d\Omega
+    \dfrac{V P_f^2}{(2\pi\hbar)^3}\dfrac{1}{v_3}  \dif\Omega
     \Big)
     \cdot
-    \dfrac{V}{v_1 d\Omega}
+    \dfrac{V}{v_1 \dif\Omega}
         \eq
     4 \Big( \dfrac{z_1 z_2e^2}{4\pi\epsilon_0} \Big)^2 \dfrac{P_f^2}{q^4v_1v_3}
 \end{equation*}
@@ -369,23 +369,24 @@ Cette dernière expression de la section efficace différentielle peut se simpli
     q^2 \eq 2 P_f^2 - 2 P_f^2 cos(\theta)
     \qquad \text{collision élastique sans recul} \quad \Leftrightarrow \quad v_1=v_3\\
         &\quad \Leftrightarrow \quad
-    q^2 \eq 4 P_f^2 sin^2(\frac{\theta}{2})
+    q^2 \eq 4 P_f^2 sin^2(\dfrac{\theta}{2})
 \end{align*}
-En injectant ce résultat dans l'expression de  $\frac{d\sigma}{d\Omega}$ :
+En injectant ce résultat dans l'expression de  $\fdif{\sigma}{\Omega}$ :
 \begin{align*}
-    \dfrac{d\sigma}{d\Omega}
+    \fdif{\sigma}{\Omega}
         &\eq
     \Bigg( \dfrac{z_1 z_2e^2}{4\pi\epsilon_0} \Bigg)^2 
-    \dfrac{4 P_f^2}{16 P_f^4 sin^4(\frac{\theta}{2})v^2_1}\\
+    \dfrac{4 P_f^2}{16 P_f^4 sin^4(\dfrac{\theta}{2})v^2_1}\\
         &\eq
     \Bigg( \dfrac{z_1 z_2e^2}{4\pi\epsilon_0} \Bigg)^2
-    \dfrac{1}{ (\frac{P_1v_1}{2})^2 16sin^4(\frac{\theta}{2})}
+    \dfrac{1}{ (\dfrac{P_1v_1}{2})^2 16sin^4(\dfrac{\theta}{2})}
     \qquad \text{Il apparaît l'énergie cinétique de la particule incidente}\\
     &\eq
     \Bigg( \dfrac{cst}{E_{cin}} \Bigg)^2
-    \dfrac{1}{16sin^4(\frac{\theta}{2})}
+    \dfrac{1}{16sin^4(\dfrac{\theta}{2})}
 \end{align*}
 Ce dernier résultat est exactement le même que le résultat obtenu classiquement. La règle d'or de Fermi nous a donc permis de retrouver l'expression classique de la section efficace de Rutherford. On peut ainsi, sans l'avoir démontrée par la théorie des perturbation, accepter la validité de la règle d'or de Fermi.
+
 
 
 
@@ -414,7 +415,7 @@ Les électrons devant sonder des noyaux ayant une taille de l'ordre de 2 femtom�
 
 Nous allons ici étudier la collision élastique d'un électron avec un noyaux ponctuel en négligeant le recul du noyau (M$_{noyau}\approx Z \cdot 1800 \cdot$ m$_e$ $>>$ m$_e$). En reprenant le résultat de la collision élastique de particules $\alpha$ avec des noyaux ponctuels sans recul, nous obtenons dans notre cas, pour une jauge $\hbar=c=1$:
 \begin{equation*}
-    \Big(  \dfrac{d\sigma}{d\Omega} \Big)_{Ruth}^{el}
+    \Big(  \fdif{\sigma}{\Omega} \Big)_{Ruth}^{el}
     \eq
     4 \Big( \dfrac{z_1 z_2e^2}{4\pi\epsilon_0} \Big)^2 \dfrac{P_f^2}{q^4v_1v_3}
     \eq
@@ -438,29 +439,29 @@ Nous pouvons simplifier l'expression du dessus avec:
         q^2 \eq 2 P_f^2 - 2 P_f^2 cos(\theta)
         \qquad \text{collision élastique sans recul : } v_1=v_3\\
             &\quad \Leftrightarrow \quad
-        q^2 \eq 4 P_f^2 sin^2(\frac{\theta}{2})\\
+        q^2 \eq 4 P_f^2 sin^2(\dfrac{\theta}{2})\\
             &\quad \Leftrightarrow \quad
-        q^2 \eq 4 E^2   sin^2(\frac{\theta}{2})
+        q^2 \eq 4 E^2   sin^2(\dfrac{\theta}{2})
     \end{align*}
 \end{itemize}
 Avec ces deux informations, la section efficace différentielle devient :
 \begin{equation*}
-    \Big(  \dfrac{d\sigma}{d\Omega}  \Big)^{el}_{Ruth}
+    \Big(  \fdif{\sigma}{\Omega}  \Big)^{el}_{Ruth}
     \eq
     \dfrac{4 (z_1 z_2 \alpha)^2 P_f^2}{q^4v_1v_3}
     \eq
     \dfrac{4 (z_1 z_2 \alpha)^2 E^2}{q^4}
     \eq
-    \dfrac{4 (z_1 z_2 \alpha)^2 E^2}{16 E^4 sin^4(\frac{\theta}{2})}
+    \dfrac{4 (z_1 z_2 \alpha)^2 E^2}{16 E^4 sin^4(\dfrac{\theta}{2})}
     \eq
     \dfrac{(z_1 z_2 \alpha)^2}{4E^2}
-    \dfrac{1}{sin^4(\frac{\theta}{2})}
+    \dfrac{1}{sin^4(\dfrac{\theta}{2})}
 \end{equation*}
 En se rappelant que nous travaillons avec un faisceau d'électrons ($z_2 = 1$) et en notant Z la charge du noyau : 
 \begin{equation}
-    \Big(  \dfrac{d\sigma}{d\Omega}  \Big)^{el}_{Ruth}
+    \Big(  \fdif{\sigma}{\Omega}  \Big)^{el}_{Ruth}
     \eq
-    \dfrac{Z^2}{4}\dfrac{\alpha^2}{E^2}\dfrac{1}{\sin{^4(\frac{\theta}{2})}}
+    \dfrac{Z^2}{4}\dfrac{\alpha^2}{E^2}\dfrac{1}{\sin{^4(\dfrac{\theta}{2})}}
     \label{sect_eff_ponct}
 \end{equation}
 L'expression \ref{sect_eff_ponct} décrit, pour rappel, la section efficace différentielle de Rutherford dans le cas d'une diffusion élastique sans recul d'électrons ultra-relativistes par un noyau ponctuel. Regardons maintenant ce que vaut cette section de Rutherford dans le cas d'un noyau non-ponctuel.
@@ -483,7 +484,7 @@ L'interaction se fait comme suivant : l'onde plane (état non-lié $\Rightarrow$
 Les vecteurs reliant le centre du noyau au détecteur et le point d'interaction entre l'électron et le noyau au détecteur peuvent être considérés parallèles si le détecteur est placé à grande distance (ce qui est le cas ; approximation de Fraunhofer). Sur le graphe, on peut voir que le vecteur reliant le centre diffuseur dans le noyau au point d'observation est $\vec{r} - \vec{R}$.\\
 
 Cette distribution de charge ne va modifier que le terme $T_{fi}$ (donc $\lambda_{fi}$) au travers de $H_{int}$:
-$$H_{int} \eq \frac{z_1z_2e^2}{4\pi\epsilon_0} \int \frac{\rho(\vec{R})}{|\vec{r} - \vec{R}|} \quad d^3\vec{R}$$ On applique ici les préceptes de la mécanique quantique : la probabilité est le carré de la somme des amplitudes (et non la somme des carrés des amplitudes, qui est la somme des probabilités). Dès lors, on additionne les probabilités sur tous les vecteurs $\vec{R}$ auxquels peut se faire l'interaction, d'où l'intégrale sur $\vec{R}$, qui a pour domaine l'ensemble de l'espace. En injectant cette expression dans l'élément de matrice $T_{fi}$ : \textcolor{red}{Encore une fois on prend juste les fonctions d'onde de seulement d'électron sans compter l'énergie, ce qui pose problème...c'est la même question qu'avant.}
+$$H_{int} \eq \dfrac{z_1z_2e^2}{4\pi\epsilon_0} \int \dfrac{\rho(\vec{R})}{|\vec{r} - \vec{R}|} \quad d^3\vec{R}$$ On applique ici les préceptes de la mécanique quantique : la probabilité est le carré de la somme des amplitudes (et non la somme des carrés des amplitudes, qui est la somme des probabilités). Dès lors, on additionne les probabilités sur tous les vecteurs $\vec{R}$ auxquels peut se faire l'interaction, d'où l'intégrale sur $\vec{R}$, qui a pour domaine l'ensemble de l'espace. En injectant cette expression dans l'élément de matrice $T_{fi}$ : \textcolor{red}{Encore une fois on prend juste les fonctions d'onde de seulement d'électron sans compter l'énergie, ce qui pose problème...c'est la même question qu'avant.}
 \begin{align*}
     T_{fi} 
 &\; \equiv \;
@@ -558,25 +559,25 @@ En fait, le facteur $F(\vec{q})$, appelé plus communément \textbf{facteur de f
 
 Nous étudions donc la collision élastique d'un électron ponctuel avec une particule cible non-ponctuelle, caractérisée pas une densité de charge et supposée de masse infinie (pas de recul). Avec nos résultats, nous pouvons maintenant étudier la section efficace différentielle de cette diffusion : il s'agit de la même section efficace différentielle que dans le cas ponctuel, avec cependant la correction $|F(\vec{q})|^2$ due au caractère non-ponctuel du noyau:
 \begin{equation*}
-    \Big( \dfrac{d\sigma}{d\Omega} \Big)^{exp}
+    \Big( \fdif{\sigma}{\Omega} \Big)^{exp}
     \eq
-    \Big( \dfrac{d\sigma}{d\Omega} \Big)^{Ruth}
+    \Big( \fdif{\sigma}{\Omega} \Big)^{Ruth}
     \cdot |F(\vec{q})|^2
     \qquad \quad \text{avec} \quad
     F(\vec{q}) \eq \int 
     \rho(\vec{R}) \cdot e^{i\vec{q} \cdot\vec{R}}
     \quad d^3\vec{R}
 \end{equation*}
-Il est cependant possible d'obtenir un résultat plus précis en considérant un recul de la particule cible (donc noyau de masse finie), c'est-à-dire que l'énergie de l'électron sera moindre après la collision (énergie après = $E'<E$ = énergie avant). Ainsi, si on veut tenir compte de la masse du noyau, il faut modifier l'expression de $\frac{dP_f}{dE_f}$ :
+Il est cependant possible d'obtenir un résultat plus précis en considérant un recul de la particule cible (donc noyau de masse finie), c'est-à-dire que l'énergie de l'électron sera moindre après la collision (énergie après = $E'<E$ = énergie avant). Ainsi, si on veut tenir compte de la masse du noyau, il faut modifier l'expression de $\dfrac{dP_f}{dE_f}$ :
 \begin{equation*}
     \dfrac{dP_f}{dE_f} \;\approx\; \dfrac{P'}{cP} \eq \dfrac{E'}{cE}
     \qquad \text{avec $c$ la vitesse de l'électron (ultra-relativiste)}
 \end{equation*}
 Par conséquent, la section efficace pour un noyau ponctuel de masse finie (donc collision élastique avec recul) est mieux décrite par la formule suivante (qu'on démontrera apparemment en TP) :
 \begin{equation*}
-    \Big( \dfrac{d\sigma}{d\Omega} \Big)^{ponctuel}
+    \Big( \fdif{\sigma}{\Omega} \Big)^{ponctuel}
     \eq
-    \Big( \dfrac{d\sigma}{d\Omega} \Big)^{Ruth}
+    \Big( \fdif{\sigma}{\Omega} \Big)^{Ruth}
     \cdot \dfrac{E'}{E}
     \qquad \text{avec} \quad
     \dfrac{E'}{E} \eq
@@ -586,9 +587,9 @@ Par conséquent, la section efficace pour un noyau ponctuel de masse finie (donc
 En utilisant ce résultat pour décrire la section efficace de la diffusion d'un électron par un noyau non-ponctuel en tenant compte du recul du noyau :
 \begin{equation*}
 \boxed{
-    \Big( \dfrac{d\sigma}{d\Omega} \Big)^{elec}
+    \Big( \fdif{\sigma}{\Omega} \Big)^{elec}
     \eq
-    \Big( \dfrac{d\sigma}{d\Omega} \Big)^{Ruth}
+    \Big( \fdif{\sigma}{\Omega} \Big)^{Ruth}
     \cdot \dfrac{E'}{E}
     \cdot |F(\vec{q})|^2
     \qquad \text{avec} \quad 
@@ -603,10 +604,10 @@ Comme dit précédemment, on sait que ce facteur de forme $F(\vec{q})$ représen
 De façon plus pragmatique, nous mesurons la section efficace pour notre diffusion que nous pouvons relier à $|F(\vec{q})|^2$:
 \begin{equation*}
     |F(\vec{q})|^2 \eq
-    \Big( \dfrac{d\sigma}{d\Omega} \Big)^{elec}
+    \Big( \fdif{\sigma}{\Omega} \Big)^{elec}
     \cdot
     \Bigg[
-    \Big( \dfrac{d\sigma}{d\Omega} \Big)^{Ruth}
+    \Big( \fdif{\sigma}{\Omega} \Big)^{Ruth}
     \cdot \dfrac{E'}{E}
     \Bigg]^{-1}
 \end{equation*}
@@ -631,7 +632,7 @@ Dans l'élaboration d'une théorie, on passe souvent par des modèles très simp
         \overset{\text{norm.}}= 
         \dfrac{1}{D}\dfrac{1}{D}\delta(z)
         \qquad \text{si} \quad
-        x,y \;\in\; \big[ -\frac{D}{2},\frac{D}{2} \big]
+        x,y \;\in\; \big[ -\dfrac{D}{2},\dfrac{D}{2} \big]
     \\[7pt]
         0 \qquad \qquad \qquad \qquad \qquad \qquad \quad \text{sinon}
     \end{array}
@@ -675,7 +676,7 @@ Nous pouvons ainsi écrire $F(\vec{q})$:
 Nous nous intéressons aux zéros de cette fonction : sous quel angle d'observation n'observe-t-on aucun électron? Plus pragmatiquement, nous nous intéresserons surtout au premier zéro de $F(\vec{q})$ : en effet, puisqu'il s'agit d'une figure de diffraction, le premier zéro nous indiquera la dimension de l'objet. Notre détecteur va sonder tous les angles possibles (donc tous les couples $(\phi,\theta)$) ; intéressons-nous donc aux cas extrêmes de ces angles : 
 \begin{itemize}[label=$\bullet$]
     
-    \item Pour $\phi=0$ (ou de façon équivalente, $\phi=0,\frac{\pi}{2},\pi,\frac{3\pi}{2},...$), $F(\vec{q})$ vaut:
+    \item Pour $\phi=0$ (ou de façon équivalente, $\phi=0,\dfrac{\pi}{2},\pi,\dfrac{3\pi}{2},...$), $F(\vec{q})$ vaut:
     \begin{equation*}
         F(\vec{q})  \eq \text{sinc}\Big(\dfrac{P sin(\theta)\cdot 1 \cdot D}{2}\Big)\cdot \text{sinc}(0) 
         \eq \text{sinc}\Big(P\dfrac{sin(\theta)D}{2}\Big)
@@ -689,7 +690,7 @@ Nous nous intéressons aux zéros de cette fonction : sous quel angle d'observat
         sin(\theta) \eq \dfrac{\lambda}{D}
     \end{equation*}
     
-    \item Pour $\phi=\pi/4$ (ou de façon équivalente, $\phi=\frac{\pi}{4},\frac{3\pi}{4},\frac{5\pi}{4},...$), on a que $cos(\phi)=sin(\phi)=\frac{1}{\sqrt{2}}$. Par conséquent, $F(\vec{q})$ vaut:
+    \item Pour $\phi=\pi/4$ (ou de façon équivalente, $\phi=\dfrac{\pi}{4},\dfrac{3\pi}{4},\dfrac{5\pi}{4},...$), on a que $cos(\phi)=sin(\phi)=\dfrac{1}{\sqrt{2}}$. Par conséquent, $F(\vec{q})$ vaut:
     \begin{equation*}
         F(\vec{q})  \eq 
         \text{sinc}\Big(\dfrac{P sin(\theta)\cdot 1 \cdot D}{2\sqrt{2}}\Big)
@@ -737,14 +738,14 @@ A partir de la relation trigonométrique $1-cos(\theta) = 2sin^2(\theta /2)$, no
     \dfrac{2\pi}{\lambda} \dfrac{D}{2}
     2 sin^2(\theta /2)
     \quad \Leftrightarrow \quad
-    sin^2(\theta /2) \eq \frac{\lambda}{2D}
+    sin^2(\theta /2) \eq \dfrac{\lambda}{2D}
 \end{equation*}
-Et pour de petits angles, $sin^2(\theta /2) \rightarrow \frac{\theta^2}{4}$ on obtient :
+Et pour de petits angles, $sin^2(\theta /2) \rightarrow \dfrac{\theta^2}{4}$ on obtient :
 \begin{equation*}
-    \theta = \sqrt{\frac{2\lambda}{D}} \; > \; \frac{\lambda}{D}
+    \theta = \sqrt{\dfrac{2\lambda}{D}} \; > \; \dfrac{\lambda}{D}
     \qquad \text{si} \quad \lambda < D
 \end{equation*}
-Connaissant maintenant l'angle auquel apparaît le premier zéro du sinus cardinal lié à l'épaisseur du carré, nous devons nous poser la question suivante : "\textit{Cet angle est-il plus petit, plus grand ou égal aux angles correspondant aux premiers zéros des deux autres sinus cardinaux?}". Autrement dit, quelle est l'influence de l'épaisseur du noyau (dans notre modèle carré) sur l'angle auquel est calculé (pas observé ; on est encore dans le modèle) le premier zéro de $F(\vec{q})$?\\
+Connaissant maintenant l'angle auquel apparaît le premier zéro du sinus cardinal lié à l'épaisseur du carré, nous devons nous poser la question suivante : <<\textit{Cet angle est-il plus petit, plus grand ou égal aux angles correspondant aux premiers zéros des deux autres sinus cardinaux?}>>. Autrement dit, quelle est l'influence de l'épaisseur du noyau (dans notre modèle carré) sur l'angle auquel est calculé (pas observé ; on est encore dans le modèle) le premier zéro de $F(\vec{q})$?\\
 
 Nous avons montré que les angles du premier zéro correspondant aux dimensions latérales du modèle ($x$ et $y$) sont de l'ordre de $\lambda / D$ (plus précisément entre $\lambda / D$ et $1.4\lambda / D$). Nous avons montré pour la dimension longitudinale ($z$) que l'angle correspondant au premier zéro était plus grand que $\lambda / D$ si $\lambda < D$.\\
 La question qui se pose est donc : est-ce que $\lambda < D$? Eh bien oui! En effet, la longueur d'onde de de Broglie de l'électron doit être inférieure à la longueur sondée (diffraction).\\
@@ -780,7 +781,7 @@ Nous redéfinissons donc le vecteur de la quantité de mouvement de l'électron 
 \end{equation*}
 On réécrit donc l'expression du facteur de forme définie à la section 11.3.1 comme la transformée de Fourier de la densité de charge $\rho$ :
 \begin{equation*}
-    F(\vec{q}) \eq \frac{1}{\pi R^2}\int_0^{2\pi} \int_0^R exp\Bigg[ iP'_r \Big(cos(\alpha)cos(\phi) + sin(\alpha)sin(\phi) \Big) \Bigg] \; r dr d\phi
+    F(\vec{q}) \eq \dfrac{1}{\pi R^2}\int_0^{2\pi} \int_0^R exp\Bigg[ iP'_r \Big(cos(\alpha)cos(\phi) + sin(\alpha)sin(\phi) \Big) \Bigg] \; r dr \dif\phi
 \end{equation*}
 Le résultat de cette intégration est une fonction de Bessel\footnote{En cas de problèmes vis-à-vis de cette notion, contacter le Pr. Grégoire Winckelmans de l'EPL, spécialiste international de la question. Très ouvert et humain, il ne faut pas hésiter à aller directement sonner à son bureau.}, et est simplement l'analogue des sinus cardinaux associés à la diffraction à travers une fente rectangulaire pour une fente circulaire.
 
@@ -835,7 +836,7 @@ On présente donc le graphe de cette transformée. La densité obtenue est quasi
 Il est bon à ce stade de rappeler les étapes de notre raisonnement\footnote{On a écrit $\rho(r)$ et non $\rho(\vec{r})$ car la densité de charge est supposée isotrope} : 
 \begin{equation*}
 \boxed{
-    |F(\vec{q})|^2 \; \longrightarrow \; F(\vec{q}) \; \longrightarrow \; \rho(r) \eq \frac{1}{2\pi} \int_0^{\infty} exp(-\vec{q}\cdot \vec{r})
+    |F(\vec{q})|^2 \; \longrightarrow \; F(\vec{q}) \; \longrightarrow \; \rho(r) \eq \dfrac{1}{2\pi} \int_0^{\infty} exp(-\vec{q}\cdot \vec{r})
     F(\vec{q}) d^3\vec{q}
 }
     \qquad r \in [0,R] \quad \text{et R = rayon du noyau}
@@ -854,9 +855,9 @@ Quelques observations sur nos résultats :
 
     \item On observe par contre que la position du premier minimum est fonction de l'énergie des particules incidentes et de l'atome cible. On rappelle que pour des petits angles, en unités naturelles ($\hbar = c = 1$) et pour des particules incidentes ultra-relativistes ($P \approx E$) :
     \begin{equation*}
-        \theta \eq \sqrt{2} \frac{\lambda}{D} \; \propto \; \frac{1}{P D} \; \propto \; \frac{1}{E_e D}
+        \theta \eq \sqrt{2} \dfrac{\lambda}{D} \; \propto \; \dfrac{1}{P D} \; \propto \; \dfrac{1}{E_e D}
     \end{equation*}
-    On constate bien que pour une énergie incidente plus élevée, l'angle du premier minimum est plus faible. On constate également qu'à énergie incidente constante, si on augmente la masse atomique de l'élément cible (en passant du $^{12}C$ au $^{16}O$ ), on a également un minimum pour un angle $\theta$ plus faible : $\theta_m \propto \frac{1}{D}$. On voit donc les prémisses d'une relation $D\uparrow \Leftrightarrow M\uparrow$.\\
+    On constate bien que pour une énergie incidente plus élevée, l'angle du premier minimum est plus faible. On constate également qu'à énergie incidente constante, si on augmente la masse atomique de l'élément cible (en passant du $^{12}C$ au $^{16}O$ ), on a également un minimum pour un angle $\theta$ plus faible : $\theta_m \propto \dfrac{1}{D}$. On voit donc les prémisses d'une relation $D\uparrow \Leftrightarrow M\uparrow$.\\
     \item En étendant le raisonnement à plus d'atomes différents, on s'aperçoit bien de la corrélation entre la taille du noyau\footnote{La taille du noyau n'est pas encore définie univoquement car la densité de charge diminue de façon douce.} et le nombre de nucléons qu'il comporte, donc sa masse. Ici, la figure représente des noyaux pair-pair, c'est à dire comprenant un nombre pair de neutrons et un nombre pair de protons
      \begin{figure}[H]
         \centering
@@ -877,12 +878,12 @@ Quelques observations sur nos résultats :
     \end{figure}
     \item On peut modéliser la densité de charge par cette expression\footnote{$\rho_0$ variera pour des noyaux autre que pair-pair pour refléter cette diminution de la densité de charge} :
     \begin{equation*}
-        \rho(r) \eq \frac{\rho_0}{1 + exp (\frac{r - R}{a})}
+        \rho(r) \eq \dfrac{\rho_0}{1 + exp (\dfrac{r - R}{a})}
     \end{equation*}
     On peut ensuite extraire $R$ comme illustré sur le graphe \ref{fig : Densité de charge} : R est défini comme $\dfrac{\rho(R)}{\rho_0} \equiv \dfrac{1}{2}$. Pour des noyaux pair-pair, on obtient ainsi :
     \begin{equation*}
         \boxed{
-            R \eq 1.07\; A^{\frac{1}{3}} [fm] \;\equiv\; r_0A^{\frac{1}{3}}
+            R \eq 1.07\; A^{\dfrac{1}{3}} [fm] \;\equiv\; r_0A^{\dfrac{1}{3}}
         } \; \text{où A est le nombre de masse atomique}
     \end{equation*}
     Cette relation nous indique donc que \textbf{le volume du noyau est proportionnel au nombre de nucléons}. Pour le moment, la valeur 1.07 (et donc $r_0$) n'a pas encore de signification physique. Il est à noter qu'en utilisant $r_0=1.2$ à la place de $r_0=1.07$, on obtient une assez bonne correspondance du rayon de tous les noyaux (et plus seulement des noyaux pair-pair).
@@ -891,11 +892,11 @@ Quelques observations sur nos résultats :
     Pour conclure, nous pouvons calculer le rayon d'un nucléon
     en reprenant la définition de la densité volumique de nucléons:
     \begin{equation*}
-        \rho_{nucleons} \eq \frac{A}{4/3 \pi R^3 } \qquad \text{cette valeur est $\pm$ constante pour tous les noyaux}
+        \rho_{nucleons} \eq \dfrac{A}{4/3 \pi R^3 } \qquad \text{cette valeur est $\pm$ constante pour tous les noyaux}
     \end{equation*}
-    Or, nous avons déduit plus haut que $R \eq r_0A^{\frac{1}{3}}$. En injectant ce résultat dans la densité de nucléons:
+    Or, nous avons déduit plus haut que $R \eq r_0A^{\dfrac{1}{3}}$. En injectant ce résultat dans la densité de nucléons:
     \begin{equation*}
-        \rho_{nucleons} \eq \frac{1}{4/3 \pi r_0^3}
+        \rho_{nucleons} \eq \dfrac{1}{4/3 \pi r_0^3}
     \end{equation*}
     En fait, cette expression est exactement l'expression de la densité volumique de de nucléon normalisée à un nucléon. On identifie ainsi le $r_0$ comme le rayon d'un nucléon (avant, cette grandeur n'avait pas de sens physique).\\
 
@@ -915,7 +916,7 @@ Quelques observations sur nos résultats :
 Nous pouvons à partir de la diffusion à petits angles définir le rayon quadratique moyen. En effet, pour de petits angles ($\vec{P}$ est presque parallèle à $\vec{P'} \; \Leftrightarrow \; \vec{q}\;\approx\;\vec{0}$), nous pouvons développer l'exponentielle dans le facteur de forme en une série de Taylor:
 \begin{align*}
     F(\vec{q}) &\;\equiv\;
-    \int \rho(\vec{R}) \cdot e^{i\frac{\vec{q} \cdot \vec{R}}{\hbar}} \; d^3\vec{R}\\[4pt]
+    \int \rho(\vec{R}) \cdot e^{i\dfrac{\vec{q} \cdot \vec{R}}{\hbar}} \; d^3\vec{R}\\[4pt]
     &\;\approx\;
     \int \rho(\vec{R}) \cdot \bigg( 
     1 + i\dfrac{\vec{q}\cdot\vec{R}}{\hbar} - \dfrac{1}{2!} \Big( \dfrac{\vec{q}\cdot\vec{R}}{\hbar}\Big)^2
@@ -939,18 +940,18 @@ Nous pouvons développer les deux intégrales $\alpha$ et $\beta$ en prenant $\v
     \alpha &\;\equiv\;
     \int \rho(R)  i\dfrac{\vec{q}\cdot\vec{R}}{\hbar} \; d^3\vec{R}\\[4pt]
     &\eq
-    \int \rho(R)  i\dfrac{qRcos(\theta)}{\hbar} \; R^2dR \;sin(\theta)d\theta \; d\phi\\[4pt]
+    \int \rho(R)  i\dfrac{qRcos(\theta)}{\hbar} \; R^2dR \;sin(\theta)\dif\theta \; \dif\phi\\[4pt]
     &\eq
-    \dfrac{iq}{\hbar} \int_0^{2\pi} d\phi \; \int_0^{\pi} cos(\theta) sin(\theta) d\theta \;\int_0^{+\infty}\rho(R) R^3 dR \\[4pt]
+    \dfrac{iq}{\hbar} \int_0^{2\pi} \dif\phi \; \int_0^{\pi} cos(\theta) sin(\theta) \dif\theta \;\int_0^{+\infty}\rho(R) R^3 dR \\[4pt]
     &\eq 0 \qquad \text{car on intègre $sin(2\theta)=2sin(\theta)cos(\theta)$ sur une période}
     \\[7pt]
     \beta &\;\equiv\;
     \int \rho(R)  \dfrac{1}{2!} \Big( \dfrac{\vec{q}\cdot\vec{R}}{\hbar}\Big)^2  \; d^3\vec{R}\\[4pt]
     &\eq
-    \int \rho(R)  \dfrac{1}{2!} \Big( \dfrac{qRcos(\theta)}{\hbar}\Big)^2  \; R^2dR \;sin(\theta)d\theta \; d\phi\\[4pt]
+    \int \rho(R)  \dfrac{1}{2!} \Big( \dfrac{qRcos(\theta)}{\hbar}\Big)^2  \; R^2dR \;sin(\theta)\dif\theta \; \dif\phi\\[4pt]
     &\eq
     \dfrac{q^2}{2\hbar^2}
-    \int_0^{2\pi} d\phi \; \int_0^{\pi} cos^2(\theta) sin(\theta) d\theta \;\int_0^{+\infty}\rho(R) R^4 dR \\[4pt]
+    \int_0^{2\pi} \dif\phi \; \int_0^{\pi} cos^2(\theta) sin(\theta) \dif\theta \;\int_0^{+\infty}\rho(R) R^4 dR \\[4pt]
     &\eq ... \eq \dfrac{2\pi}{3}\dfrac{q^2}{\hbar^2} \;\int_0^{+\infty}\rho(R) R^4 dR
 \end{align*}
 Ainsi, pour des diffusions à petits angles:
@@ -965,11 +966,11 @@ On peut encore simplifier cette expression en introduisant la valeur moyenne du 
     \int R^2 \rho(R) \; d^3\vec{R}
     \qquad \text{par définition de la densité de charge}\\[4pt]
     &\eq
-    \int_0^{2\pi}d\phi \int_0^{\pi} sin(\theta) d\theta \int_0^{+\infty}\rho(R) R^4dR\\[4pt]
+    \int_0^{2\pi}\dif\phi \int_0^{\pi} sin(\theta) \dif\theta \int_0^{+\infty}\rho(R) R^4dR\\[4pt]
     &\eq 
     4\pi \int_0^{+\infty}\rho(R) R^4dR\\[4pt]
-    &\approx \frac{4\pi\int_0^R R^4dR}{4\pi\int_0^R R^2dR} \qquad \text{Pour une densité de la forme d'une marche de 0 à R}\\[4pt]
-    &\approx \frac{3}{5}R^2
+    &\approx \dfrac{4\pi\int_0^R R^4dR}{4\pi\int_0^R R^2dR} \qquad \text{Pour une densité de la forme d'une marche de 0 à R}\\[4pt]
+    &\approx \dfrac{3}{5}R^2
 \end{align*}
 En injectant le résultat dans l'expression du facteur de forme pour de faibles $\vec{q}$:
 \begin{equation}
@@ -980,8 +981,8 @@ En injectant le résultat dans l'expression du facteur de forme pour de faibles 
     }
     \label{deriv_fact_forme}
 \end{equation}
-Tout cela semble assez naturel :  en effet, les électrons sonde que nous employons ne "voient" que la surface effective des atomes qu'ils rencontrent. Ce la se traduit par l'apparition du rayon carré moyen, il correspond au rayon de la moyenne de la surface observée, on mesure en réalité $\expval{R^2}$.\\
-Alors, en quoi le rayon quadratique moyen diffère-t'il du rayon classique? Prenons un exemple : le noyau de deuton (1 proton et un neutron) a une forme de cigare, lors d'une collision entre un électron sonde et cette distribution de charge, l'électron percevra en moyenne une sphère de rayon R, où R représente donc le "diamètre" du cigare, sa plus grand longueur. La mesure du rayon quadratique moyen a donc bien plus de sens.\\
+Tout cela semble assez naturel :  en effet, les électrons sonde que nous employons ne <<voient>> que la surface effective des atomes qu'ils rencontrent. Ce la se traduit par l'apparition du rayon carré moyen, il correspond au rayon de la moyenne de la surface observée, on mesure en réalité $\expval{R^2}$.\\
+Alors, en quoi le rayon quadratique moyen diffère-t'il du rayon classique? Prenons un exemple : le noyau de deuton (1 proton et un neutron) a une forme de cigare, lors d'une collision entre un électron sonde et cette distribution de charge, l'électron percevra en moyenne une sphère de rayon R, où R représente donc le <<diamètre>> du cigare, sa plus grand longueur. La mesure du rayon quadratique moyen a donc bien plus de sens.\\
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.8]{Images4/deutérium.png}
@@ -995,8 +996,8 @@ En repartant des relations établies précédemment, on peut établir une relati
     \caption{Graphe du rayon quadratique moyen observé en fonction de $A^{1/3}$ tel que A est le nombre de masse}
 \end{figure}
 \begin{align*}
-    R &\eq \sqrt{\frac{5}{3}} \sqrt{\expval{R^2}}\\
-    &\eq \sqrt{\frac{5}{3}} aA^{1/3} \quad \text{où $a$ est la pente de la droite mesurée expérimentalement}
+    R &\eq \sqrt{\dfrac{5}{3}} \sqrt{\expval{R^2}}\\
+    &\eq \sqrt{\dfrac{5}{3}} aA^{1/3} \quad \text{où $a$ est la pente de la droite mesurée expérimentalement}
 \end{align*}
 En général :
 \begin{equation*}
@@ -1010,11 +1011,6 @@ Pour des noyaux pair-pair :
         R \eq 1.07 A^{1/3}
     }
 \end{equation*}
-
-
-
-
-
 
 
 
@@ -1075,7 +1071,7 @@ En guise d'exemple, considérons le deutérium, atome formé d'un proton,d'un ne
     \begin{equation*}
         M(^{2}D)=2,014~u
     \end{equation*} 
-où $u=\frac{1}{12}M(^{12}_{}C)=931,495\frac{MeV}{c^2}=1,66054.10^{-27}kg$\\[0,2cm]
+où $u=\dfrac{1}{12}M(^{12}_{}C)=931,495\dfrac{MeV}{c^2}=1,66054.10^{-27}kg$\\[0,2cm]
 Nous connaissons donc la masse du proton (via la masse de l'atome d'hydrogène), la masse du deuton (via spectromètre de masse). Pour déterminer la masse du neutron, nous avons besoin de l'énergie de liaison du deuton. Pour mesurer cette énergie, nous avons deux options:
 \begin{itemize}[label=$\bullet$]
     \item En bombardant des neutrons sur des protons, nous aurons éventuellement une fusion dont il résultera un deuton et un photon : $n+p \rightarrow ^2D+\gamma$. L'énergie de liaison sera donc l'énergie du photon émis par la réaction.
@@ -1159,7 +1155,7 @@ Un autre type de transmutation est réalisé à l'aide des rayonnements $\beta^+
 En outre, il existe des noyaux pseudo-stables : c'est-à-dire que, pour un même nombre de protons et neutrons (=même noyau), il existe deux agencements possibles des nucléons dont l'un est stable et l'autre instable. Ce type de noyau est de plus en plus présent lorsque $A$ augmente.
 
 \subsection{Les niveaux d'énergie des noyaux}
-Le parallèle avec la physique atomique est direct : les noyaux ont également des niveaux d'énergie avec un état fondamental et des états excités\textcolor{red}{Demander au prof à quoi correspond un état excité : un arrangement différent? Des vibrations entre les nucléons? Vibrations comme dans un cristal? Cette question a aussi un impact sur le paragraphe juste au-dessus}, les transitions entre ces niveaux se font via l'émission ou l'absorption d'un photon. Il y a tout de même des différences car on peut également observer des "transitions entre atomes", via les phénomènes de désintégration $\alpha$ et $\beta$ mentionnés précédemment.
+Le parallèle avec la physique atomique est direct : les noyaux ont également des niveaux d'énergie avec un état fondamental et des états excités\textcolor{red}{Demander au prof à quoi correspond un état excité : un arrangement différent? Des vibrations entre les nucléons? Vibrations comme dans un cristal? Cette question a aussi un impact sur le paragraphe juste au-dessus}, les transitions entre ces niveaux se font via l'émission ou l'absorption d'un photon. Il y a tout de même des différences car on peut également observer des <<transitions entre atomes>>, via les phénomènes de désintégration $\alpha$ et $\beta$ mentionnés précédemment.
 
 \begin{figure}[H]
     \centering
@@ -1175,16 +1171,8 @@ On peut également lire $EC = 0.14\%$ ; EC signfie \emph{electron conversion} et
 \begin{equation*}
     e^- \; + \; ^{30}P \; \longrightarrow \; ^{30}Si \; + \; \nu_e
 \end{equation*}
-On a donc réaction entre l'électron et un proton du noyau via le recouvrement de leurs fonctions d'onde. La réaction donne un neutron et un neutrino électronique. Le bilan d'énergie est donc différent car l'énergie "gagnée", la différence d'énergie entre les deux niveaux $\Delta E$, doit être répartie entre seulement 2 acteurs,le silicium et le neutrino, et non 3.\\
+On a donc réaction entre l'électron et un proton du noyau via le recouvrement de leurs fonctions d'onde. La réaction donne un neutron et un neutrino électronique. Le bilan d'énergie est donc différent car l'énergie <<gagnée>>, la différence d'énergie entre les deux niveaux $\Delta E$, doit être répartie entre seulement 2 acteurs,le silicium et le neutrino, et non 3.\\
 Pour information, les transitions possibles sont déterminées par des règles de sélection de façon tout à fait analogue à la physique atomique. En effet, pour la désintégration du $^{30}P$ en $^{30}Si$, on a des transitions de spin possibles (on a l'équivalent de termes, je crois, sur la gauche de l'état : $1+$ par exemple) et la transition $1+ \rightarrow 0+$ est plus probable devant la transition $1+ \rightarrow 2+$
-
-
-
-
-
-
-
-
 
 
 
@@ -1265,7 +1253,7 @@ Cette symétrie de la fonction de spin est importante car, expérimentalement, l
 
     \item Si $s=0$ et $l=0$. Cet état n'existe pas car, et on le sait expérimentalement, son potentiel ne permet pas d'héberger un état lié. Le potentiel total qui agit sur les nucléons est $V_{np} \eq V(r)<0$, bien qu'attractif, n'est pas assez profond pour qu'il y ait un état lié\\[4pt]
     
-    \item Si $s=1$ et $l=0$, alors le potentiel total qui agit sur les nucléons est $V_{np} \eq V(r) + f(r) \cdot (\vec{\sigma}_1 \cdot \vec{\sigma}_2)$ avec $V(r)$ le potentiel lié à la force forte et $f(r)$ un terme de couplage de spin. $\vec{\sigma}_i$ désigne la matrice de Pauli associée au vecteur de spin, on a donc : $\vec{S_i} = \frac{\hbar}{2}\vec{\sigma}_i$ (le facteur 1/2 est simplement absorbé dans $f(r)$). Ici le produit des matrices de Pauli vaut 1.  En fait, $f$ doit être suffisamment négatif (il doit suffisamment abaisser le potentiel total) pour qu'un état lié soit possible. Il est à noter qu'une telle forme de potentiel est compatible avec le cas $(s=0,l=0)$ où le produit des matrices de Pauli est nul.\\[4pt]
+    \item Si $s=1$ et $l=0$, alors le potentiel total qui agit sur les nucléons est $V_{np} \eq V(r) + f(r) \cdot (\vec{\sigma}_1 \cdot \vec{\sigma}_2)$ avec $V(r)$ le potentiel lié à la force forte et $f(r)$ un terme de couplage de spin. $\vec{\sigma}_i$ désigne la matrice de Pauli associée au vecteur de spin, on a donc : $\vec{S_i} = \dfrac{\hbar}{2}\vec{\sigma}_i$ (le facteur 1/2 est simplement absorbé dans $f(r)$). Ici le produit des matrices de Pauli vaut 1.  En fait, $f$ doit être suffisamment négatif (il doit suffisamment abaisser le potentiel total) pour qu'un état lié soit possible. Il est à noter qu'une telle forme de potentiel est compatible avec le cas $(s=0,l=0)$ où le produit des matrices de Pauli est nul.\\[4pt]
     
     \item  Si $s=0$ et $l=1$, alors le potentiel total qui agit sur les nucléons est toujours $V_{np} \eq V(r) + f(r) \cdot (\vec{\sigma}_1 \cdot \vec{\sigma}_2)$. Cependant, contrairement au cas $(s=1,l=0)$, le produit des matrices de Pauli $\vec{\sigma}_1 \cdot \vec{\sigma}_2$ vaut $-1$ (les spins sont opposés) et, par conséquent, le terme de couplage de spin est positif : il rehausse la valeur du potentiel $V_{np}$, ce qui ne permet donc pas de créer un état lié (le puits d'énergie est encore moins profond que le cas $(s=0,l=0)$ qui n'était déjà pas lié)\\[4pt] 
     %La grande question qui demeure c'est pourquoi on a pas considéré cette correction de spin dans le cas l = 0 s = 0?
@@ -1277,7 +1265,7 @@ Nous avons donc un premier modèle du potentiel entre deux nucléons qui prend e
 Dans le potentiel $V_{np} \eq V(r) + f(r) \cdot (\vec{\sigma}_1 \cdot \vec{\sigma}_2)$, le terme $f$ est donc le couplage de spin. En fait, il s'agit du même terme que celui de la correction hyperfine de l'atome d'hydrogène, à ceci près que, ici, ce terme n'est pas correctif mais déterminant : $\mathcal{O}(V(r)) \;\approx\; \mathcal{O}(f(r))$.
 
 Puisqu'il existe un état lié $n/p$, il est légitime de se demander s'il existe des états liés $n/n$ ou $p/p$ (uniquement deux particules!). D'un point de vue observationnel, aucun de ces deux cas n'existe. Pour l'état lié $p/p$, on pourrait argumenter que c'est l'interaction coulombienne qui empêche cet état (bien qu'en pratique, ce n'est pas ça qui détermine l'abscence de cet état lié). Cependant, il n'y a, a priori, aucune raison pour que l'état $n/n$ n'existe pas.\\
-En fait, ces états liés $n/n$ ou $p/p$ n'existent pas à cause du principe d'incertitude de Pauli qui peut se formuler comme "\textit{2 fermions identiques ne peuvent pas avoir les même nombres quantiques}". Une façon d'assurer cela est d'imposer que la fonction d'onde soit antisymétrique sous l'échange de deux particules (sinon on ne pourrait pas distinguer les deux fermions) : $\Psi_{12} \eq -\Psi_{21}$\\
+En fait, ces états liés $n/n$ ou $p/p$ n'existent pas à cause du principe d'incertitude de Pauli qui peut se formuler comme <<\textit{2 fermions identiques ne peuvent pas avoir les même nombres quantiques}>>. Une façon d'assurer cela est d'imposer que la fonction d'onde soit antisymétrique sous l'échange de deux particules (sinon on ne pourrait pas distinguer les deux fermions) : $\Psi_{12} \eq -\Psi_{21}$\\
 
 Qu'en est-il de la fonction d'onde des état $n/n$ et $p/p$?
 \begin{itemize}[label=$\bullet$]
@@ -1373,14 +1361,11 @@ En faisant des diffusions entre neutrons et protons ($n/n$, $p/p$ et $n/p$), on 
 
 
 
-
-
-
 \section{L'isospin et les premiers modèles nucléaires (naïfs)}
 
 \subsection{L'isospin}
 
-En toute généralité, lorsqu'une invariance est observée dans un problème physique, il est légitime de se demander s'il existe une symétrie associée à cette invariance. Dans notre cas, nous avons une invariance de charge pour l'interaction forte et la symétrie qui y est associée est l'isospin\footnote{Plus formellement, la symétrie sous échange de nucléons associée à l'interaction forte.} ; on parlera de nombre quantique d'isospin. Le nom "isospin" nous indique que cette symétrie a la même structure mathématique que la symétrie de spin, bien que physiquement le spin et l'isospin n'ont rien en commun.\\
+En toute généralité, lorsqu'une invariance est observée dans un problème physique, il est légitime de se demander s'il existe une symétrie associée à cette invariance. Dans notre cas, nous avons une invariance de charge pour l'interaction forte et la symétrie qui y est associée est l'isospin\footnote{Plus formellement, la symétrie sous échange de nucléons associée à l'interaction forte.} ; on parlera de nombre quantique d'isospin. Le nom <<isospin>> nous indique que cette symétrie a la même structure mathématique que la symétrie de spin, bien que physiquement le spin et l'isospin n'ont rien en commun.\\
 
 Cette symétrie d'isospin est l'invariance de l'Hamiltonien d'interaction entre deux nucléons sous une rotation dans une espace $\mathbb{R}^3$ abstrait appelé \textit{l'espace d'isospin}. On parlera d'un isospin up ou down. Plus précisément, l'état d'isospin up correspond au proton tandis que l'état d'isospin down correspond au neutron.
 \begin{equation*}
@@ -1404,10 +1389,10 @@ Cette définition du proton et du neutron nous permet de définir l'état d'un n
 \textbf{Pas matière d'examen :}\\
 Il existe une interprétation graphique de ces notions. La contrainte de normalisation crée une topologie de sphère dans $\mathbb{R}^3$, appelée sphère de Bloch. Dans cette topologie\footnote{Cf le cours de Group Theory. Il s'agit d'une surface ou d'un volume qui représente le domaine de valeurs admis pour les paramètres qui définissent un groupe.}, on représente un état quelconque par un vecteur dont l'origine est en 0 et l'extrémité sur la sphère, on a donc bien deux degrés de liberté correspondant aux deux angles $\theta$ et $\phi$.\\
 \begin{equation*}
-    \ket{p'} \eq e^{-i\frac{\phi}{2}}cos(\frac{\theta}{2})\ket{p} + e^{i\frac{\phi}{2}}sin(\frac{\theta}{2})\ket{n}
+    \ket{p'} \eq e^{-i\dfrac{\phi}{2}}cos(\dfrac{\theta}{2})\ket{p} + e^{i\dfrac{\phi}{2}}sin(\dfrac{\theta}{2})\ket{n}
 \end{equation*}
 \begin{equation*}
-    \ket{n'} \eq e^{i\frac{\phi}{2}}sin(\frac{\theta}{2})\ket{p} + e^{-i\frac{\phi}{2}}cos(\frac{\theta}{2})\ket{n}
+    \ket{n'} \eq e^{i\dfrac{\phi}{2}}sin(\dfrac{\theta}{2})\ket{p} + e^{-i\dfrac{\phi}{2}}cos(\dfrac{\theta}{2})\ket{n}
 \end{equation*}
 \textbf{De nouveau matière d'examen :}\\
 L'isospin d'un nucléon est $1/2$ ($I_{\text{nucléon}} =1/2$). En conséquence, un objet composé de A nucléons et d'isospin cumulé de $I$ se présentera sous la forme de $2I+1$ noyaux isobares en changeant les protons en neutrons et vice-versa. En fait, l'interaction entre les nucléons est \textbf{invariante par transformation des états 'purs' ($\ket{p}$ et $\ket{n}$) en des états 'composites' ($\ket{p'}$ et $\ket{n'}$)}. Ces états composites ne sont ni proton, ni neutron mais une superposition des deux : le potentiel d'interaction entre nucléons ne sera pas modifié par le changement de variable $(\ket{p},\ket{n}) \;\rightarrow\; (\ket{p'},\ket{n'})$, pour autant que ce changement consiste en une rotation.\\
@@ -1423,7 +1408,7 @@ Ceci explique pourquoi l'isospin porte un tel nom : sa ressemblance mathématiqu
 \begin{equation*}
     I \; \longrightarrow\; 2I+1 \; \text{isobares (même nombre de nucléons) avec des propriétés similaires}
 \end{equation*}
-Reprenons l'exemple du $^{11}_5$B et du $^{11}_6$C dérivés à la section \ref{Evid_exp2} : nous avions vu de par le tableau des énergies que les deux noyaux avaient, à l'électromagnétisme près, les mêmes niveaux d'énergie. Ainsi, nous pouvons interpréter les noyaux de $^{11}_5$B et $^{11}_6$C comme un seul et même noyau avec un isospin $11/2$ car il contient 11 nucléons et, par conséquent, $2\cdot\frac{11}{2}+1 = 12$ états isobares que sont les noyaux de $^{11}_5$B et $^{11}_6$C ainsi que leurs isobares constitués de 11 protons, 10 protons-1 neutron etc.
+Reprenons l'exemple du $^{11}_5$B et du $^{11}_6$C dérivés à la section \ref{Evid_exp2} : nous avions vu de par le tableau des énergies que les deux noyaux avaient, à l'électromagnétisme près, les mêmes niveaux d'énergie. Ainsi, nous pouvons interpréter les noyaux de $^{11}_5$B et $^{11}_6$C comme un seul et même noyau avec un isospin $11/2$ car il contient 11 nucléons et, par conséquent, $2\cdot\dfrac{11}{2}+1 = 12$ états isobares que sont les noyaux de $^{11}_5$B et $^{11}_6$C ainsi que leurs isobares constitués de 11 protons, 10 protons-1 neutron etc.
 
 
 
@@ -1436,7 +1421,7 @@ Reprenons l'exemple du $^{11}_5$B et du $^{11}_6$C dérivés à la section \ref{
 \subsubsection{Notions générales et étude du deuton}
 
 
-Tout d'abord et pour éviter toute confusion, rappelons que les protons et les neutrons sont toujours des fermions et possèdent donc également un spin de 1/2. Ils respectent donc la règle de Pauli. Cependant, comme les protons et les neutrons sont bien des particules différentes, un "même état quantique"\footnote{Équivalent au sens de l'interaction forte qui est indépendante des nucléons mais il y a une différence d'énergie légère à cause de la répulsion coulombienne, on dit que la symétrie est inexacte.} peut donc accueillir deux protons et deux neutrons. Commençons par expliciter nos notations :
+Tout d'abord et pour éviter toute confusion, rappelons que les protons et les neutrons sont toujours des fermions et possèdent donc également un spin de 1/2. Ils respectent donc la règle de Pauli. Cependant, comme les protons et les neutrons sont bien des particules différentes, un <<même état quantique>>\footnote{Équivalent au sens de l'interaction forte qui est indépendante des nucléons mais il y a une différence d'énergie légère à cause de la répulsion coulombienne, on dit que la symétrie est inexacte.} peut donc accueillir deux protons et deux neutrons. Commençons par expliciter nos notations :
 \begin{equation*}
     \Psi_1\uparrow \;\longrightarrow\; p_1
 \end{equation*}
@@ -1450,10 +1435,10 @@ Tout d'abord et pour éviter toute confusion, rappelons que les protons et les n
     \Psi_2\downarrow\;\longrightarrow\; n_2
 \end{equation*}
 \begin{equation*}
-    I = 0 \; \longrightarrow \; \psi_0 \eq \frac{1}{\sqrt{2}}(p_1n_2 - p_2n_1)
+    I = 0 \; \longrightarrow \; \psi_0 \eq \dfrac{1}{\sqrt{2}}(p_1n_2 - p_2n_1)
 \end{equation*}
 \begin{equation*}
-    I = 1 \; \longrightarrow \quad \psi_{11} = p_1p_2 \quad;\quad \psi_{12} = \frac{1}{\sqrt{2}}(p_1n_2 + p_2n_1) \quad;\quad \psi_{13} = n_1n_2
+    I = 1 \; \longrightarrow \quad \psi_{11} = p_1p_2 \quad;\quad \psi_{12} = \dfrac{1}{\sqrt{2}}(p_1n_2 + p_2n_1) \quad;\quad \psi_{13} = n_1n_2
 \end{equation*}
 On écrit également la décomposition générale de la fonction :
 \begin{equation*}
@@ -1494,17 +1479,17 @@ L'interaction entre nucléons provoque des états liés via le potentiel d'inter
 \end{figure}
 A ce stade, nous choisissons un modèle presque jouet mais qui nous permettra de rendre compte d'un certain nombre de phénomènes non triviaux. Nous choisissons donc de modéliser $V(r)$ par une fonction créneau à $V_0$ de 0 à $R_{RMS}$. La question est donc de savoir s'il est possible d'obtenir une fonction d'onde d'énergie $B$ avec ce modèle et un rayon fixé au rayon expérimental. Le problème est identique au problème classique du puits de potentiel unidimensionnel fini bien connu. On rappelle donc l'expression de l'Hamiltonien :
 \begin{equation*}
-    -\frac{\hbar^2}{2\mu}\Big(\nabla^2 + V(r)\Big)\Psi \eq E\Psi
+    -\dfrac{\hbar^2}{2\mu}\Big(\nabla^2 + V(r)\Big)\Psi \eq E\Psi
 \end{equation*}
 \begin{equation*}
-    \frac{1}{\mu} \eq \frac{1}{M_p} + \frac{1}{M_n} \; \approx \; \frac{2}{M_p}
+    \dfrac{1}{\mu} \eq \dfrac{1}{M_p} + \dfrac{1}{M_n} \; \approx \; \dfrac{2}{M_p}
 \end{equation*}
 Via la séparation de variables $\Psi(r,\theta,\phi) \eq \chi(r)Y_l^m(\theta,\phi)$, avec $U(r) \eq r\chi(r)$ et en ignorant le terme de moment angulaire ($l=0$) :
 \begin{equation*}
-    -\frac{\hbar^2}{2\mu}\Big(\dfrac{d^2\chi(r)}{dr^2} + \frac{2}{r}\dfrac{d\chi(r)}{dr}\Big) + [V(r) + \frac{l(l+1)\hbar^2}{2\mu r^2}]\eq E\chi(r)
+    -\dfrac{\hbar^2}{2\mu}\Big(\dfrac{d^2\chi(r)}{dr^2} + \dfrac{2}{r}\dfrac{\dif\chi(r)}{dr}\Big) + [V(r) + \dfrac{l(l+1)\hbar^2}{2\mu r^2}]\eq E\chi(r)
 \end{equation*}
 \begin{equation*}
-    -\frac{\hbar}{2\mu}\Big(\dfrac{d^2}{dr^2} + V(r) \Big)U(r) \eq EU(r)
+    -\dfrac{\hbar}{2\mu}\Big(\dfrac{d^2}{dr^2} + V(r) \Big)U(r) \eq EU(r)
 \end{equation*}
 où $E<0$, V(r) le potentiel créneau défini précédemment.
 Les solutions de cette équation sont :
@@ -1537,13 +1522,13 @@ On peut résoudre cette équation transcendantale par des moyens numériques ou 
     cotan(k_1R) \; \approx \; 0
 \end{equation*}
 \begin{equation*}
-    K_1 R \eq \frac{\pi}{2}
+    K_1 R \eq \dfrac{\pi}{2}
 \end{equation*}
 \begin{equation*}
-    2mV_0 R^2 \eq \frac{\pi^2}{4}
+    2mV_0 R^2 \eq \dfrac{\pi^2}{4}
 \end{equation*}
 \begin{equation*}
-    V_0 \eq \frac{\pi^2(\hbar c)^2}{4mR^2} \eq \frac{\pi^2 (198)^2}{4 939 (2.1)^2}
+    V_0 \eq \dfrac{\pi^2(\hbar c)^2}{4mR^2} \eq \dfrac{\pi^2 (198)^2}{4 939 (2.1)^2}
     \eq 25MeV
 \end{equation*}
 On a toujours l'énergie expérimentale du système : $|B| = 2.2MeV$. On a donc que $V_0 \approx 10\cdot|B|$, l'approximation faite plus haut est donc bien valide.\\
@@ -1552,15 +1537,15 @@ En fin de compte nous avons donc, comme pour le puits de potentiel fini classiqu
     \centering
     \includegraphics[width=\textwidth]{Images4/ModèleDeuton.PNG}
 \end{figure}
-On note qu'il existe une probabilité de présence relativement élevée hors du rayon $R$. Il ne faut cependant pas oublier que la réelle partie radiale de la fonction d'onde est $\chi(r)$ et que donc le facteur $\frac{1}{r}$ atténue nettement cette probabilité.\\
+On note qu'il existe une probabilité de présence relativement élevée hors du rayon $R$. Il ne faut cependant pas oublier que la réelle partie radiale de la fonction d'onde est $\chi(r)$ et que donc le facteur $\dfrac{1}{r}$ atténue nettement cette probabilité.\\
 On note aussi que pour un $V_0$ un peu moins profond, nous n'aurions pas d'état lié neutron-proton et nous vivrions dans un monde bien différent.\\
 
 On calcule également l'intégrale de ce puits de potentiel sphérique, cette valeur nous servira de point d'appui\footnote{Elle sera considérée comme une donnée à reproduire.} pour le développement d'autres modèles de potentiel au Chapitre 18.
 \begin{equation*}
     I 
     \eq \int V(r) d^3\vec{r} 
-    \eq -4\pi\int_0^{\frac{R}{2}} V_0 r^2 dr 
-    \eq -\frac{V_0}{8}\frac{4R^3}{3}
+    \eq -4\pi\int_0^{\dfrac{R}{2}} V_0 r^2 dr 
+    \eq -\dfrac{V_0}{8}\dfrac{4R^3}{3}
     \eq -170MeVfm^3
 \end{equation*}
 \subsubsection{Résolution de l'équation transcendante : Méthode 1}
@@ -1568,7 +1553,7 @@ On calcule également l'intégrale de ce puits de potentiel sphérique, cette va
     -k_2 \eq k_1 cotan(k_1R)
 \end{equation*}
 \begin{equation*}
-    Z \eq \sqrt{\frac{E+V_0}{-E}} \Big(= \frac{k_1}{k_2} \Big)
+    Z \eq \sqrt{\dfrac{E+V_0}{-E}} \Big(= \dfrac{k_1}{k_2} \Big)
 \end{equation*}
 \begin{equation*}
     b \eq \sqrt{-2mE}R \simeq 0.23 R
@@ -1598,10 +1583,10 @@ On réécrit l'équation autrement.
     y \eq k_2 R
 \end{equation*}
 \begin{equation*}
-    y \eq -x cotan(x) \simeq -x \Big( \frac{1-\frac{x^2}{2}}{x} + \mathcal{O}(x^3) \Big) \simeq \frac{x^2}{2} -1
+    y \eq -x cotan(x) \simeq -x \Big( \dfrac{1-\dfrac{x^2}{2}}{x} + \mathcal{O}(x^3) \Big) \simeq \dfrac{x^2}{2} -1
 \end{equation*}
 \begin{equation*}
-    x^2 + y^2 \eq 2mV_0R^2 \; > \; \big(\frac{\pi}{2}\big)^2 \rightarrow car\ cotan(\frac{\pi}{2}) = 0
+    x^2 + y^2 \eq 2mV_0R^2 \; > \; \big(\dfrac{\pi}{2}\big)^2 \rightarrow car\ cotan(\dfrac{\pi}{2}) = 0
 \end{equation*}
 
 L'inéquation est la condition pour avoir une solution à cette équation. On voit aussi graphiquement que pour des valeurs assez élevées pour le rayon du cercle, on peut avoir plusieurs solutions.
@@ -1609,10 +1594,6 @@ L'inéquation est la condition pour avoir une solution à cette équation. On vo
     \centering
     \includegraphics[scale=1.2]{Images4/EqTranscendante.PNG}
 \end{figure}
-
-
-
-
 
 
 
@@ -1628,7 +1609,7 @@ Commençons par une série de réflexions sur les modèles microscopiques dével
     \centering
     \includegraphics[scale=1.0]{Images4/stabilité du fer.PNG}
 \end{figure}
-Le modèle en potentiel constant développé précédemment ne permet pas de rendre compte de l'imcompressibilité du noyau mesurée par le facteur de forme et la répartition de la charge que nous en avons extrait. En effet, il n'y a aucun potentiel répulsif ($>0$) pour empêcher que deux nucléons ne "fusionnent".\\
+Le modèle en potentiel constant développé précédemment ne permet pas de rendre compte de l'imcompressibilité du noyau mesurée par le facteur de forme et la répartition de la charge que nous en avons extrait. En effet, il n'y a aucun potentiel répulsif ($>0$) pour empêcher que deux nucléons ne <<fusionnent>>.\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Images4/Modèle macro.PNG}
@@ -1671,7 +1652,7 @@ Sur base de ces hypothèses et en rajoutant les interactions quantiques on obtie
     \quad-\quad
     \underbrace{a_c Z^2 A^{-1/3 }}_{Coulomb}
     \quad-\quad 
-    \underbrace{a_{sym}\frac{(Z-N)^2}{A}}_{\text{Asymétrie}}
+    \underbrace{a_{sym}\dfrac{(Z-N)^2}{A}}_{\text{Asymétrie}}
     \quad+\quad 
     \underbrace{\delta(A)}_{\text{Parité}}}\quad
     \label{B}
@@ -1680,13 +1661,13 @@ Présentons brièvement chacun des termes présent dans l'équation de l'énergi
 \begin{itemize}[label = $\bullet$]
     \item \textbf{Volume} : décrit l'interaction forte entre les nucléons.
     
-    \item \textbf{Surface} : Le terme de volume considère que tous les nucléons sont entourés de proches voisins, le terme vient donc réduire l'énergie proportionnellement à ces "voisins manquants" à la surface du noyau. On peut le voir comme un terme de tension superficielle.
+    \item \textbf{Surface} : Le terme de volume considère que tous les nucléons sont entourés de proches voisins, le terme vient donc réduire l'énergie proportionnellement à ces <<voisins manquants>> à la surface du noyau. On peut le voir comme un terme de tension superficielle.
     
-    \item \textbf{Répulsion coulombienne} : Les protons du noyau se repoussent via la force de Coulomb (on a déjà observé les effets de cette interaction plus tôt). Le terme $A^{-1/3}$ est l'équivalent $\frac{1}{r}$ étant donné que $R=r_0A^{1/3}$.
+    \item \textbf{Répulsion coulombienne} : Les protons du noyau se repoussent via la force de Coulomb (on a déjà observé les effets de cette interaction plus tôt). Le terme $A^{-1/3}$ est l'équivalent $\dfrac{1}{r}$ étant donné que $R=r_0A^{1/3}$.
     
-    \item \textbf{Asymétrie} : Phénoménologiquement, on voit bien que les atomes qui présentent une  forte asymétrie dans leur nombre de protons et de neutons ne sont pas stables. On modélise ce comportement par cette expression, le carré indique bien que l'asymétrie diminue l'énergie d'interaction peu importe son "sens". Le facteur $\frac{1}{A}$ exprime le fait que le facteur d'asymétrie devienne de moins en moins influent au fur et à mesure que la masse des atomes augmente. En effet, dans les noyaux lourds, on voit beaucoup d'isotopes asymétriques stables.
+    \item \textbf{Asymétrie} : Phénoménologiquement, on voit bien que les atomes qui présentent une  forte asymétrie dans leur nombre de protons et de neutons ne sont pas stables. On modélise ce comportement par cette expression, le carré indique bien que l'asymétrie diminue l'énergie d'interaction peu importe son <<sens>>. Le facteur $\dfrac{1}{A}$ exprime le fait que le facteur d'asymétrie devienne de moins en moins influent au fur et à mesure que la masse des atomes augmente. En effet, dans les noyaux lourds, on voit beaucoup d'isotopes asymétriques stables.
     
-    \item \textbf{Parité} : A nouveau, on remarque que la parité des nombres de nucléons intervient aussi dans l'énergie de liaison. Le cas le plus favorable est une configuration pair-pair, le cas "classique" est pair-impair et le cas défavorable impair-impair. Sur 274 atomes stables, 60.2\% sont pair-pair, 38.3\% pair-impair et 1.5\% sont impair-impair.\footnote{Source : notes de Buskulic. Le prof a donné les mauvais chiffres au cours}
+    \item \textbf{Parité} : A nouveau, on remarque que la parité des nombres de nucléons intervient aussi dans l'énergie de liaison. Le cas le plus favorable est une configuration pair-pair, le cas <<classique>> est pair-impair et le cas défavorable impair-impair. Sur 274 atomes stables, 60.2\% sont pair-pair, 38.3\% pair-impair et 1.5\% sont impair-impair.\footnote{Source : notes de Buskulic. Le prof a donné les mauvais chiffres au cours}
 \end{itemize}
 
 \subsubsection{Développements des différents termes}
@@ -1716,17 +1697,17 @@ Pour obtenir la valeur du coefficient $a_{\text{Coulomb}}$, nous devons juste ca
     dq \cdot V(r) \qquad \qquad \quad \;\text{avec $V(r)$ le potentiel créé par la sphère déjà existante}
     \\ 
     &\eq 
-    \rho 4\pi r^2 dr \cdot \frac{ \rho \frac{4}{3}\pi r^3}{4\pi\epsilon_0 r}
-    \qquad \text{avec } \rho \eq \frac{Ze}{\frac{4}{3}\pi R^3}\text{ : la densité est constante dans le volume}\\
+    \rho 4\pi r^2 dr \cdot \dfrac{ \rho \dfrac{4}{3}\pi r^3}{4\pi\epsilon_0 r}
+    \qquad \text{avec } \rho \eq \dfrac{Ze}{\dfrac{4}{3}\pi R^3}\text{ : la densité est constante dans le volume}\\
     &\eq
-    \frac{4\pi}{3\epsilon_0}\rho^2 r^4 dr \\
+    \dfrac{4\pi}{3\epsilon_0}\rho^2 r^4 dr \\
     \Leftrightarrow \qquad W &\eq
-    \int_0^R dW \eq \frac{3}{5}\underbrace{\frac{e^2}{4\pi\epsilon_0}}_{\alpha}\frac{Z^2}{r_0}A^{-1/3}
+    \int_0^R dW \eq \dfrac{3}{5}\underbrace{\dfrac{e^2}{4\pi\epsilon_0}}_{\alpha}\dfrac{Z^2}{r_0}A^{-1/3}
 \end{align*}
 
 On obtient donc le coefficient du terme de Coulomb, $a_{\text{Coulomb}}$, avec $\hbar c \approx 198 [MeV\cdot fm]$.
 \begin{equation*}
-    a_c \eq \frac{3}{5}\frac{\alpha}{r_0} \hbar c \approx 0.72MeV
+    a_c \eq \dfrac{3}{5}\dfrac{\alpha}{r_0} \hbar c \approx 0.72MeV
 \end{equation*}
 On considère que ce résultat est assez précis dans la limite où l'approximation continue du noyau par une sphère continue uniformément chargée est correcte. Dès lors, pour des A peu élevés, ce modèle n'est plus valable et il faut faire un calcul avec l'ajout de charges discrètes.
 
@@ -1740,7 +1721,7 @@ On définit également $\Delta E$, la différence d'énergie entre deux états d
     \centering
     \includegraphics[scale = 0.7]{Images4/tableau_Asymétrie.PNG}
 \end{figure}
-La fonction $\frac{(N-Z)^2}{A}$ n'est donc qu'une approximation des résultats présentés dans le tableau. On obtient donc $a_{sym}$.
+La fonction $\dfrac{(N-Z)^2}{A}$ n'est donc qu'une approximation des résultats présentés dans le tableau. On obtient donc $a_{sym}$.
 \begin{equation*}
     a_{\text{asymétrique}} \eq \dfrac{A\Delta E}{8}
 \end{equation*}
@@ -1753,13 +1734,13 @@ Nous pouvons faire deux remarques sur nos développements:
 \paragraph{Détail du terme d'appariement :} 
 
 
-Le terme d'appariement est une correction purement empirique basée sur l'observation de "nombres magiques"\footnote{A notre niveau du moins} permettant une meilleure stabilité des atomes. La base de ces constatations est une meilleure stabilité des noyaux pair-pair (qui ont une nombre pair de proton et un nombre pair de neutrons).\\
+Le terme d'appariement est une correction purement empirique basée sur l'observation de <<nombres magiques>>\footnote{A notre niveau du moins} permettant une meilleure stabilité des atomes. La base de ces constatations est une meilleure stabilité des noyaux pair-pair (qui ont une nombre pair de proton et un nombre pair de neutrons).\\
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{Images4/appariement.PNG}
 \end{figure}
 
-Nous supposons donc un mécanisme, une force d'appariement (dont on n'explique pas encore l'origine physique!), qui fait qu'un état est plus lié quand les couches du noyau sont pleines que lorsqu'elles sont vides \textcolor{red}{Pourquoi on parle de couches ici, vu qu'on n'est pas dans le modèle en couche mais dans le modèle de la goutte liquide...est-ce que par couche il ne faudrait pas plutôt dire "niveau"? Ca me semblerait déjà mieux}. Ainsi, le terme d'appariement est totalement empirique.\\
+Nous supposons donc un mécanisme, une force d'appariement (dont on n'explique pas encore l'origine physique!), qui fait qu'un état est plus lié quand les couches du noyau sont pleines que lorsqu'elles sont vides \textcolor{red}{Pourquoi on parle de couches ici, vu qu'on n'est pas dans le modèle en couche mais dans le modèle de la goutte liquide...est-ce que par couche il ne faudrait pas plutôt dire <<niveau>>? Ca me semblerait déjà mieux}. Ainsi, le terme d'appariement est totalement empirique.\\
 \begin{figure}[htp]
     \centering
     \includegraphics{Images4/appariement2.PNG}
@@ -1775,7 +1756,7 @@ Nous supposons donc un mécanisme, une force d'appariement (dont on n'explique p
 
 On modélise la variation de $\Delta E$ à partir du comportement d'une particule quantique dans un puits de potentiel\footnote{Ce n'est pas exactement le développement fait par le prof en cours. On y a rajouté des étapes/coefficients qui nous semblaient plus corrects.}.\\
 \begin{equation*}
-    \frac{\hbar^2}{2\mu}\nabla^2 \psi \eq (E- V_0)\psi
+    \dfrac{\hbar^2}{2\mu}\nabla^2 \psi \eq (E- V_0)\psi
 \end{equation*}
 Pour un puits fini en 3D, on a comme solution de ce problème aux valeurs propres:
 \begin{align*}
@@ -1788,13 +1769,13 @@ Comme on a un système constitué de deux corps en interaction dans un potentiel
     ak_i \eq n_i \pi
 \end{equation*}
 \begin{equation*}
-    k^2 \eq k_x^2 + k_y^2 + k_z^2 \eq \frac{n^2\pi^2}{a^2}
+    k^2 \eq k_x^2 + k_y^2 + k_z^2 \eq \dfrac{n^2\pi^2}{a^2}
 \end{equation*}
 Et on obtient finalement une expression pour $\Delta E$ en fonction de $A$\footnote{Pour le facteur $\gamma,$ voir les discussions liées à la densité de charge.}.
 \begin{equation*}
-    \frac{|\Delta E|}{\Delta a} 
+    \dfrac{|\Delta E|}{\Delta a} 
     \eq \dfrac{\partial E}{\partial a}\Delta a
-    \eq \dfrac{\partial}{\partial a}\Big( \frac{\hbar^2n^2\pi^2}{2ma^2}\Big)\underbrace{\Delta a}_{=\Delta(2R)= 2*\gamma\approx 5fm}
+    \eq \dfrac{\partial}{\partial a}\Big( \dfrac{\hbar^2n^2\pi^2}{2ma^2}\Big)\underbrace{\Delta a}_{=\Delta(2R)= 2*\gamma\approx 5fm}
 \end{equation*}
 \begin{equation*}
     a^3 \eq 8r_0^3 A
@@ -1803,9 +1784,9 @@ Et on obtient finalement une expression pour $\Delta E$ en fonction de $A$\footn
     r_0 \eq 1.2fm
 \end{equation*}
 \begin{equation*}
-    \Delta E \eq a_{sym} \;\approx\; \frac{150}{A}MeV
+    \Delta E \eq a_{sym} \;\approx\; \dfrac{150}{A}MeV
 \end{equation*}
-Cette valeur est en excellent accord avec les mesures expérimentales : en fait on a eu "trop" de chances parce que nos approximations sont excessives mais le résultat est +- correct.
+Cette valeur est en excellent accord avec les mesures expérimentales : en fait on a eu <<trop>> de chances parce que nos approximations sont excessives mais le résultat est +- correct.
 
 
 
@@ -1828,7 +1809,7 @@ Connaissant l'énergie de liaison atomique $B(A,Z)$ de par notre modèle de la g
     \centering
     \includegraphics[width=\textwidth] {Images4/Bethe.PNG}
 \end{figure}
-Nous l'avons dit, il existe des nombres "magiques" de nucléons par noyau qui lui octroient une meilleure stabilité. Leur existence laisse supposer une structure en couche, tout comme les gaz rares possèdent une plus haute stabilité car leur structure en couche est fermée et est donc composée de nombres bien particuliers d'électrons.
+Nous l'avons dit, il existe des nombres <<magiques>> de nucléons par noyau qui lui octroient une meilleure stabilité. Leur existence laisse supposer une structure en couche, tout comme les gaz rares possèdent une plus haute stabilité car leur structure en couche est fermée et est donc composée de nombres bien particuliers d'électrons.
 
 
 \subsection{La vallée de stabilité}
@@ -1845,11 +1826,11 @@ En prenant B comme l'énergie de liaison nucléaire et en négligeant l'énergie
     \eq 0
 \end{equation*}
 \begin{equation*}
-    \frac{a_c}{2a_{sym}}Z A^{2/3} - A + 2Z \eq 0
+    \dfrac{a_c}{2a_{sym}}Z A^{2/3} - A + 2Z \eq 0
 \end{equation*}
 \begin{equation*}
     \boxed{\quad
-        Z \eq \frac{A}{2} \frac{1}{1 + \frac{a_{coulomb}}{4a_{sym}}A^{2/3}}\quad
+        Z \eq \dfrac{A}{2} \dfrac{1}{1 + \dfrac{a_{coulomb}}{4a_{sym}}A^{2/3}}\quad
     }
 \end{equation*}
 \begin{figure}[H]
@@ -1877,11 +1858,6 @@ Les flèches représentées indiquent les transitions entre noyau, elles ont don
 
 
 
-
-
-
-
-
 \section{De l'interaction nucléon-nucléon au potentiel moyen de Wood-Saxon}
 \subsection{Potentiel de Yukawa}
 
@@ -1901,7 +1877,7 @@ Nous allons développer le modèle de Yukawa dans le cas du deuton à l'aide d'u
     V_0 \eq 35 MeV
 \end{equation*}
 \begin{equation*}
-    I \eq \int_V V_{NN}d\vec{r}^3 \eq -170MeVfm^3
+    I \eq \int_V V_{NN}\dif\vec{r}^3 \eq -170MeVfm^3
 \end{equation*}
 Le potentiel carré présente deux problèmes évidents :
 \begin{itemize}[label = $\bullet$]
@@ -1913,24 +1889,24 @@ On obtient ce potentiel dit de Yukawa :
     \centering
     \includegraphics[scale =0.42] {Images4/Potentiel_Yukawa.jpg}
 \end{figure}
-Formellement, on a atténué exponentiellement l'équivalent d'un potentiel coulombien, en $\frac{1}{r}$. On introduit plusieurs grandeurs :
+Formellement, on a atténué exponentiellement l'équivalent d'un potentiel coulombien, en $\dfrac{1}{r}$. On introduit plusieurs grandeurs :
 \begin{itemize}[label = $\bullet$]
-    \item $\frac{g^2}{4\pi}$ Bien entendu le facteur $4\pi$ n'a pas d'intérêt en soi, il nous servira juste à comparer proprement les amplitudes des constantes de couplage $g$ et $e$. Notons d'ailleurs qu'identifier $g$ à une charge électrique est une hérésie, il ne s'agit pas de l'interaction coulombienne. Nous sommes dans une démarche d'analogie et de comparaison.
-    \item $\lambda$ a les dimensions d'une longueur : il s'agit de la longueur d'atténuation du potentiel. $\lambda$ apparaîtra dans un terme $e^{-\frac{(r-r_0)}{\lambda}}$.
+    \item $\dfrac{g^2}{4\pi}$ Bien entendu le facteur $4\pi$ n'a pas d'intérêt en soi, il nous servira juste à comparer proprement les amplitudes des constantes de couplage $g$ et $e$. Notons d'ailleurs qu'identifier $g$ à une charge électrique est une hérésie, il ne s'agit pas de l'interaction coulombienne. Nous sommes dans une démarche d'analogie et de comparaison.
+    \item $\lambda$ a les dimensions d'une longueur : il s'agit de la longueur d'atténuation du potentiel. $\lambda$ apparaîtra dans un terme $e^{-\dfrac{(r-r_0)}{\lambda}}$.
     \item $r_0$ est le rayon d'équilibre d'un état stationnaire de la particule dans le potentiel. Il s'agit du rayon auquel l'exponentielle prend le pas sur le potentiel coulombien (quand $r<r_0$). $r_0 \approx [0.1;0.5]$fm
 \end{itemize}
 Nous modéliserons ainsi le potentiel d'interaction entre nucléons $U(r)$ (rendant seulement compte de l'interaction forte) comme:\footnote{Cette écriture est assez générale pour les interactions, il suffit de moduler les paramètres libres.}
 \begin{equation*}
 \boxed{
-    U(r) \eq -\frac{g^2}{4\pi} \frac{1}{r}e^{-(r-r_0)/\lambda}
+    U(r) \eq -\dfrac{g^2}{4\pi} \dfrac{1}{r}e^{-(r-r_0)/\lambda}
     }
 \end{equation*}
-On impose la conservation de l'intégrale sur le volume, nommée $I$ et valant $170 [MeV \cdot fm^3]$. Par ce biais, on va pouvoir imposer une gamme de valeur pour $\lambda$ en faisant varier g sur l'intervalle $[e,1]$ où $e$ représente un couplage infinitésimal (électromagnétisme) et 1 un très grand couplage. On définit également $\alpha_s = \frac{g^2}{4\pi}$ la constante adimensionnelle de structure du système par analogie avec la constante de structure fine $\alpha$.
+On impose la conservation de l'intégrale sur le volume, nommée $I$ et valant $170 [MeV \cdot fm^3]$. Par ce biais, on va pouvoir imposer une gamme de valeur pour $\lambda$ en faisant varier g sur l'intervalle $[e,1]$ où $e$ représente un couplage infinitésimal (électromagnétisme) et 1 un très grand couplage. On définit également $\alpha_s = \dfrac{g^2}{4\pi}$ la constante adimensionnelle de structure du système par analogie avec la constante de structure fine $\alpha$.
 \begin{align*}
     \dfrac{I}{\hbar c}  
     \;\equiv\; \int U \; d^3\Vec{r}
-    &\eq \alpha_s \int_S \frac{1}{r}e^{-(r-r_0)/\lambda} d^3\Vec{r}\\
-    &\eq 4\pi \alpha_s \int_{r_0}^\infty \frac{1}{r}e^{-(r-r_0)/\lambda} r^2 dr\\
+    &\eq \alpha_s \int_S \dfrac{1}{r}e^{-(r-r_0)/\lambda} d^3\Vec{r}\\
+    &\eq 4\pi \alpha_s \int_{r_0}^\infty \dfrac{1}{r}e^{-(r-r_0)/\lambda} r^2 dr\\
     &\eq 4\pi\alpha_s e^{r_0/\lambda} \int_{r_0}^\infty e^{-r/\lambda} r dr
 \end{align*}
 \begin{align*}
@@ -1940,15 +1916,15 @@ On impose la conservation de l'intégrale sur le volume, nommée $I$ et valant $
 \end{align*}
 \begin{equation*}
     \boxed{
-        \frac{I} {\hbar c}\eq 4\pi \alpha_s \lambda(\lambda + r_0)
+        \dfrac{I} {\hbar c}\eq 4\pi \alpha_s \lambda(\lambda + r_0)
         \eq g^2\lambda(\lambda + r_0)}
 \end{equation*}
 \begin{equation*}
-    \lambda \eq \frac{-r_0 \pm \sqrt{r_0^2 + \frac{I}{\pi\alpha_s\hbar c}}}{2}
+    \lambda \eq \dfrac{-r_0 \pm \sqrt{r_0^2 + \dfrac{I}{\pi\alpha_s\hbar c}}}{2}
 \end{equation*}
-Nous obtenons ainsi deux valeurs de la longueur d'atténuation $\lambda$. Dans l'intérêt de la simplicité de la discussion, on fixe $r_0$ à 0 car il en est déjà très proche, physiquement parlant cela revient à dire que l'exponentielle liée au méson ne prend le pas sur le potentiel coulombien qu'en r = 0, c'est un petit peu délicat à justifier mais ça n'est pas insensé. On ne considère également que la valeur positive de $\lambda$ car une longueur négative n'a pas de sens physique. En remplaçant ainsi $I$ par sa valeur ($170$ [Mev.fm$^3$]) et $\alpha_s$ par son intervalle possible $[e,1]$ où e désigne la charge élémentaire dans le système d'unités naturelles : $\hbar = c = \epsilon_0 = 1$ où\footnote{Il suffit de remplacer dans l'expression de la constante de structure fine $\alpha \eq \frac{e^2}{4\pi\epsilon_0 \hbar c}$} $e \approx 0.3$. On peut enfin obtenir un intervalle pour $\lambda$ :
+Nous obtenons ainsi deux valeurs de la longueur d'atténuation $\lambda$. Dans l'intérêt de la simplicité de la discussion, on fixe $r_0$ à 0 car il en est déjà très proche, physiquement parlant cela revient à dire que l'exponentielle liée au méson ne prend le pas sur le potentiel coulombien qu'en r = 0, c'est un petit peu délicat à justifier mais ça n'est pas insensé. On ne considère également que la valeur positive de $\lambda$ car une longueur négative n'a pas de sens physique. En remplaçant ainsi $I$ par sa valeur ($170$ [Mev.fm$^3$]) et $\alpha_s$ par son intervalle possible $[e,1]$ où e désigne la charge élémentaire dans le système d'unités naturelles : $\hbar = c = \epsilon_0 = 1$ où\footnote{Il suffit de remplacer dans l'expression de la constante de structure fine $\alpha \eq \dfrac{e^2}{4\pi\epsilon_0 \hbar c}$} $e \approx 0.3$. On peut enfin obtenir un intervalle pour $\lambda$ :
 \begin{equation*}
-    \lambda \eq \dfrac{1}{2} \sqrt{\frac{I}{\pi\alpha_s\hbar c}}
+    \lambda \eq \dfrac{1}{2} \sqrt{\dfrac{I}{\pi\alpha_s\hbar c}}
     \quad \Rightarrow \quad
     \lambda \;\in\; [3;0.9]\; \text{fm}
 \end{equation*}
@@ -1956,12 +1932,12 @@ Nous obtenons ainsi deux valeurs de la longueur d'atténuation $\lambda$. Dans l
 Cet intervalle a donc été obtenu en supposant une profondeur du puits de potentiel similaire à la profondeur permettant d'expliquer l'énergie de liaison du deuton : nous avons utilisé $I=170$.\\
 
 C'est ici que la discussion devient vraiment intéressante. Nous avons donc un intervalle de valeur, dépendant de l'intensité du couplage, pour la longueur d'atténuation $\lambda$ du potentiel moyen. Par une analyse dimensionnelle, et en utilisant les constantes fondamentales associées, on peut transformer cette longueur en une masse (en unités naturelles, [L]=[M$^{-1}$]).\footnote{En continuant cette analogie avec l'électromagnétisme, on peut arriver à une conclusion très intéressante. Pour retrouver l'interaction électromagnétique classique, il nous suffit de remplacer g par e et... de poser $m = 0$, ce qui supposerait une particule médiatrice de l'interaction de masse nulle comme... le photon hé oui ! Dès lors, $\lambda$ serait l'équivalent de la longueur d'onde du photon.}\\
-L'hypothèse de Yukawa consiste à supposer que cette masse est associée à une particule.\footnote{Si nous comprenons la longueur d'atténuation du potentiel de Yukawa comme la longueur d'onde d'un méson, nous obtenons via $\lambda \eq \frac{\hbar c}{mc^2}$ que $P=mc$ : ainsi le méson se déplacerait à la vitesse de la lumière? Ceci est peut être possible si on considère des particules virtuelles \textcolor{red}{question pour le prof : le méson irait à la vitesse de la lumière? Parce que le passage d'une unité atomique de longueur à une unité atomique de masse semble impliquer cela.}}\\
+L'hypothèse de Yukawa consiste à supposer que cette masse est associée à une particule.\footnote{Si nous comprenons la longueur d'atténuation du potentiel de Yukawa comme la longueur d'onde d'un méson, nous obtenons via $\lambda \eq \dfrac{\hbar c}{mc^2}$ que $P=mc$ : ainsi le méson se déplacerait à la vitesse de la lumière? Ceci est peut être possible si on considère des particules virtuelles \textcolor{red}{question pour le prof : le méson irait à la vitesse de la lumière? Parce que le passage d'une unité atomique de longueur à une unité atomique de masse semble impliquer cela.}}\\
 \begin{equation*}
-    \lambda \eq \frac{\hbar c}{mc^2}
+    \lambda \eq \dfrac{\hbar c}{mc^2}
 \end{equation*}
 \begin{equation*}
-    e^{-r/\lambda} \eq e^{-mr} \qquad \text{car } \lambda \eq \frac{\hbar c}{mc^2} \eq \dfrac{1\cdot 1}{m \cdot 1^2} \eq \dfrac{1}{m}
+    e^{-r/\lambda} \eq e^{-mr} \qquad \text{car } \lambda \eq \dfrac{\hbar c}{mc^2} \eq \dfrac{1\cdot 1}{m \cdot 1^2} \eq \dfrac{1}{m}
 \end{equation*}
 Il peut sembler étonnant de remplacer une longueur par une masse : en fait, puisque nous somme en unités atomiques, nous avons que l'unité de longueur est équivalente à une unité de masse$^{-1}$.
 \begin{equation*}
@@ -1995,10 +1971,10 @@ L'hypothèse de Yukawa donne donc un sens physique à $m$ (ou, de façon équiva
 
 Avant de nous attaquer au potentiel de Yukawa et à ses implications, concentrons-nous d'abord sur ce que nous savons de l'électromagnétisme. Introduisons donc le potentiel scalaire électromagnétique $\Psi$.
 \begin{equation*}
-    \Psi \eq \frac{e}{4\pi \epsilon_0 r}(\hbar c)
+    \Psi \eq \dfrac{e}{4\pi \epsilon_0 r}(\hbar c)
 \end{equation*}
 \begin{equation*}
-    U \eq  \frac{\alpha}{r}(\hbar c)\eq e\Psi 
+    U \eq  \dfrac{\alpha}{r}(\hbar c)\eq e\Psi 
 \end{equation*}
 $\Psi$ a les propriétés d'une onde et satisfait donc les équations suivantes\footnote{Attention l'opérateur $\nabla$ s'exprime dans les coordonnées sphériques.} :
 \begin{equation*}
@@ -2028,12 +2004,12 @@ On applique le même raisonnement pour l'interaction forte. Il s'agit à nouveau
     V_{NN} \eq g\Psi_s
 \end{equation*}
 \begin{equation*}
-    \Psi_s \eq \frac{g}{4\pi\epsilon_0}\frac{1}{r}e^{-mr}
+    \Psi_s \eq \dfrac{g}{4\pi\epsilon_0}\dfrac{1}{r}e^{-mr}
 \end{equation*}
 On rappelle l'expression de nabla en coordonnées sphériques (puisque notre système est à symétrie sphérique, la partie angulaire du laplacien - qui concerne les $Y^m_l$ - sur la fonction sera nulle). $\Psi$ est donc solution de l'équation suivante, après avoir fait quelques dérivées triviales :
 \begin{equation*}
     \nabla^2\Psi_s(r) 
-    \eq \frac{1}{r^2}\dfrac{\partial^2}{\partial r^2}\Big(r^2 \Psi_s\Big)
+    \eq \dfrac{1}{r^2}\dfrac{\partial^2}{\partial r^2}\Big(r^2 \Psi_s\Big)
     \eq m^2 \Psi_s
 \end{equation*}
 \begin{equation*}
@@ -2067,7 +2043,7 @@ On va donc créer des interactions fortes entre particules dans le continuum. A 
     \item $p_p\; +\; p_c\; \longrightarrow\; p_p \;+\; p_c$ est faisable (les protons sont stables) mais il y a une contamination électromagnétique dans l'interaction : cela complique nos mesures!
     \item $n_p\; +\; p_c\; \longrightarrow\; n_p \;+\; p_c$ est l'interaction la plus aisée à effectuer et ne comporte pas de contamination électromagnétique : c'est donc la diffusion des neutrons sur des protons cibles qui sera étudiée.
 \end{itemize}
-On travaille dans le référentiel centre de masse du système à deux corps (cfr. figure \ref{collision_np_yukawa}). Puisque nous supposons que nos deux corps ont la même masse, dans le référentiel CM, ils auront la même vitesse (au signe près). Cela revient entre autre à placer notre observateur au milieu des deux particules : $v_p = -v_n = -\frac{1}{2}v_{n,lab}$. Les angles de diffusion seront également différent du référentiel du laboratoire. On y réécrit donc la conservation de l'énergie :
+On travaille dans le référentiel centre de masse du système à deux corps (cfr. figure \ref{collision_np_yukawa}). Puisque nous supposons que nos deux corps ont la même masse, dans le référentiel CM, ils auront la même vitesse (au signe près). Cela revient entre autre à placer notre observateur au milieu des deux particules : $v_p = -v_n = -\dfrac{1}{2}v_{n,lab}$. Les angles de diffusion seront également différent du référentiel du laboratoire. On y réécrit donc la conservation de l'énergie :
 \begin{equation*}
     E_0 \eq E_1 + E_2 \eq E_3 + E_4
 \end{equation*}
@@ -2079,24 +2055,24 @@ On travaille dans le référentiel centre de masse du système à deux corps (cf
 \end{figure}
 Tout comme nous avons utilisé la notion de section efficace différentielle pour sonder l'interaction électromagnétique du noyau avec des particules $\alpha$, nous allons utiliser cette notion pour étudier le comportement de l'interaction forte entre le proton et le neutron lors de la collision. Les raisonnements faits pour l'étude du noyau sont toujours valables, aux constantes près qui varient mais, dans ce cours, on ne va faire que des relations de proportionnalité car seul un terme nous intéresse dans la section efficace. On écrit donc :
 \begin{equation*}
-    \dfrac{d\sigma}{d\Omega}\Big|_{CM} \; \propto \; |T_{fi}(1+2\longrightarrow3+4)|^2
+    \fdif{\sigma}{\Omega}\Big|_{CM} \; \propto \; |T_{fi}(1+2\longrightarrow3+4)|^2
 \end{equation*}
 \begin{equation*}
-    T_{fi}(1+2\longrightarrow3+4)\; \propto \; \alpha_s \int \frac{1}{r}e^{-mr}e^{i\Vec{q}\cdot\Vec{r}}d\Vec{r}^{\ 3}
+    T_{fi}(1+2\longrightarrow3+4)\; \propto \; \alpha_s \int \dfrac{1}{r}e^{-mr}e^{i\Vec{q}\cdot\Vec{r}}\dif\Vec{r}^{\ 3}
     \qquad \text{où }\Vec{q} \eq \Vec{P_1} - \Vec{P_3}
 \end{equation*}
 Cette intégrale est, à quelques facteurs près, strictement égale à celle résolue à la section \ref{calcul_Tfi} pour la diffusion de particule avec interaction électromagnétique. En utilisant ce résultat, nous obtenons :
 \begin{align*}
-    \int \frac{1}{r}e^{i\Vec{q}\cdot\Vec{r}}e^{-\epsilon r} \;\;d^3\Vec{r}
+    \int \dfrac{1}{r}e^{i\Vec{q}\cdot\Vec{r}}e^{-\epsilon r} \;\;d^3\Vec{r}
     &\;\propto\; 
-    \frac{4\pi\hbar^2}{q^2}\frac{1}{1+\epsilon^2} \qquad \text{où }\Vec{q} 
+    \dfrac{4\pi\hbar^2}{q^2}\dfrac{1}{1+\epsilon^2} \qquad \text{où }\Vec{q} 
     = \Vec{P_1} - \Vec{P_3}; \; \epsilon \rightarrow 0\\
     &\;\propto\; 
-    \frac{4\pi\hbar^2}{q^2+m^2c^2}
-    \eq \frac{4\pi}{q^2+m^2}\\
+    \dfrac{4\pi\hbar^2}{q^2+m^2c^2}
+    \eq \dfrac{4\pi}{q^2+m^2}\\
     \Leftrightarrow \qquad 
-    \dfrac{d\sigma}{d\Omega}\Big|_{CM} 
-    &\; \propto \; \frac{\alpha_s^2}{q^2 + m^2}
+    \fdif{\sigma}{\Omega}\Big|_{CM} 
+    &\; \propto \; \dfrac{\alpha_s^2}{q^2 + m^2}
 \end{align*}
 
 Nous remarquons ainsi que l'introduction du facteur d'atténuation $e^{-mr}$ dans le potentiel provoque l'ajoute de la masse (énergie de masse ici) au dénominateur de l'élément de matrice du taux de transition. Ceci est la seule différence (mises à part la modification du couplage) avec la taux de transition obtenu pour une interaction électromagnétique.\\
@@ -2104,12 +2080,12 @@ On développe ensuite $q^2$ la norme du vecteur de la quantité de mouvement éc
 \begin{align*}
     q^2 &\eq (\Vec{P_1} - \Vec{P_3})^2 \qquad \quad \text{où }\; |P_1| = |P_2| = |P_3| = |P_4| \equiv P \text{ dans le référentiel CM}\\
     &\eq 2P^2(1-cos(\theta_{CM}))\\
-    &\eq 4P^2sin^2(\frac{\theta_{CM}}{2})
+    &\eq 4P^2sin^2(\dfrac{\theta_{CM}}{2})
 \end{align*}
 Il faut bien comprendre la définition de $\theta_{CM}$ à ce stade, il s'agit bien de l'angle entre les vecteurs incident et diffusé. Ainsi, la section efficace de la collision élastique, décrite avec le potentiel d'interaction de Yukawa, entre un proton et un neutron, est proportionnelle à:
 \begin{equation*}
-    \dfrac{d\sigma}{d\Omega}\Big|_{CM} 
-    \; \propto \; \frac{\alpha_s^2}{4P^2sin^2(\theta_{CM}/2) + m^2}
+    \fdif{\sigma}{\Omega}\Big|_{CM} 
+    \; \propto \; \dfrac{\alpha_s^2}{4P^2sin^2(\theta_{CM}/2) + m^2}
 \end{equation*}
 Nous pouvons observer à la figure \ref{sect_eff_diff_np_th} l'allure de la courbe que notre théorie prédit.
 \begin{figure}[H]
@@ -2123,7 +2099,7 @@ Nous pouvons observer à la figure \ref{sect_eff_diff_np_th} l'allure de la cour
 \subsection{Incohérence théorique et découverte des autres pions}
 
 
-En réalité on observe pas la courbe en $\frac{1}{(sin^2 + m^2)^2}$ de la figure \ref{sect_eff_diff_np_th} mais plutôt une forme comme sur la figure \ref{sect_eff_diff_np_exp} (le graphe expérimental est symétrique). Le graphe présente une remontée dans les grands angles. On remarque aussi (et ce n'est pas représenté que le graphe) que pour des plus grandes énergie incidente le graphe s'abaisse uniformément. C'est compréhensible car on peut facilement supposer que de plus grandes quantités de mouvement incidentes augmenteront la quantité de mouvement échangée $\Vec{q}$ et la dépendance de la section efficace est en $\frac{1}{m^2 + q^2}$.\\
+En réalité on observe pas la courbe en $\dfrac{1}{(sin^2 + m^2)^2}$ de la figure \ref{sect_eff_diff_np_th} mais plutôt une forme comme sur la figure \ref{sect_eff_diff_np_exp} (le graphe expérimental est symétrique). Le graphe présente une remontée dans les grands angles. On remarque aussi (et ce n'est pas représenté que le graphe) que pour des plus grandes énergie incidente le graphe s'abaisse uniformément. C'est compréhensible car on peut facilement supposer que de plus grandes quantités de mouvement incidentes augmenteront la quantité de mouvement échangée $\Vec{q}$ et la dépendance de la section efficace est en $\dfrac{1}{m^2 + q^2}$.\\
 Cependant, la remontée est à ce stade incompréhensible et semble mettre notre théorie en péril.\\
 \begin{figure}[H]
     \centering
@@ -2138,7 +2114,7 @@ Cette remontée du graphe exprime un nombre important de diffusions à grand ang
 \end{figure}
 On présente donc ici deux diagrammes différents, un dans l'espace-temps (Feynmann) et un x-y (habituel). Nous imposons les états asymptotiques (3:n,4:p). Cependant, il reste deux possibilités d'interaction : soit les particules demeurent les mêmes (c'est ce que représente le diagramme espace-temps de la figure ci-dessus) et sont simplement diffusées, soit les particules sont échangées (cfr. petit schéma en bas à droite) et diffusées à des angles différents.\\
 
-Décrivons plus précisément le processus d'interaction : les particules s'approchent et à un moment quelconque, l'une émet un quanta d'échange, un méson et donc ici un pion. En émettant celui-ci la particule change sa trajectoire et éventuellement sa charge. La seconde particule reçoit ensuite le quanta et modifie à son tour sa trajectoire et éventuellement sa charge. On distingue donc les deux cas de figure : les particules sont inversées ou elles ne le sont pas. Dans le cas où elles ne sont pas inversées, il n'y a pas de transfert de charge, le méson échangé est donc un pion neutre $\pi^0$. Dans le cas où les particules sont inversées, le méson échangé est soit un $\pi^+$ soit un $\pi^-$. Comment sait-on laquelle est émise? Hé bien, on ne peut pas\footnote{Dans notre discussion, il est possible de le savoir mais la fonction d'onde s'effondrerait sur sa valeur propre. Ce qui revient à imposer au méson de passer par un trou en particulier, ce qui mène aux conséquences connues.} et on a pas besoin de le savoir, soit le proton émet un $\pi^+$ soit le neutron émet un $\pi^-$ le résultat est le même. En mécanique quantique, on somme toutes les possibilités interférentes amenant à une même situation finale et c'est exactement ce qu'on a ici ! En termes profanes, les deux phénomènes ont lieu en même temps : "l'électron passe par les deux fentes" !\\
+Décrivons plus précisément le processus d'interaction : les particules s'approchent et à un moment quelconque, l'une émet un quanta d'échange, un méson et donc ici un pion. En émettant celui-ci la particule change sa trajectoire et éventuellement sa charge. La seconde particule reçoit ensuite le quanta et modifie à son tour sa trajectoire et éventuellement sa charge. On distingue donc les deux cas de figure : les particules sont inversées ou elles ne le sont pas. Dans le cas où elles ne sont pas inversées, il n'y a pas de transfert de charge, le méson échangé est donc un pion neutre $\pi^0$. Dans le cas où les particules sont inversées, le méson échangé est soit un $\pi^+$ soit un $\pi^-$. Comment sait-on laquelle est émise? Hé bien, on ne peut pas\footnote{Dans notre discussion, il est possible de le savoir mais la fonction d'onde s'effondrerait sur sa valeur propre. Ce qui revient à imposer au méson de passer par un trou en particulier, ce qui mène aux conséquences connues.} et on a pas besoin de le savoir, soit le proton émet un $\pi^+$ soit le neutron émet un $\pi^-$ le résultat est le même. En mécanique quantique, on somme toutes les possibilités interférentes amenant à une même situation finale et c'est exactement ce qu'on a ici ! En termes profanes, les deux phénomènes ont lieu en même temps : <<l'électron passe par les deux fentes>> !\\
 
 Revenons maintenant à $q$, la quantité de mouvement échangée par les particules qui est simplement la quantité de mouvement de leur méson d'interaction. On comprend également en quoi notre calcul précédent était incorrect, nous n'avions considéré qu'une des deux possibilités interférentes, celles de l'interaction caractérisée par un pion neutre. Corrigeons donc notre erreur.\\
 \begin{figure}[H]
@@ -2152,12 +2128,12 @@ L'angle $\theta_{CM}$ est toujours l'angle entre le proton et le neutron seuleme
 On obtient la même expression mais avec un cosinus ! Rien de compliqué donc. On obtient finalement pour la section efficace différentielle.
 \begin{equation*}
     \boxed{
-        T_{fi} \; \propto\; g^2 \Big(\frac{1}{m_\pi^2 + q^2} + \frac{1}{m_\pi^2 + q'^2}\Big)
+        T_{fi} \; \propto\; g^2 \Big(\dfrac{1}{m_\pi^2 + q^2} + \dfrac{1}{m_\pi^2 + q'^2}\Big)
     }
 \end{equation*}
 \begin{equation*}
     \boxed{
-        \dfrac{d\sigma}{d\Omega}\Big|_{CM} \;\propto\;\alpha_s^2 \Big(\frac{1}{2m_n T sin^2(\frac{\theta_{CM}}{2})+m^2_\pi} + \frac{1}{2m_n T cos^2(\frac{\theta_{CM}}{2})+m^2_\pi}\Big)^2
+        \fdif{\sigma}{\Omega}\Big|_{CM} \;\propto\;\alpha_s^2 \Big(\dfrac{1}{2m_n T sin^2(\dfrac{\theta_{CM}}{2})+m^2_\pi} + \dfrac{1}{2m_n T cos^2(\dfrac{\theta_{CM}}{2})+m^2_\pi}\Big)^2
     }
 \end{equation*}
 Le modèle de Yukawa est donc en opposition à ce que nous aurions pu attendre d'une expérience Rutherford. La proportion de neutrons rétrodiffusés est équivalente à celle des protons diffusés !
@@ -2167,11 +2143,11 @@ Remarques :
     \item Dans le référentiel du laboratoire, on écrit : $p_n = m_n v_n$. En réexprimant dans le référentiel centre de masse et en fonction de l'énergie cinétique :
     \begin{align*}
         P_{CM} & \eq P_1\\
-        &\eq \frac{m_n v_n}{2}
-        & \eq\frac{1}{2}\sqrt{2M T_{cin}}
+        &\eq \dfrac{m_n v_n}{2}
+        & \eq\dfrac{1}{2}\sqrt{2M T_{cin}}
     \end{align*}
     \begin{equation*}
-        P^2 \eq \frac{1}{2}m_n T_{cin}^{labo}
+        P^2 \eq \dfrac{1}{2}m_n T_{cin}^{labo}
     \end{equation*}
     \item Dans notre modèle, nous avons supposé que la masse des pions $\pi^+,\pi^-,\pi^0$ était identique, ce qui n'est vrai qu'en première approximation.
 \end{itemize}
@@ -2204,7 +2180,7 @@ Les angles nous indiquent qu'il y a eu des processus de désintégration. La lon
 \end{equation*}
 Par la cinématique de la désintégration du pion de masse $M$, on peut réécrire l'énergie du muon ($m_\mu$) émis car on connait sa masse. (En unités naturelles et en ignorant l'énergie cinétique du neutrino)
 \begin{equation*}
-    E_\mu \eq \frac{(M^2 + m_\mu^2)}{2M}\quad \text{avec} \; M \eq 140MeV; \; m_\mu \eq 106MeV
+    E_\mu \eq \dfrac{(M^2 + m_\mu^2)}{2M}\quad \text{avec} \; M \eq 140MeV; \; m_\mu \eq 106MeV
 \end{equation*}
 \begin{equation*}
     E_\mu \eq T + m_\mu
@@ -2225,7 +2201,7 @@ En conclusion, ces observations expérimentales ont fourni des preuves prématur
 Le découverte de nombreuses autres particules ont suivi dans la foulée : $\underbrace{\rho}_{750MeV}$, $\underbrace{\omega^{0,\pm},\eta, \sigma}_{1GeV}$ ...\\
 Ces particules possédant une masse bien plus grande que la masse du pion, leur ordre était supérieur à celui de notre développement et donc leur participation négligeable. Cependant, pour de grandes valeurs d'énergie incidente et donc de $q$, on peut les observer. On découvre ainsi que $\omega^-$ est le méson à l'origine de la répulsion à très courte distance. On a donc un potentiel d'interaction qui devient la somme des interactions faisant intervenir chaque méson.\footnote{Dans l'expression qui suit, l'interaction avec $\omega$ est répulsive, il n'y a rien d'évident à cela mais cette notion dépasse largement le cadre du cours.}
 \begin{equation*}
-    V_{NN}\eq - \frac{g^2_\pi}{r}e^{-m_\pi r} +  \frac{g^2_\omega}{r}e^{-m_\omega r} +\ ...
+    V_{NN}\eq - \dfrac{g^2_\pi}{r}e^{-m_\pi r} +  \dfrac{g^2_\omega}{r}e^{-m_\omega r} +\ ...
 \end{equation*}
 \begin{figure}[H]
     \centering
@@ -2244,36 +2220,37 @@ Ces nombres magiques sont le résultat de la saturation de couches de nucléons 
 \subsubsection{Le modèle du gaz de Fermi}
 Nous considérons simplement une ensemble de nucléons confinés dans un volume $V$ grâce à un potentiel moyen. Nous avions supposé un puits sphérique (forme carrée de potentiel en 1D). Le caractère fini de ce volume impose une quantification des états des nucléons. Ce qui signifie que pour calculer l'énergie de tous les nucléons enfermés dans cette boite on procède comme suit :
 \begin{equation*}
-    T_{tot} \eq \sum_i \frac{P_i^2}{2m}
+    T_{tot} \eq \sum_i \dfrac{P_i^2}{2m}
 \end{equation*}
-Les nucléons sont encore et toujours des fermions, nous devons donc satisfaire le principe d'exclusion. Pour obtenir l'état fondamental du système, il nous faut donc remplir tous les états possibles en partant des "plus bas". On est ici dans un cas exactement analogue à la sphère de Fermi des électrons de conduction dans un métal en physique de l'état solide. Les électrons se répartissent dans les états d'énergie en partant des plus bas et on retrouve donc dans l'espace 3D des nombres d'onde une boule dont la frontière est la sphère de rayon $k_F$. Dans le cas des nucléons, nous appellerons la quantité de mouvement frontière $q_F$ associée à l'énergie de Fermi $E_F$. Nous travaillons dans un cadre non-relativiste, on peut donc écrire pour ce potentiel :
+Les nucléons sont encore et toujours des fermions, nous devons donc satisfaire le principe d'exclusion. Pour obtenir l'état fondamental du système, il nous faut donc remplir tous les états possibles en partant des <<plus bas>>. On est ici dans un cas exactement analogue à la sphère de Fermi des électrons de conduction dans un métal en physique de l'état solide. Les électrons se répartissent dans les états d'énergie en partant des plus bas et on retrouve donc dans l'espace 3D des nombres d'onde une boule dont la frontière est la sphère de rayon $k_F$. Dans le cas des nucléons, nous appellerons la quantité de mouvement frontière $q_F$ associée à l'énergie de Fermi $E_F$. Nous travaillons dans un cadre non-relativiste, on peut donc écrire pour ce potentiel :
 \begin{equation*}
-    E_F \eq \frac{P_F^2}{2m}
+    E_F \eq \dfrac{P_F^2}{2m}
 \end{equation*}
-Il nous faut maintenant nous pencher sur la densité d'états dans l'espace de $p$. Nous notons $dn$ le nombre d'états situés dans une portion de sphère indicée $d\Omega$ d'épaisseur $dp$. Nous notons également le volume minimal dans l'espace $p$ comme $\frac{(2\pi)^3}{\nu}$ où $\nu$ représente un volume matériel, ici le volume de confinement. Il nous faut ici introduire une approximation : bien que nous sachions que les états sont discrétisés, nous allons considérer que ceux-ci sont assez proches et nombreux pour passer à une forme intégrale (c'est une hypothèse hautement critiquable pour des systèmes $A<30$).
+Il nous faut maintenant nous pencher sur la densité d'états dans l'espace de $p$. Nous notons $dn$ le nombre d'états situés dans une portion de sphère indicée $\dif\Omega$ d'épaisseur $dp$. Nous notons également le volume minimal dans l'espace $p$ comme $\dfrac{(2\pi)^3}{\nu}$ où $\nu$ représente un volume matériel, ici le volume de confinement. Il nous faut ici introduire une approximation : bien que nous sachions que les états sont discrétisés, nous allons considérer que ceux-ci sont assez proches et nombreux pour passer à une forme intégrale (c'est une hypothèse hautement critiquable pour des systèmes $A<30$).
 \begin{equation*}
-    dn \eq \underbrace{(2I+1)(2S+1)}_{\text{mult. de spin et d'isospin}}\frac{p^2dpd\Omega}{\frac{(2\pi)^3}{\nu}}
+    dn \eq \underbrace{(2I+1)(2S+1)}_{\text{mult. de spin et d'isospin}}\dfrac{p^2dp\dif\Omega}{\dfrac{(2\pi)^3}{\nu}}
 \end{equation*}
 Comme dans le cas de la sphère de Fermi, intégrer la densité d'état sur la sphère doit redonner le nombre d'électrons de conduction. Nous intégrons donc sur notre sphère pour retrouver le nombre de nucléons $A$.
 \begin{equation*}
-    A\eq \int_S\int_0^{P_F} \dfrac{dn}{dp}dpd\Omega
+    A\eq \int_S\int_0^{P_F} \fdif{n}{p}dp\dif\Omega
 \end{equation*}
-On a une intégrale angulaire sur la surface de la sphère $\int_S d\Omega$ qui donne un terme $4\pi$ ainsi que l'intégrale de $p^2$. On se sert également de la relation entre $A$ et $r_0^3$
+On a une intégrale angulaire sur la surface de la sphère $\int_S \dif\Omega$ qui donne un terme $4\pi$ ainsi que l'intégrale de $p^2$. On se sert également de la relation entre $A$ et $r_0^3$
+\[
+    P_F c \eq \dfrac{\hbar c}{r_0}(\dfrac{9\pi}{8})^{\dfrac{1}{3}}\; \approx \; 250MeV
+\]
+
 \begin{equation*}
-    P_F c \eq \frac{\hbar c}{r_0}(\frac{9\pi}{8})^\frac{1}{3}\; \approx \; 250MeV
-\end{equation*}
-\begin{equation*}
-    E_F\eq \frac{P_F^2}{2m}  \; \approx \; 35MeV
+    E_F\eq \dfrac{P_F^2}{2m}  \; \approx \; 35MeV
 \end{equation*}
 On calcule ensuite l'énergie totale du système en oubliant pas de normaliser.
 \begin{equation*}
-    T_{tot}\eq \int_0^{P_F} \frac{p^2}{2m}dn 
-    \eq \frac{A}{2m} \frac{\int_0^{P_F} p^2 \dfrac{dn}{dp}dp}{\int_0^{P_F}dn}
-    \eq \frac{3}{5} A E_F
+    T_{tot}\eq \int_0^{P_F} \dfrac{p^2}{2m}dn 
+    \eq \dfrac{A}{2m} \dfrac{\int_0^{P_F} p^2 \fdif{n}{p}dp}{\int_0^{P_F}dn}
+    \eq \dfrac{3}{5} A E_F
 \end{equation*}
 Car on a que\footnote{Dans les notes de M.Lemaître, le tout est encore multiplié par $\nu$ mais il s'agit d'une erreur je pense.} :
 \begin{equation*}
-    A \eq \int_S\int_0^{P_F}dn d\Omega \eq \int_S\int_0^{P_F}\dfrac{dn}{dp} dpd\Omega \eq \frac{4\nu}{(2\pi\hbar)^3} 4\pi \frac{P_F^3}{3}
+    A \eq \int_S\int_0^{P_F}dn \dif\Omega \eq \int_S\int_0^{P_F}\fdif{n}{p} dp\dif\Omega \eq \dfrac{4\nu}{(2\pi\hbar)^3} 4\pi \dfrac{P_F^3}{3}
 \end{equation*}
 Nous venons d'obtenir la somme des énergies cinétiques. Pour estimer l'énergie potentielle du système, nous nous servons bien entendu de l'hypothèse du potentiel moyen. On peut représenter la situation comme suit :
 \begin{figure}
@@ -2286,10 +2263,10 @@ On a tout simplement :
 \end{equation*}
 De par la courbe d'Aston, nous avons également la moyenne de l'énergie moyenne par nucléon.
 \begin{equation*}
-    \expval{B} \eq \frac{B}{A} \eq 8MeV
+    \expval{B} \eq \dfrac{B}{A} \eq 8MeV
 \end{equation*}
 \begin{equation*}
-    -B \eq T_{tot} + V_{tot} \eq \frac{3}{5}A E_F - V_0 A
+    -B \eq T_{tot} + V_{tot} \eq \dfrac{3}{5}A E_F - V_0 A
 \end{equation*}
 On peut donc fournir une estimation de $V_0$.
 \begin{equation*}
@@ -2299,7 +2276,7 @@ On peut donc fournir une estimation de $V_0$.
 Le développement sera similaire à ce qui a été fait pour le deuton à la différence que pour celui-ci on était toujours dans le cas de figure $l=0$ \footnote{Voir partie REF}. Pour continuer l'analogie avec la physique des solides, on a jusqu'ici considéré le cas d'électrons libres et on intègre maintenant un potentiel d'attraction moyen $V_0$.\\
 On écrit l'équation de Schrödinger en coordonnées sphériques.
 \begin{equation*}
-       \frac{-\hbar^2}{2m} \Big(\dfrac{d^2\chi(r)}{dr^2} + \frac{2}{r}\dfrac{d\chi(r)}{dr} - \frac{l(l+1)}{r^2}\Big)\eq (E-V(r))\chi(r)
+       \dfrac{-\hbar^2}{2m} \Big(\dfrac{d^2\chi(r)}{dr^2} + \dfrac{2}{r}\dfrac{\dif\chi(r)}{dr} - \dfrac{l(l+1)}{r^2}\Big)\eq (E-V(r))\chi(r)
 \end{equation*}
 
 \begin{equation*}
@@ -2308,15 +2285,15 @@ On écrit l'équation de Schrödinger en coordonnées sphériques.
 
 \begin{equation*}
     \boxed{
-       \frac{-\hbar^2}{2m} \Big(\dfrac{d^2\chi(r)}{dr^2} + \frac{2}{r}\dfrac{d\chi(r)}{dr} - \frac{l(l+1)}{r^2}\Big)\eq (E+V_0)\chi(r)
+       \dfrac{-\hbar^2}{2m} \Big(\dfrac{d^2\chi(r)}{dr^2} + \dfrac{2}{r}\dfrac{\dif\chi(r)}{dr} - \dfrac{l(l+1)}{r^2}\Big)\eq (E+V_0)\chi(r)
     }
 \end{equation*}
 où $m$ est la masse du nucléon.\\
 Les solutions de ces équations sont connues : les fameuses fonctions de Bessel sphériques $J_l(r)$.
 \paragraph{Pour $l=0$ :} on obtient facilement une solution en sinus cardinal sphérique qui correspond à notre solution de Bessel $J_0(r)$. Il faut ici être bien attentif à la définition de $J_0(r)$ ainsi qu'à la différence entre $A$ et $A'$, l'un contient $k_1$ l'autre non.
 \begin{align*}
-    \chi(r) &\eq A\frac{sin(k_1r)}{r}\; \text{avec}\; k_1 \eq \sqrt{2m(E+V_0}\\
-    &\eq A' \frac{sin(k_1r)}{k_1 r}\\
+    \chi(r) &\eq A\dfrac{sin(k_1r)}{r}\; \text{avec}\; k_1 \eq \sqrt{2m(E+V_0}\\
+    &\eq A' \dfrac{sin(k_1r)}{k_1 r}\\
     &\eq A'J_0(k_1 r)
 \end{align*}
 %Dans les notes de Lemaître, c'est un A et non un A' à la dernière ligne, c'est très probablement une erreur vu que J_0 correspond classiquement au simple sinus cardinal
@@ -2326,7 +2303,7 @@ Dans notre développement nous effectuons une énorme simplification : plutôt q
 \end{equation*}
 \paragraph{Pour l $\neq$ 0 :} Les fonctions de Bessel sphériques sont plus complexes mais toujours composées de fonctions trigonométriques divisées par des polynômes de $r$. Par exemple :
 \begin{equation*}
-    J_1(k_1 r) \eq \frac{sin(k_1 r}{(k_1 r)^2} - \frac{cos(k_1r)}{k_1r}
+    J_1(k_1 r) \eq \dfrac{sin(k_1 r}{(k_1 r)^2} - \dfrac{cos(k_1r)}{k_1r}
 \end{equation*}
 Les racines de la fonctions ne sont plus exprimables en multiples de $\pi$ mais l'idée demeure la même.
 \begin{equation*}
@@ -2334,7 +2311,7 @@ Les racines de la fonctions ne sont plus exprimables en multiples de $\pi$ mais 
 \end{equation*}
 On a toujours la relation analogue aux électrons libres :
 \begin{equation*}
-    E_{nl} \eq \frac{\hbar^2k_{nl}^2}{2m}
+    E_{nl} \eq \dfrac{\hbar^2k_{nl}^2}{2m}
 \end{equation*}
 $k$ dépend donc de $l$ et à travers lui $E$ également. En termes physiques l'effet centrifuge influe sur les niveaux d'énergie des nucléons. On peut également deviner que l'énergie sera indépendante de $m$ la projection du moment orbital sur un axe car le noyau présente une symétrie sphérique.\\
 En multipliant les multiplicités de spin, d'isospin et de moment orbital, on peut obtenir la dégénérescence d'une valeur d'énergie.
@@ -2344,7 +2321,7 @@ En multipliant les multiplicités de spin, d'isospin et de moment orbital, on pe
 On a désormais tous les ingrédients pour construire une échelle des niveaux d'énergie en fonction des nombres quantiques des nucléons mais avant ça faisons un détour par la probabilité de présence radiale.\\
 On note la probabilité de trouver la particule dans une coquille sphérique s'étendant sur$ [r,r+dr]$.
 \begin{equation*}
-    P(r)dr \eq |\chi(r)|^2 r^2 dr \underbrace{\int_S Y_l^m(\theta,\phi)d\Omega}_{= 1 \text{par prop.}}
+    P(r)dr \eq |\chi(r)|^2 r^2 dr \underbrace{\int_S Y_l^m(\theta,\phi)\dif\Omega}_{= 1 \text{par prop.}}
 \end{equation*}
 \begin{figure}[H]
     \centering
@@ -2360,7 +2337,7 @@ Tout comme la méthode de Hartree-Fock, on aboutit à une expression implicite. 
 \end{figure}
 On a pu obtenir $\rho(\Vec{r})$ par la mesure de la section efficace, le calcul du facteur de forme etc. On peut donc estimer le potentiel moyen $V_{m}$ par une fonction implicite. Elle n'est évidemment plus implicite si on a $\rho(\vec({r)}$.
 \begin{equation*}
-    V_m(\vec{r}) \eq \frac{\int \rho(\vec{r}')V(\vec{r}-\vec{r}')d\vec{r'}^3}{\int \rho(r)d\vec{r}^3}\eq \frac{\int \rho(\vec{r}')-v_0\delta(\vec{r'}-\vec{r})d\vec{r'}^3}{1}\eq -v_0 \rho(\vec{r})
+    V_m(\vec{r}) \eq \dfrac{\int \rho(\vec{r}')V(\vec{r}-\vec{r}')\dif\vec{r'}^3}{\int \rho(r)\dif\vec{r}^3}\eq \dfrac{\int \rho(\vec{r}')-v_0\delta(\vec{r'}-\vec{r})\dif\vec{r'}^3}{1}\eq -v_0 \rho(\vec{r})
 \end{equation*}
 Comme on a placé notre delta de Dirac en 0 :
 \begin{equation*}
@@ -2404,18 +2381,18 @@ On rappelle l'expression classique du moment magnétique total $\vec{J} :$
     \vec{J} \eq \vec{L} + \vec{S}
 \end{equation*}
 \begin{equation*}
-    \Rightarrow \vec{L}\cdot\vec{S} \eq \frac{1}{2} \Big(J^2 - L^2 - S^2\Big)
+    \Rightarrow \vec{L}\cdot\vec{S} \eq \dfrac{1}{2} \Big(J^2 - L^2 - S^2\Big)
 \end{equation*}
 En physique nucléaire et contrairement à la physique atomique, nous avons $g(r) < 0$. l'interaction spin-orbite est donc liante.\\
 \begin{figure}
     \centering
     \includegraphics[scale = 0.7]{Images4/spin-orbite_dégén.PNG}
-    \caption{ATTENTION : l'expression correcte pour $\Delta E_-$ est : $l^2 + l +\frac{3}{4}$}
+    \caption{ATTENTION : l'expression correcte pour $\Delta E_-$ est : $l^2 + l +\dfrac{3}{4}$}
 \end{figure}
 On en tire donc l'expression en fonction de $l$ de l'écart en énergie entre les deux niveaux précédemment dégénérés.
 \begin{equation*}
 \boxed{
-    \;\Delta E \eq -\expval{g}(l+\frac{1}{2})\;
+    \;\Delta E \eq -\expval{g}(l+\dfrac{1}{2})\;
     }
 \end{equation*}
 Dans un modèle naïf, on peut supposer $g(r) = g_0$.
@@ -2426,7 +2403,7 @@ Il y a cependant ici une zone de flou : si en physique atomique il est aisé de 
 \end{equation*}
 Comme nous savons que notre noyau respecte la symétrie sphérique par la mesure de la surface efficace, nous pouvons supposer que le couplage sera proportionnel au gradient de la densité de charge selon r.
 \begin{equation*}
-    \nabla \rho(\vec{r}) \eq \dfrac{d\rho}{dr}\frac{\vec{r}}{r}
+    \nabla \rho(\vec{r}) \eq \dfrac{\dif\rho}{dr}\dfrac{\vec{r}}{r}
 \end{equation*}
 \begin{equation*}
     \vec{r} \; \propto \; \nabla \rho(\vec{r})
@@ -2438,7 +2415,7 @@ Comme nous savons que notre noyau respecte la symétrie sphérique par la mesure
     V_{SO}(r) \; \propto \; \Big(\nabla \rho(\vec{r})\cross \vec{P}\Big)\cdot \vec{S}
 \end{equation*}
 \begin{equation*}
-    V_{SO}(r) \eq\underbrace{  \lambda\dfrac{d\rho(r)}{dr}\frac{1}{r}}_{= g(r)}\Big(\vec{L}\cdot \vec{S}\Big)
+    V_{SO}(r) \eq\underbrace{  \lambda\dfrac{\dif\rho(r)}{dr}\dfrac{1}{r}}_{= g(r)}\Big(\vec{L}\cdot \vec{S}\Big)
 \end{equation*}
 \begin{equation*}
     g(r) \;\propto\; \dfrac{\partial V(r)}{\partial r} \; \text{car}\; \rho(r) \propto V(r)
@@ -2464,18 +2441,11 @@ Le modèle marche également de façon tout à fait satisfaisante pour les noyau
 
 
 
-
-
-
-
-
-
-
 \section{Hypothèse subjective sur les théories physiques}
 \emph{La discussion rapportée ici concerne la structure des théories physiques et de possibles futurs développements de celles-ci. Il ne s'agit pas à proprement parler de matière d'examen.}\\
 On peut caractériser une théorie physique par deux choses :
 \begin{itemize}[label = $\bullet$]
-    \item \textbf{Les paramètres libres adimensionnels} représentent une série de valeurs invariantes d'échelle. Nous savons désormais que l'Univers est en expansion et l'adimensionnalité garantit une continuité dans le temps de nos théories physiques. Un exemple de paramètres libres sont les nombreuses particules auxquelles nous avons abouti à la fin de la discussion concernant l'hypothèse de Yukawa. Une théorie trop fournie en paramètres libres est flexible (on peut les régler pour satifsaire beaucoup d'expériences) mais est également symptomatique d'une interaction plus fondamentale permettant de regrouper tous ces phénomènes sous un nombre plus limités de bannières. Exemple : les particules de Yukawa sont en réalité constituées de quarks, gluons etc donc de particules "fondamentales", leur nombre est plus limité et permet de rendre compte des effets de ces particules composites : pion, muon etc.
+    \item \textbf{Les paramètres libres adimensionnels} représentent une série de valeurs invariantes d'échelle. Nous savons désormais que l'Univers est en expansion et l'adimensionnalité garantit une continuité dans le temps de nos théories physiques. Un exemple de paramètres libres sont les nombreuses particules auxquelles nous avons abouti à la fin de la discussion concernant l'hypothèse de Yukawa. Une théorie trop fournie en paramètres libres est flexible (on peut les régler pour satifsaire beaucoup d'expériences) mais est également symptomatique d'une interaction plus fondamentale permettant de regrouper tous ces phénomènes sous un nombre plus limités de bannières. Exemple : les particules de Yukawa sont en réalité constituées de quarks, gluons etc donc de particules <<fondamentales>>, leur nombre est plus limité et permet de rendre compte des effets de ces particules composites : pion, muon etc.
     \item \textbf{Les observables physiques} représentent des grandeurs mesurables absolues, dimensionelles et physiques (donc pas un nombre d'événements par seconde comme pour un courant par exemple), il en existe plusieurs jeux en compétition. Ces jeux sont toujours composés de 3 grandeurs qui permettent de recomposer le temps, la masse et la distance. Actuellement, il est admis que $h$ et $c$ devront être incluses car elles sont incluses dans toutes les théories et sont universelles. Pour la troisième, il y a une série de candidats : $k_B$, $M_{Planck}$, $M_{nucleon}$, $\Lambda$. Elle doit également être indépendante de toute théorie.
 \end{itemize}
 On a actuellement repéré une série de constantes permettant de définir les différentes théories physiques.
@@ -2485,13 +2455,8 @@ On a actuellement repéré une série de constantes permettant de définir les d
     \hline
          Interaction &em&forte&grav.&faible & Higgs  \\
          \hline
-         Constante associée& $\alpha=\frac{e^2}{4\pi\epsilon_0\hbar c}$&$\alpha_s=\frac{g^2}{4\pi}$&$\frac{Gm_N}{\hbar^3}$&$\alpha$&???\\
+         Constante associée& $\alpha=\dfrac{e^2}{4\pi\epsilon_0\hbar c}$&$\alpha_s=\dfrac{g^2}{4\pi}$&$\dfrac{Gm_N}{\hbar^3}$&$\alpha$&???\\
          \hline
     \end{tabular}
 \end{table}
 Le fait que la constante $\alpha$ apparaisse dans les théories électromagnétiques et d'interaction faible est incroyable et indique que nous sommes sur la bonne voie pour l'unification des interactions. Il y a également des similitudes entre l'interaction de Higgs et l'interaction faible.
-
-
-
-
-
